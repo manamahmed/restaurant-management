@@ -1,0 +1,1293 @@
+[
+  {
+    "id": 1,
+    "title": "Tasty Bites",
+    "img": "https://example.com/tasty-bites.jpg",
+    "location": "123 Main Street, Cityville",
+    "opening_hours": "Mon-Sat: 11:00 AM - 10:00 PM, Sun: 12:00 PM - 8:00 PM",
+    "menus": {
+      "Main menu": [
+        {
+          "menu_id": 1,
+          "name": "Spaghetti Bolognese",
+          "img": "https://example.com/spaghetti.jpg",
+          "description": "Classic Italian pasta with rich meat sauce",
+          "price": 12.99
+        },
+        {
+          "menu_id": 2,
+          "name": "Chicken Alfredo",
+          "img": "https://example.com/chicken-alfredo.jpg",
+          "description": "Creamy Alfredo sauce with grilled chicken",
+          "price": 14.99
+        },
+        {
+          "menu_id": 3,
+          "name": "Margherita Pizza",
+          "img": "https://example.com/margherita-pizza.jpg",
+          "description": "Fresh tomatoes, mozzarella, and basil",
+          "price": 10.99
+        },
+        {
+          "menu_id": 4,
+          "name": "Grilled Salmon",
+          "img": "https://example.com/grilled-salmon.jpg",
+          "description": "Grilled salmon fillet with lemon and herbs",
+          "price": 16.99
+        }
+      ],
+      "Dessert": [
+        {
+          "menu_id": 5,
+          "name": "Tiramisu",
+          "img": "https://example.com/tiramisu.jpg",
+          "description": "Layered coffee-flavored Italian dessert",
+          "price": 7.99
+        },
+        {
+          "menu_id": 6,
+          "name": "Chocolate Fondue",
+          "img": "https://example.com/chocolate-fondue.jpg",
+          "description": "Assorted fruits with melted chocolate",
+          "price": 8.99
+        },
+        {
+          "menu_id": 7,
+          "name": "Cheesecake",
+          "img": "https://example.com/cheesecake.jpg",
+          "description": "Classic New York-style cheesecake",
+          "price": 9.99
+        },
+        {
+          "menu_id": 8,
+          "name": "Fruit Sorbet",
+          "img": "https://example.com/fruit-sorbet.jpg",
+          "description": "Refreshing mixed fruit sorbet",
+          "price": 5.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 9,
+          "name": "Mojito",
+          "img": "https://example.com/mojito.jpg",
+          "description": "Refreshing minty lime cocktail",
+          "price": 6.99
+        },
+        {
+          "menu_id": 10,
+          "name": "Red Wine",
+          "img": "https://example.com/red-wine.jpg",
+          "description": "Rich and full-bodied red wine",
+          "price": 12.99
+        },
+        {
+          "menu_id": 11,
+          "name": "Iced Latte",
+          "img": "https://example.com/iced-latte.jpg",
+          "description": "Chilled espresso with milk",
+          "price": 4.99
+        },
+        {
+          "menu_id": 12,
+          "name": "Soda",
+          "img": "https://example.com/soda.jpg",
+          "description": "Assorted soft drinks",
+          "price": 2.99
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 13,
+          "name": "Bruschetta",
+          "img": "https://example.com/bruschetta.jpg",
+          "description": "Toasted bread with tomato and basil topping",
+          "price": 5.99
+        },
+        {
+          "menu_id": 14,
+          "name": "Garlic Bread",
+          "img": "https://example.com/garlic-bread.jpg",
+          "description": "Warm bread with garlic butter",
+          "price": 4.99
+        },
+        {
+          "menu_id": 15,
+          "name": "Chicken Wings",
+          "img": "https://example.com/chicken-wings.jpg",
+          "description": "Crispy chicken wings with various sauces",
+          "price": 8.99
+        },
+        {
+          "menu_id": 16,
+          "name": "Caprese Skewers",
+          "img": "https://example.com/caprese-skewers.jpg",
+          "description": "Mozzarella, tomato, and basil skewers",
+          "price": 6.99
+        }
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "title": "Sizzling Grill",
+    "img": "https://example.com/sizzling-grill.jpg",
+    "location": "456 Oak Avenue, Townsville",
+    "opening_hours": "Mon-Sun: 12:00 PM - 11:00 PM",
+    "menus": {
+      "Main menu": [
+        {
+          "menu_id": 17,
+          "name": "Steak with Chimichurri",
+          "img": "https://example.com/steak-chimichurri.jpg",
+          "description": "Grilled steak with tangy chimichurri sauce",
+          "price": 18.99
+        },
+        {
+          "menu_id": 18,
+          "name": "BBQ Ribs",
+          "img": "https://example.com/bbq-ribs.jpg",
+          "description": "Slow-cooked BBQ ribs with smoky flavor",
+          "price": 16.99
+        },
+        {
+          "menu_id": 19,
+          "name": "Shrimp Scampi",
+          "img": "https://example.com/shrimp-scampi.jpg",
+          "description": "Garlic butter shrimp served over pasta",
+          "price": 20.99
+        },
+        {
+          "menu_id": 20,
+          "name": "Vegetarian Stir-Fry",
+          "img": "https://example.com/vegetarian-stir-fry.jpg",
+          "description": "Assorted vegetables stir-fried to perfection",
+          "price": 14.99
+        }
+      ],
+      "Dessert": [
+        {
+          "menu_id": 21,
+          "name": "Apple Pie",
+          "img": "https://example.com/apple-pie.jpg",
+          "description": "Homemade apple pie with a flaky crust",
+          "price": 8.99
+        },
+        {
+          "menu_id": 22,
+          "name": "Molten Lava Cake",
+          "img": "https://example.com/molten-lava-cake.jpg",
+          "description": "Warm chocolate cake with a gooey center",
+          "price": 9.99
+        },
+        {
+          "menu_id": 23,
+          "name": "Panna Cotta",
+          "img": "https://example.com/panna-cotta.jpg",
+          "description": "Creamy Italian dessert with berry coulis",
+          "price": 7.99
+        },
+        {
+          "menu_id": 24,
+          "name": "Frozen Yogurt",
+          "img": "https://example.com/frozen-yogurt.jpg",
+          "description": "Refreshing frozen yogurt with assorted toppings",
+          "price": 5.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 25,
+          "name": "Sangria",
+          "img": "https://example.com/sangria.jpg",
+          "description": "Fruity wine punch with assorted fruits",
+          "price": 9.99
+        },
+        {
+          "menu_id": 26,
+          "name": "Craft Beer",
+          "img": "https://example.com/craft-beer.jpg",
+          "description": "Locally brewed craft beer with a variety of flavors",
+          "price": 7.99
+        },
+        {
+          "menu_id": 27,
+          "name": "Margarita",
+          "img": "https://example.com/margarita.jpg",
+          "description": "Classic margarita with a salted rim",
+          "price": 6.99
+        },
+        {
+          "menu_id": 28,
+          "name": "Lemonade",
+          "img": "https://example.com/lemonade.jpg",
+          "description": "Freshly squeezed lemonade with a hint of mint",
+          "price": 4.99
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 29,
+          "name": "Loaded Nachos",
+          "img": "https://example.com/loaded-nachos.jpg",
+          "description": "Nachos topped with cheese, jalapeños, and salsa",
+          "price": 7.99
+        },
+        {
+          "menu_id": 30,
+          "name": "Mozzarella Sticks",
+          "img": "https://example.com/mozzarella-sticks.jpg",
+          "description": "Crispy mozzarella sticks with marinara sauce",
+          "price": 6.99
+        },
+        {
+          "menu_id": 31,
+          "name": "Spinach Artichoke Dip",
+          "img": "https://example.com/spinach-artichoke-dip.jpg",
+          "description": "Creamy dip with spinach, artichokes, and cheese",
+          "price": 8.99
+        },
+        {
+          "menu_id": 32,
+          "name": "Garlic Fries",
+          "img": "https://example.com/garlic-fries.jpg",
+          "description": "Crispy fries tossed with garlic and herbs",
+          "price": 5.99
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Fresh Delights",
+    "img": "https://example.com/fresh-delights.jpg",
+    "location": "789 Garden Lane, Greensville",
+    "opening_hours": "Mon-Fri: 10:00 AM - 8:00 PM, Sat-Sun: 11:00 AM - 7:00 PM",
+    "menus": {
+      "Main menu": [
+        {
+          "menu_id": 33,
+          "name": "Quinoa Salad",
+          "img": "https://example.com/quinoa-salad.jpg",
+          "description": "Healthy salad with quinoa, mixed greens, and vinaigrette",
+          "price": 11.99
+        },
+        {
+          "menu_id": 34,
+          "name": "Caprese Panini",
+          "img": "https://example.com/caprese-panini.jpg",
+          "description": "Grilled panini with mozzarella, tomato, and basil",
+          "price": 9.99
+        },
+        {
+          "menu_id": 35,
+          "name": "Vegetable Curry",
+          "img": "https://example.com/vegetable-curry.jpg",
+          "description": "Spicy vegetable curry served with rice",
+          "price": 13.99
+        },
+        {
+          "menu_id": 36,
+          "name": "Stuffed Bell Peppers",
+          "img": "https://example.com/stuffed-bell-peppers.jpg",
+          "description": "Bell peppers stuffed with quinoa and veggies",
+          "price": 10.99
+        }
+      ],
+      "Dessert": [
+        {
+          "menu_id": 37,
+          "name": "Chia Seed Pudding",
+          "img": "https://example.com/chia-seed-pudding.jpg",
+          "description": "Dessert pudding made with chia seeds and almond milk",
+          "price": 6.99
+        },
+        {
+          "menu_id": 38,
+          "name": "Fruit Parfait",
+          "img": "https://example.com/fruit-parfait.jpg",
+          "description": "Layered parfait with fresh fruits and yogurt",
+          "price": 8.99
+        },
+        {
+          "menu_id": 39,
+          "name": "Vegan Chocolate Cake",
+          "img": "https://example.com/vegan-chocolate-cake.jpg",
+          "description": "Moist chocolate cake made without dairy or eggs",
+          "price": 9.99
+        },
+        {
+          "menu_id": 40,
+          "name": "Coconut Sorbet",
+          "img": "https://example.com/coconut-sorbet.jpg",
+          "description": "Creamy sorbet made with coconut milk",
+          "price": 5.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 41,
+          "name": "Green Smoothie",
+          "img": "https://example.com/green-smoothie.jpg",
+          "description": "Healthy smoothie with spinach, banana, and green fruits",
+          "price": 6.99
+        },
+        {
+          "menu_id": 42,
+          "name": "Detox Water",
+          "img": "https://example.com/detox-water.jpg",
+          "description": "Infused water with cucumber, lemon, and mint",
+          "price": 3.99
+        },
+        {
+          "menu_id": 43,
+          "name": "Herbal Tea",
+          "img": "https://example.com/herbal-tea.jpg",
+          "description": "Warm herbal tea with a blend of aromatic herbs",
+          "price": 4.99
+        },
+        {
+          "menu_id": 44,
+          "name": "Fresh Orange Juice",
+          "img": "https://example.com/fresh-orange-juice.jpg",
+          "description": "Squeezed orange juice, rich in Vitamin C",
+          "price": 4.99
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 45,
+          "name": "Avocado Toast",
+          "img": "https://example.com/avocado-toast.jpg",
+          "description": "Toasted bread with mashed avocado and cherry tomatoes",
+          "price": 7.99
+        },
+        {
+          "menu_id": 46,
+          "name": "Cucumber Rolls",
+          "img": "https://example.com/cucumber-rolls.jpg",
+          "description": "Fresh cucumber rolls with cream cheese and herbs",
+          "price": 6.99
+        },
+        {
+          "menu_id": 47,
+          "name": "Kale Chips",
+          "img": "https://example.com/kale-chips.jpg",
+          "description": "Crispy kale chips with sea salt",
+          "price": 5.99
+        },
+        {
+          "menu_id": 48,
+          "name": "Edamame",
+          "img": "https://example.com/edamame.jpg",
+          "description": "Steamed edamame with sea salt",
+          "price": 4.99
+        }
+      ]
+    }
+  },
+
+  {
+    "id": 4,
+    "title": "Spice Kingdom",
+    "img": "https://example.com/spice-kingdom.jpg",
+    "location": "222 Spice Boulevard, Flavortown",
+    "opening_hours": "Mon-Sun: 11:30 AM - 10:30 PM",
+    "menus": {
+      "Main menu": [
+        {
+          "menu_id": 49,
+          "name": "Chicken Curry",
+          "img": "https://example.com/chicken-curry.jpg",
+          "description": "Spicy chicken curry with aromatic spices",
+          "price": 15.99
+        },
+        {
+          "menu_id": 50,
+          "name": "Paneer Tikka Masala",
+          "img": "https://example.com/paneer-tikka-masala.jpg",
+          "description": "Paneer cubes in a creamy tomato-based sauce",
+          "price": 13.99
+        },
+        {
+          "menu_id": 51,
+          "name": "Biryani",
+          "img": "https://example.com/biryani.jpg",
+          "description": "Fragrant rice dish with meat, vegetables, and spices",
+          "price": 17.99
+        },
+        {
+          "menu_id": 52,
+          "name": "Tandoori Mixed Grill",
+          "img": "https://example.com/tandoori-mixed-grill.jpg",
+          "description": "Assorted grilled meats with tandoori spices",
+          "price": 19.99
+        }
+      ],
+      "Dessert": [
+        {
+          "menu_id": 53,
+          "name": "Gulab Jamun",
+          "img": "https://example.com/gulab-jamun.jpg",
+          "description": "Deep-fried dumplings in sugar syrup",
+          "price": 6.99
+        },
+        {
+          "menu_id": 54,
+          "name": "Rasmalai",
+          "img": "https://example.com/rasmalai.jpg",
+          "description": "Soft cheese dumplings in saffron-flavored milk",
+          "price": 7.99
+        },
+        {
+          "menu_id": 55,
+          "name": "Mango Lassi Popsicle",
+          "img": "https://example.com/mango-lassi-popsicle.jpg",
+          "description": "Refreshing mango lassi in frozen popsicle form",
+          "price": 4.99
+        },
+        {
+          "menu_id": 56,
+          "name": "Kheer",
+          "img": "https://example.com/kheer.jpg",
+          "description": "Creamy rice pudding with cardamom and nuts",
+          "price": 8.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 57,
+          "name": "Masala Chai",
+          "img": "https://example.com/masala-chai.jpg",
+          "description": "Spiced tea with aromatic Indian spices",
+          "price": 3.99
+        },
+        {
+          "menu_id": 58,
+          "name": "Mango Lassi",
+          "img": "https://example.com/mango-lassi.jpg",
+          "description": "Yogurt-based drink with fresh mango pulp",
+          "price": 4.99
+        },
+        {
+          "menu_id": 59,
+          "name": "Rose Sharbat",
+          "img": "https://example.com/rose-sharbat.jpg",
+          "description": "Rose-flavored syrup mixed with water",
+          "price": 3.99
+        },
+        {
+          "menu_id": 60,
+          "name": "Thandai",
+          "img": "https://example.com/thandai.jpg",
+          "description": "Cooling drink with almonds, fennel, and cardamom",
+          "price": 5.99
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 61,
+          "name": "Samosa",
+          "img": "https://example.com/samosa.jpg",
+          "description": "Crispy pastry filled with spiced potatoes and peas",
+          "price": 4.99
+        },
+        {
+          "menu_id": 62,
+          "name": "Chicken Pakora",
+          "img": "https://example.com/chicken-pakora.jpg",
+          "description": "Deep-fried chicken fritters with spices",
+          "price": 6.99
+        },
+        {
+          "menu_id": 63,
+          "name": "Papdi Chaat",
+          "img": "https://example.com/papdi-chaat.jpg",
+          "description": "Crunchy snack with yogurt, chutney, and spices",
+          "price": 5.99
+        },
+        {
+          "menu_id": 64,
+          "name": "Aloo Tikki",
+          "img": "https://example.com/aloo-tikki.jpg",
+          "description": "Fried potato patties with mint chutney",
+          "price": 4.99
+        }
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "title": "Ocean Grill",
+    "img": "https://example.com/ocean-grill.jpg",
+    "location": "555 Seafood Avenue, Marinetown",
+    "opening_hours": "Wed-Sat: 5:00 PM - 11:00 PM, Sun: 4:00 PM - 9:00 PM",
+    "menus": {
+      "Main menu": [
+        {
+          "menu_id": 65,
+          "name": "Grilled Lobster Tail",
+          "img": "https://example.com/grilled-lobster-tail.jpg",
+          "description": "Butter-grilled lobster tail served with garlic butter",
+          "price": 29.99
+        },
+        {
+          "menu_id": 66,
+          "name": "Seafood Paella",
+          "img": "https://example.com/seafood-paella.jpg",
+          "description": "Spanish rice dish with a mix of seafood",
+          "price": 25.99
+        },
+        {
+          "menu_id": 67,
+          "name": "Blackened Mahi-Mahi",
+          "img": "https://example.com/blackened-mahi-mahi.jpg",
+          "description": "Spicy blackened mahi-mahi fillet",
+          "price": 22.99
+        },
+        {
+          "menu_id": 68,
+          "name": "Sushi Platter",
+          "img": "https://example.com/sushi-platter.jpg",
+          "description": "Assorted sushi rolls with soy sauce and wasabi",
+          "price": 27.99
+        }
+      ],
+      "Dessert": [
+        {
+          "menu_id": 69,
+          "name": "Key Lime Pie",
+          "img": "https://example.com/key-lime-pie.jpg",
+          "description": "Florida-style key lime pie with graham cracker crust",
+          "price": 8.99
+        },
+        {
+          "menu_id": 70,
+          "name": "Coconut Panna Cotta",
+          "img": "https://example.com/coconut-panna-cotta.jpg",
+          "description": "Coconut-flavored Italian dessert with tropical fruit",
+          "price": 9.99
+        },
+        {
+          "menu_id": 71,
+          "name": "Mango Sorbet",
+          "img": "https://example.com/mango-sorbet.jpg",
+          "description": "Refreshing sorbet made with fresh mangoes",
+          "price": 6.99
+        },
+        {
+          "menu_id": 72,
+          "name": "Chocolate Sea Shells",
+          "img": "https://example.com/chocolate-sea-shells.jpg",
+          "description": "Chocolates shaped like seashells with a smooth filling",
+          "price": 10.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 73,
+          "name": "Pineapple Coconut Mojito",
+          "img": "https://example.com/pineapple-coconut-mojito.jpg",
+          "description": "Tropical twist on the classic mojito",
+          "price": 7.99
+        },
+        {
+          "menu_id": 74,
+          "name": "Blue Lagoon",
+          "img": "https://example.com/blue-lagoon.jpg",
+          "description": "Blue curaçao cocktail with vodka and lemonade",
+          "price": 8.99
+        },
+        {
+          "menu_id": 75,
+          "name": "Frozen Margarita",
+          "img": "https://example.com/frozen-margarita.jpg",
+          "description": "Blended margarita with a salted rim",
+          "price": 6.99
+        },
+        {
+          "menu_id": 76,
+          "name": "Cucumber Mint Cooler",
+          "img": "https://example.com/cucumber-mint-cooler.jpg",
+          "description": "Cooling drink with cucumber, mint, and lime",
+          "price": 5.99
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 77,
+          "name": "Crab Cakes",
+          "img": "https://example.com/crab-cakes.jpg",
+          "description": "Golden-brown crab cakes served with aioli",
+          "price": 9.99
+        },
+        {
+          "menu_id": 78,
+          "name": "Calamari Rings",
+          "img": "https://example.com/calamari-rings.jpg",
+          "description": "Crispy calamari rings with marinara sauce",
+          "price": 8.99
+        },
+        {
+          "menu_id": 79,
+          "name": "Clam Chowder",
+          "img": "https://example.com/clam-chowder.jpg",
+          "description": "Creamy New England clam chowder",
+          "price": 7.99
+        },
+        {
+          "menu_id": 80,
+          "name": "Seared Tuna Bites",
+          "img": "https://example.com/seared-tuna-bites.jpg",
+          "description": "Sesame-crusted seared tuna bites with wasabi mayo",
+          "price": 11.99
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "title": "Veggie Delight",
+    "img": "https://example.com/veggie-delight.jpg",
+    "location": "777 Green Avenue, Vegantown",
+    "opening_hours": "Tue-Sat: 11:00 AM - 9:00 PM, Sun: 12:00 PM - 7:00 PM",
+    "menus": {
+      "Main menu": [
+        {
+          "menu_id": 81,
+          "name": "Vegan Buddha Bowl",
+          "img": "https://example.com/vegan-buddha-bowl.jpg",
+          "description": "Nutrient-packed bowl with grains, veggies, and plant-based protein",
+          "price": 14.99
+        },
+        {
+          "menu_id": 82,
+          "name": "Eggplant Parmesan",
+          "img": "https://example.com/eggplant-parmesan.jpg",
+          "description": "Baked eggplant with marinara sauce and vegan cheese",
+          "price": 12.99
+        },
+        {
+          "menu_id": 83,
+          "name": "Chickpea Curry",
+          "img": "https://example.com/chickpea-curry.jpg",
+          "description": "Spicy chickpea curry served with basmati rice",
+          "price": 13.99
+        },
+        {
+          "menu_id": 84,
+          "name": "Vegetarian Sushi Rolls",
+          "img": "https://example.com/vegetarian-sushi-rolls.jpg",
+          "description": "Assorted sushi rolls with a variety of vegetables",
+          "price": 15.99
+        }
+      ],
+      "Dessert": [
+        {
+          "menu_id": 85,
+          "name": "Vegan Chocolate Mousse",
+          "img": "https://example.com/vegan-chocolate-mousse.jpg",
+          "description": "Silky chocolate mousse made without dairy or eggs",
+          "price": 7.99
+        },
+        {
+          "menu_id": 86,
+          "name": "Fruit Sorbet Cones",
+          "img": "https://example.com/fruit-sorbet-cones.jpg",
+          "description": "Colorful fruit sorbet in crispy cones",
+          "price": 6.99
+        },
+        {
+          "menu_id": 87,
+          "name": "Coconut Bliss Balls",
+          "img": "https://example.com/coconut-bliss-balls.jpg",
+          "description": "Energy balls made with coconut, dates, and nuts",
+          "price": 8.99
+        },
+        {
+          "menu_id": 88,
+          "name": "Vegan Cheesecake",
+          "img": "https://example.com/vegan-cheesecake.jpg",
+          "description": "Creamy cheesecake made with plant-based ingredients",
+          "price": 9.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 89,
+          "name": "Green Detox Smoothie",
+          "img": "https://example.com/green-detox-smoothie.jpg",
+          "description": "Refreshing smoothie with kale, cucumber, and green fruits",
+          "price": 6.99
+        },
+        {
+          "menu_id": 90,
+          "name": "Almond Milk Latte",
+          "img": "https://example.com/almond-milk-latte.jpg",
+          "description": "Coffee latte made with almond milk",
+          "price": 4.99
+        },
+        {
+          "menu_id": 91,
+          "name": "Hibiscus Iced Tea",
+          "img": "https://example.com/hibiscus-iced-tea.jpg",
+          "description": "Iced tea infused with hibiscus petals",
+          "price": 3.99
+        },
+        {
+          "menu_id": 92,
+          "name": "Sparkling Cucumber Mint Lemonade",
+          "img": "https://example.com/sparkling-cucumber-mint-lemonade.jpg",
+          "description": "Bubbly lemonade with cucumber and mint",
+          "price": 5.99
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 93,
+          "name": "Avocado Spring Rolls",
+          "img": "https://example.com/avocado-spring-rolls.jpg",
+          "description": "Fresh spring rolls with avocado, veggies, and peanut sauce",
+          "price": 7.99
+        },
+        {
+          "menu_id": 94,
+          "name": "Sweet Potato Fries",
+          "img": "https://example.com/sweet-potato-fries.jpg",
+          "description": "Crispy sweet potato fries with vegan aioli",
+          "price": 5.99
+        },
+        {
+          "menu_id": 95,
+          "name": "Quinoa Stuffed Mushrooms",
+          "img": "https://example.com/quinoa-stuffed-mushrooms.jpg",
+          "description": "Mushroom caps filled with quinoa and herbs",
+          "price": 8.99
+        },
+        {
+          "menu_id": 96,
+          "name": "Kale Chips",
+          "img": "https://example.com/kale-chips.jpg",
+          "description": "Baked kale chips with nutritional yeast",
+          "price": 4.99
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "title": "Mediterranean Flavors",
+    "img": "https://example.com/mediterranean-flavors.jpg",
+    "location": "456 Olive Street, Meditown",
+    "opening_hours": "Mon-Sat: 12:00 PM - 10:00 PM, Sun: 1:00 PM - 9:00 PM",
+    "menus": {
+      "Main menu": [
+        {
+          "menu_id": 97,
+          "name": "Greek Salad",
+          "img": "https://example.com/greek-salad.jpg",
+          "description": "Classic Greek salad with feta and olives",
+          "price": 12.99
+        },
+        {
+          "menu_id": 98,
+          "name": "Moussaka",
+          "img": "https://example.com/moussaka.jpg",
+          "description": "Layered casserole with eggplant, minced meat, and béchamel",
+          "price": 15.99
+        },
+        {
+          "menu_id": 99,
+          "name": "Grilled Lamb Chops",
+          "img": "https://example.com/grilled-lamb-chops.jpg",
+          "description": "Tender lamb chops marinated and grilled to perfection",
+          "price": 18.99
+        },
+        {
+          "menu_id": 100,
+          "name": "Falafel Platter",
+          "img": "https://example.com/falafel-platter.jpg",
+          "description": "Crispy falafel served with hummus and tahini",
+          "price": 13.99
+        }
+      ],
+      "Dessert": [
+        {
+          "menu_id": 101,
+          "name": "Baklava",
+          "img": "https://example.com/baklava.jpg",
+          "description": "Sweet pastry layers with nuts and honey syrup",
+          "price": 8.99
+        },
+        {
+          "menu_id": 102,
+          "name": "Galaktoboureko",
+          "img": "https://example.com/galaktoboureko.jpg",
+          "description": "Custard-filled phyllo pastry with sweet syrup",
+          "price": 9.99
+        },
+        {
+          "menu_id": 103,
+          "name": "Raspberry Yogurt Parfait",
+          "img": "https://example.com/raspberry-yogurt-parfait.jpg",
+          "description": "Yogurt parfait with fresh raspberries and granola",
+          "price": 7.99
+        },
+        {
+          "menu_id": 104,
+          "name": "Orange Blossom Sorbet",
+          "img": "https://example.com/orange-blossom-sorbet.jpg",
+          "description": "Refreshing sorbet infused with orange blossom flavor",
+          "price": 6.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 105,
+          "name": "Mediterranean Lemonade",
+          "img": "https://example.com/mediterranean-lemonade.jpg",
+          "description": "Lemonade with a Mediterranean twist",
+          "price": 4.99
+        },
+        {
+          "menu_id": 106,
+          "name": "Tzatziki Mint Cooler",
+          "img": "https://example.com/tzatziki-mint-cooler.jpg",
+          "description": "Cooling drink with tzatziki flavors and mint",
+          "price": 5.99
+        },
+        {
+          "menu_id": 107,
+          "name": "Olive Martini",
+          "img": "https://example.com/olive-martini.jpg",
+          "description": "Martini with a hint of olive brine",
+          "price": 7.99
+        },
+        {
+          "menu_id": 108,
+          "name": "Pomegranate Sparkler",
+          "img": "https://example.com/pomegranate-sparkler.jpg",
+          "description": "Bubbly drink with pomegranate and sparkling water",
+          "price": 6.99
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 109,
+          "name": "Spanakopita",
+          "img": "https://example.com/spanakopita.jpg",
+          "description": "Spinach and feta-filled pastry triangles",
+          "price": 7.99
+        },
+        {
+          "menu_id": 110,
+          "name": "Stuffed Grape Leaves",
+          "img": "https://example.com/stuffed-grape-leaves.jpg",
+          "description": "Grape leaves stuffed with rice and herbs",
+          "price": 6.99
+        },
+        {
+          "menu_id": 111,
+          "name": "Mediterranean Hummus Platter",
+          "img": "https://example.com/mediterranean-hummus-platter.jpg",
+          "description": "Hummus served with olives, tomatoes, and pita",
+          "price": 8.99
+        },
+        {
+          "menu_id": 112,
+          "name": "Zucchini Fritters",
+          "img": "https://example.com/zucchini-fritters.jpg",
+          "description": "Crispy zucchini fritters with tzatziki sauce",
+          "price": 5.99
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "title": "Sizzling Steaks",
+    "img": "https://example.com/sizzling-steaks.jpg",
+    "location": "123 Grill Street, Meatropolis",
+    "opening_hours": "Tue-Sun: 5:00 PM - 11:00 PM",
+    "menus": {
+      "Main menu": [
+        {
+          "menu_id": 113,
+          "name": "Filet Mignon",
+          "img": "https://example.com/filet-mignon.jpg",
+          "description": "Tender filet mignon steak cooked to perfection",
+          "price": 29.99
+        },
+        {
+          "menu_id": 114,
+          "name": "Ribeye Steak",
+          "img": "https://example.com/ribeye-steak.jpg",
+          "description": "Juicy ribeye steak with marbling for extra flavor",
+          "price": 26.99
+        },
+        {
+          "menu_id": 115,
+          "name": "New York Strip",
+          "img": "https://example.com/new-york-strip.jpg",
+          "description": "Classic New York strip steak, well-seasoned and grilled",
+          "price": 24.99
+        },
+        {
+          "menu_id": 116,
+          "name": "T-bone Steak",
+          "img": "https://example.com/t-bone-steak.jpg",
+          "description": "A combination of tenderloin and strip steak on the bone",
+          "price": 31.99
+        }
+      ],
+      "Dessert": [
+        {
+          "menu_id": 117,
+          "name": "Chocolate Lava Cake",
+          "img": "https://example.com/chocolate-lava-cake.jpg",
+          "description": "Warm chocolate cake with a gooey molten center",
+          "price": 9.99
+        },
+        {
+          "menu_id": 118,
+          "name": "Cheesecake Sampler",
+          "img": "https://example.com/cheesecake-sampler.jpg",
+          "description": "Assorted cheesecake slices with different toppings",
+          "price": 10.99
+        },
+        {
+          "menu_id": 119,
+          "name": "Creme Brulee",
+          "img": "https://example.com/creme-brulee.jpg",
+          "description": "Rich custard with a caramelized sugar crust",
+          "price": 8.99
+        },
+        {
+          "menu_id": 120,
+          "name": "Berry Parfait",
+          "img": "https://example.com/berry-parfait.jpg",
+          "description": "Layers of berries, cream, and granola in a glass",
+          "price": 7.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 121,
+          "name": "Classic Martini",
+          "img": "https://example.com/classic-martini.jpg",
+          "description": "The timeless martini with gin or vodka",
+          "price": 8.99
+        },
+        {
+          "menu_id": 122,
+          "name": "Red Wine Sangria",
+          "img": "https://example.com/red-wine-sangria.jpg",
+          "description": "Fruity sangria made with red wine and fresh fruits",
+          "price": 7.99
+        },
+        {
+          "menu_id": 123,
+          "name": "Espresso Martini",
+          "img": "https://example.com/espresso-martini.jpg",
+          "description": "Coffee-flavored cocktail with vodka and espresso",
+          "price": 9.99
+        },
+        {
+          "menu_id": 124,
+          "name": "Sparkling Water",
+          "img": "https://example.com/sparkling-water.jpg",
+          "description": "Refreshing sparkling water with a hint of lemon",
+          "price": 3.99
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 125,
+          "name": "Garlic Butter Shrimp",
+          "img": "https://example.com/garlic-butter-shrimp.jpg",
+          "description": "Plump shrimp cooked in garlic butter sauce",
+          "price": 12.99
+        },
+        {
+          "menu_id": 126,
+          "name": "Mushroom Bruschetta",
+          "img": "https://example.com/mushroom-bruschetta.jpg",
+          "description": "Toasted bread with savory mushroom topping",
+          "price": 9.99
+        },
+        {
+          "menu_id": 127,
+          "name": "Spinach Artichoke Dip",
+          "img": "https://example.com/spinach-artichoke-dip.jpg",
+          "description": "Creamy dip with spinach, artichokes, and cheese",
+          "price": 8.99
+        },
+        {
+          "menu_id": 128,
+          "name": "Loaded Potato Skins",
+          "img": "https://example.com/loaded-potato-skins.jpg",
+          "description": "Potato skins filled with cheese, bacon, and sour cream",
+          "price": 10.99
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "title": "Café Aroma",
+    "img": "https://example.com/cafe-aroma.jpg",
+    "location": "789 Espresso Lane, Coffeeville",
+    "opening_hours": "Mon-Sat: 7:00 AM - 8:00 PM, Sun: 8:00 AM - 6:00 PM",
+    "menus": {
+      "Coffee": [
+        {
+          "menu_id": 129,
+          "name": "Espresso",
+          "img": "https://example.com/espresso.jpg",
+          "description": "Strong and concentrated black coffee",
+          "price": 3.99
+        },
+        {
+          "menu_id": 130,
+          "name": "Cappuccino",
+          "img": "https://example.com/cappuccino.jpg",
+          "description": "Espresso with steamed milk foam and a sprinkle of cocoa",
+          "price": 4.99
+        },
+        {
+          "menu_id": 131,
+          "name": "Latte",
+          "img": "https://example.com/latte.jpg",
+          "description": "Espresso with steamed milk and a touch of foam",
+          "price": 5.99
+        },
+        {
+          "menu_id": 132,
+          "name": "Americano",
+          "img": "https://example.com/americano.jpg",
+          "description": "Diluted espresso with hot water, similar to drip coffee",
+          "price": 4.49
+        }
+      ],
+      "Bakery": [
+        {
+          "menu_id": 133,
+          "name": "Croissant",
+          "img": "https://example.com/croissant.jpg",
+          "description": "Flaky and buttery pastry",
+          "price": 2.49
+        },
+        {
+          "menu_id": 134,
+          "name": "Cinnamon Roll",
+          "img": "https://example.com/cinnamon-roll.jpg",
+          "description": "Sweet roll with cinnamon sugar and icing",
+          "price": 3.49
+        },
+        {
+          "menu_id": 135,
+          "name": "Blueberry Muffin",
+          "img": "https://example.com/blueberry-muffin.jpg",
+          "description": "Moist muffin with blueberries",
+          "price": 2.99
+        },
+        {
+          "menu_id": 136,
+          "name": "Chocolate Croissant",
+          "img": "https://example.com/chocolate-croissant.jpg",
+          "description": "Croissant filled with chocolate",
+          "price": 3.99
+        }
+      ],
+      "Tea": [
+        {
+          "menu_id": 137,
+          "name": "Earl Grey",
+          "img": "https://example.com/earl-grey.jpg",
+          "description": "Black tea flavored with bergamot oil",
+          "price": 4.99
+        },
+        {
+          "menu_id": 138,
+          "name": "Green Tea",
+          "img": "https://example.com/green-tea.jpg",
+          "description": "Light and refreshing green tea",
+          "price": 3.99
+        },
+        {
+          "menu_id": 139,
+          "name": "Chai Latte",
+          "img": "https://example.com/chai-latte.jpg",
+          "description": "Spiced tea with steamed milk",
+          "price": 5.49
+        },
+        {
+          "menu_id": 140,
+          "name": "Peppermint Herbal Tea",
+          "img": "https://example.com/peppermint-herbal-tea.jpg",
+          "description": "Caffeine-free herbal tea with peppermint",
+          "price": 4.49
+        }
+      ],
+      "Snacks": [
+        {
+          "menu_id": 141,
+          "name": "Avocado Toast",
+          "img": "https://example.com/avocado-toast.jpg",
+          "description": "Toasted bread with mashed avocado and cherry tomatoes",
+          "price": 6.99
+        },
+        {
+          "menu_id": 142,
+          "name": "Bagel with Cream Cheese",
+          "img": "https://example.com/bagel-with-cream-cheese.jpg",
+          "description": "Freshly baked bagel with cream cheese",
+          "price": 4.99
+        },
+        {
+          "menu_id": 143,
+          "name": "Caprese Panini",
+          "img": "https://example.com/caprese-panini.jpg",
+          "description": "Grilled panini with mozzarella, tomato, and basil",
+          "price": 7.99
+        },
+        {
+          "menu_id": 144,
+          "name": "Granola Parfait",
+          "img": "https://example.com/granola-parfait.jpg",
+          "description": "Layered parfait with yogurt, granola, and fresh fruits",
+          "price": 5.99
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "title": "Tasty Tacos",
+    "img": "https://example.com/tasty-tacos.jpg",
+    "location": "567 Salsa Street, Tacotown",
+    "opening_hours": "Mon-Sat: 11:00 AM - 9:00 PM, Sun: 12:00 PM - 8:00 PM",
+    "menus": {
+      "Tacos": [
+        {
+          "menu_id": 145,
+          "name": "Classic Beef Taco",
+          "img": "https://example.com/classic-beef-taco.jpg",
+          "description": "Seasoned ground beef, lettuce, cheese, and salsa",
+          "price": 3.99
+        },
+        {
+          "menu_id": 146,
+          "name": "Grilled Chicken Taco",
+          "img": "https://example.com/grilled-chicken-taco.jpg",
+          "description": "Grilled chicken, pico de gallo, lettuce, and sour cream",
+          "price": 4.49
+        },
+        {
+          "menu_id": 147,
+          "name": "Vegetarian Taco",
+          "img": "https://example.com/vegetarian-taco.jpg",
+          "description": "Sauteed vegetables, black beans, guacamole, and salsa",
+          "price": 3.99
+        },
+        {
+          "menu_id": 148,
+          "name": "Shrimp Taco",
+          "img": "https://example.com/shrimp-taco.jpg",
+          "description": "Garlic butter shrimp, cabbage slaw, and cilantro-lime sauce",
+          "price": 4.99
+        }
+      ],
+      "Burritos": [
+        {
+          "menu_id": 149,
+          "name": "Beef and Bean Burrito",
+          "img": "https://example.com/beef-and-bean-burrito.jpg",
+          "description": "Beef, refried beans, rice, cheese, and salsa",
+          "price": 7.99
+        },
+        {
+          "menu_id": 150,
+          "name": "Carnitas Burrito",
+          "img": "https://example.com/carnitas-burrito.jpg",
+          "description": "Slow-cooked pork, black beans, rice, and guacamole",
+          "price": 8.49
+        },
+        {
+          "menu_id": 151,
+          "name": "Veggie Quinoa Burrito",
+          "img": "https://example.com/veggie-quinoa-burrito.jpg",
+          "description": "Quinoa, black beans, sauteed vegetables, and salsa",
+          "price": 7.49
+        },
+        {
+          "menu_id": 152,
+          "name": "Barbacoa Burrito",
+          "img": "https://example.com/barbacoa-burrito.jpg",
+          "description": "Shredded beef, pinto beans, rice, and chipotle sauce",
+          "price": 8.99
+        }
+      ],
+      "Nachos": [
+        {
+          "menu_id": 153,
+          "name": "Supreme Nachos",
+          "img": "https://example.com/supreme-nachos.jpg",
+          "description": "Tortilla chips topped with beef, cheese, guacamole, and sour cream",
+          "price": 9.99
+        },
+        {
+          "menu_id": 154,
+          "name": "Vegetarian Nachos",
+          "img": "https://example.com/vegetarian-nachos.jpg",
+          "description": "Tortilla chips topped with black beans, cheese, salsa, and jalapeños",
+          "price": 8.99
+        },
+        {
+          "menu_id": 155,
+          "name": "Chicken Tinga Nachos",
+          "img": "https://example.com/chicken-tinga-nachos.jpg",
+          "description": "Shredded chicken tinga, queso, pico de gallo, and pickled jalapeños",
+          "price": 10.49
+        },
+        {
+          "menu_id": 156,
+          "name": "Seafood Nachos",
+          "img": "https://example.com/seafood-nachos.jpg",
+          "description": "Mixed seafood, cheese, avocado, and chipotle mayo",
+          "price": 11.99
+        }
+      ],
+      "Drinks": [
+        {
+          "menu_id": 157,
+          "name": "Horchata",
+          "img": "https://example.com/horchata.jpg",
+          "description": "Sweet rice milk flavored with cinnamon",
+          "price": 2.99
+        },
+        {
+          "menu_id": 158,
+          "name": "Agua Fresca",
+          "img": "https://example.com/agua-fresca.jpg",
+          "description": "Refreshing fruit-infused water",
+          "price": 2.49
+        },
+        {
+          "menu_id": 159,
+          "name": "Mexican Soda",
+          "img": "https://example.com/mexican-soda.jpg",
+          "description": "Imported Mexican sodas in various flavors",
+          "price": 1.99
+        },
+        {
+          "menu_id": 160,
+          "name": "Margarita",
+          "img": "https://example.com/margarita.jpg",
+          "description": "Classic lime margarita with salted rim",
+          "price": 7.99
+        }
+      ]
+    }
+  }
+]
