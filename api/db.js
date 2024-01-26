@@ -13,33 +13,34 @@ db.serialize(() => {
         db.run(
           `CREATE TABLE restaurants (
             id INTEGER PRIMARY KEY,
-            name TEXT NOT NULL,
-            image TEXT,
+            title TEXT NOT NULL,
+            img TEXT,
             description TEXT,
-            address TEXT,
-            opening_time DATETIME
+            location TEXT,
+            opening_hours TEXT
         )`,
           (err) => {
             if (!err) {
               // Insert sample data into the restaurants table
               const restaurantStmt = db.prepare(`
-                INSERT INTO restaurants (name, image, description, address, opening_time)
+                INSERT INTO restaurants (title, img, description, location, opening_hours)
                 VALUES (?, ?, ?, ?, ?)
                 `);
 
               restaurantStmt.run(
                 "Restaurant A",
-                "",
+                "https://example.com/tasty-bites.jpg",
                 "A cozy place",
-                "123 Main St",
-                "2024-01-25 12:00:00"
+                "123 Main Street, Cityville",
+                "Mon-Sat: 11:00 AM - 10:00 PM, Sun: 12:00 PM - 8:00 PM"
               );
+
               restaurantStmt.run(
                 "Restaurant B",
-                "",
+                "https://example.com/sizzling-grill.jpg",
                 "Family-friendly",
                 "456 Oak St",
-                "2024-01-25 18:00:00"
+                "Mon-Sun: 12:00 PM - 11:00 PM"
               );
 
               restaurantStmt.finalize();
@@ -59,7 +60,7 @@ db.serialize(() => {
           `CREATE TABLE menus (
             id INTEGER PRIMARY KEY,
             name TEXT NOT NULL,
-            image TEXT,
+            img TEXT,
             description TEXT,
             price REAL NOT NULL,
             category TEXT NOT NULL,
@@ -70,13 +71,13 @@ db.serialize(() => {
             if (!err) {
               // Insert sample data into the menus table
               const menuStmt = db.prepare(`
-                  INSERT INTO menus (name, image, description, price, category, restaurant_id)
+                  INSERT INTO menus (name, img, description, price, category, restaurant_id)
                   VALUES (?, ?, ?, ?, ?, ?)
                   `);
 
               menuStmt.run(
                 "Menu 1",
-                "",
+                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
                 "Delicious starters",
                 10.99,
                 "Main Dish",
@@ -84,14 +85,28 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Menu 2",
-                "",
+                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
                 "Special main courses",
                 19.99,
                 "Drinks",
                 1
               );
-              menuStmt.run("Menu 3", "", "Kids menu", 7.99, "Dessert", 2);
-              menuStmt.run("Menu 4", "", "Desserts", 8.99, "Main Dish", 2);
+              menuStmt.run(
+                "Menu 3",
+                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "Kids menu",
+                7.99,
+                "Dessert",
+                2
+              );
+              menuStmt.run(
+                "Menu 4",
+                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "Desserts",
+                8.99,
+                "Main Dish",
+                2
+              );
 
               menuStmt.finalize();
             }

@@ -14,8 +14,8 @@ const routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
-        loader: () => fetch("data.json"),
+        element: <Home />,
+        loader: () => fetch("http://localhost:4000/api/restaurants"),
       },
       {
         path: "/contact",
@@ -27,8 +27,8 @@ const routes = createBrowserRouter([
       },
       {
         path: "/menus/:id",
-        element: <Menus></Menus>,
-        loader: () => fetch("/public/data.json"),
+        element: <Menus />,
+        // loader: () => fetch("/public/data.json"),
       },
       {
         path: "/my-order",

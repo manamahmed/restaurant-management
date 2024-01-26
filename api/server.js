@@ -1,10 +1,13 @@
 const express = require("express");
+const cors = require("cors");
+
 const restaurantsRouter = require("./routes/restaurantsRouter.js");
 
 const app = express();
 
 // Middleware to parse JSON data
 app.use(express.json());
+app.use(cors());
 
 app.use(restaurantsRouter);
 
