@@ -29,7 +29,7 @@ db.serialize(() => {
 
               restaurantStmt.run(
                 "Restaurant A",
-                "https://example.com/tasty-bites.jpg",
+                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
                 "A cozy place",
                 "123 Main Street, Cityville",
                 "Mon-Sat: 11:00 AM - 10:00 PM, Sun: 12:00 PM - 8:00 PM"
@@ -37,7 +37,7 @@ db.serialize(() => {
 
               restaurantStmt.run(
                 "Restaurant B",
-                "https://example.com/sizzling-grill.jpg",
+                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
                 "Family-friendly",
                 "456 Oak St",
                 "Mon-Sun: 12:00 PM - 11:00 PM"

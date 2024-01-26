@@ -26,9 +26,8 @@ const routes = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
-        path: "/menus/:id",
+        path: "/restaurants/:id",
         element: <Menus />,
-        // loader: () => fetch("/public/data.json"),
       },
       {
         path: "/my-order",
@@ -36,7 +35,7 @@ const routes = createBrowserRouter([
         loader: () => fetch("/public/data.json"),
       },
       { path: "/login", element: <Login></Login> },
-      { path: "/register", element: <Register></Register>},
+      { path: "/register", element: <Register></Register> },
     ],
   },
 ]);
