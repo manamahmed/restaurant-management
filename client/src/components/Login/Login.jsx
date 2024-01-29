@@ -1,21 +1,62 @@
-import { Link } from "react-router-dom";
-
-
-
-
-
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const { signIn, signInWithGoogle } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log(email, password);
+
+    signIn(email, password)
+      .then((data) => {
+        console.log(data.user);
+        Swal.fire({
+          title: "Good job!",
+          text: "Login Successful!",
+          icon: "success",
+        });
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    //  Create user
+    signInWithGoogle()
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire({
+          title: "Good job!",
+          text: "Login Successful!",
+          icon: "success",
+        });
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col">
           <div className="text-center lg:text-left">
             <h1 className="text-5xl font-bold mb-12">Login now</h1>
-           
           </div>
           <div className="card shrink-0 w-[500px]  shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -25,6 +66,7 @@ const Login = () => {
                   placeholder="email"
                   className="input input-bordered"
                   required
+                  name="email"
                 />
               </div>
               <div className="form-control">
@@ -36,6 +78,7 @@ const Login = () => {
                   placeholder="password"
                   className="input input-bordered"
                   required
+                  name="password"
                 />
                 <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
@@ -47,6 +90,13 @@ const Login = () => {
                 <button className="btn btn-primary">Login</button>
               </div>
             </form>
+            <div onClick={handleGoogleSignIn} className="text-center">
+              or signUp with <br />
+              <button className="  btn btn-outline w-[440px] mt-4">
+                <FaGoogle className="text-blue-500 text-xl"></FaGoogle>
+                <span className="text-blue-500 text-l">Login With Google</span>
+              </button>
+            </div>
             <p className="text-center p-2 mb-2">
               New Here ?
               <Link to={"/register"}>

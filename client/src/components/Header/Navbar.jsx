@@ -1,20 +1,46 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          title: "Good job!",
+          text: "Logout Successful!",
+          icon: "success",
+        });
+        navigate("/");
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+        console.log(error);
+      });
+  };
+
   const links = (
     <>
       <li>
-      <NavLink to={"/"}>Home</NavLink>
+        <NavLink to={"/"}>Home</NavLink>
       </li>
       <li>
-      <NavLink to={"/contact"}>Contact Us</NavLink>
+        <NavLink to={"/contact"}>Contact Us</NavLink>
       </li>
       <li>
-      <NavLink to={"/blog"}>Blog</NavLink>
+        <NavLink to={"/blog"}>Blog</NavLink>
       </li>
       <li>
-      <NavLink to={"/my-order"}>My Order</NavLink>
+        <NavLink to={"/my-order"}>My Order</NavLink>
       </li>
     </>
   );
@@ -52,9 +78,17 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <Link to={"/login"}>
-            <button className="btn">Login</button>
-          </Link>
+          {user?.email ? (
+            <>
+              <button onClick={handleLogout} className="btn btn-secondary">
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link to={"/login"}>
+              <button className="btn btn-secondary">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
