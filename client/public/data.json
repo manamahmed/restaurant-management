@@ -9,7 +9,7 @@
       "Main menu": [
         {
           "menu_id": 1,
-          "name": "Spaghetti Bolognese",
+          "name": "https://i.ibb.co/JqqrGMf/afif-ramdhasuma-omcpmrw4f-Kw-unsplash.jpg",
           "img": "https://example.com/spaghetti.jpg",
           "description": "Classic Italian pasta with rich meat sauce",
           "price": 12.99
@@ -17,21 +17,21 @@
         {
           "menu_id": 2,
           "name": "Chicken Alfredo",
-          "img": "https://example.com/chicken-alfredo.jpg",
+          "img": "https://i.ibb.co/XLxpHqs/farhad-ibrahimzade-n02-DKJ1fi-K0-unsplash.jpg",
           "description": "Creamy Alfredo sauce with grilled chicken",
           "price": 14.99
         },
         {
           "menu_id": 3,
           "name": "Margherita Pizza",
-          "img": "https://example.com/margherita-pizza.jpg",
+          "img": "https://i.ibb.co/KVXdGjK/freshly-italian-pizza-with-mozzarella-cheese-slice-generative-ai-1.jpg",
           "description": "Fresh tomatoes, mozzarella, and basil",
           "price": 10.99
         },
         {
           "menu_id": 4,
           "name": "Grilled Salmon",
-          "img": "https://example.com/grilled-salmon.jpg",
+          "img": "https://i.ibb.co/Qp3PqBD/giovanna-gomes-qe-Mf-OXm-DWp-A-unsplash.jpg",
           "description": "Grilled salmon fillet with lemon and herbs",
           "price": 16.99
         }
@@ -139,28 +139,28 @@
         {
           "menu_id": 17,
           "name": "Steak with Chimichurri",
-          "img": "https://example.com/steak-chimichurri.jpg",
+          "img": "https://i.ibb.co/Yyqfn4T/louis-hansel-m-VZ-gjm-TOk-unsplash.jpg",
           "description": "Grilled steak with tangy chimichurri sauce",
           "price": 18.99
         },
         {
           "menu_id": 18,
           "name": "BBQ Ribs",
-          "img": "https://example.com/bbq-ribs.jpg",
+          "img": "https://i.ibb.co/JdDPNqs/louis-hansel-SQczzy-Gkmp-U-unsplash.jpg",
           "description": "Slow-cooked BBQ ribs with smoky flavor",
           "price": 16.99
         },
         {
           "menu_id": 19,
           "name": "Shrimp Scampi",
-          "img": "https://example.com/shrimp-scampi.jpg",
+          "img": "https://i.ibb.co/zSVLWk4/marika-sartori-KTLFh-RO1-Sds-unsplash.jpg",
           "description": "Garlic butter shrimp served over pasta",
           "price": 20.99
         },
         {
           "menu_id": 20,
           "name": "Vegetarian Stir-Fry",
-          "img": "https://example.com/vegetarian-stir-fry.jpg",
+          "img": "https://i.ibb.co/r3p7mhG/marika-sartori-ZD-CEnh-S630-unsplash.jpg",
           "description": "Assorted vegetables stir-fried to perfection",
           "price": 14.99
         }
@@ -169,14 +169,14 @@
         {
           "menu_id": 21,
           "name": "Apple Pie",
-          "img": "https://example.com/apple-pie.jpg",
+          "img": "https://i.ibb.co/sPT943F/mark-konig-Myfb-M2-QYF4o-unsplash.jpg",
           "description": "Homemade apple pie with a flaky crust",
           "price": 8.99
         },
         {
           "menu_id": 22,
           "name": "Molten Lava Cake",
-          "img": "https://example.com/molten-lava-cake.jpg",
+          "img": "https://i.ibb.co/sPT943F/mark-konig-Myfb-M2-QYF4o-unsplash.jpg",
           "description": "Warm chocolate cake with a gooey center",
           "price": 9.99
         },
@@ -268,21 +268,21 @@
         {
           "menu_id": 33,
           "name": "Quinoa Salad",
-          "img": "https://example.com/quinoa-salad.jpg",
+          "img": "https://i.ibb.co/sPT943F/mark-konig-Myfb-M2-QYF4o-unsplash.jpg",
           "description": "Healthy salad with quinoa, mixed greens, and vinaigrette",
           "price": 11.99
         },
         {
           "menu_id": 34,
           "name": "Caprese Panini",
-          "img": "https://example.com/caprese-panini.jpg",
+          "img": "https://i.ibb.co/sPT943F/mark-konig-Myfb-M2-QYF4o-unsplash.jpg",
           "description": "Grilled panini with mozzarella, tomato, and basil",
           "price": 9.99
         },
         {
           "menu_id": 35,
           "name": "Vegetable Curry",
-          "img": "https://example.com/vegetable-curry.jpg",
+          "img": "https://i.ibb.co/x5PBFr2/mixed-ingredient-pizza-wooden-board.jpg",
           "description": "Spicy vegetable curry served with rice",
           "price": 13.99
         },
