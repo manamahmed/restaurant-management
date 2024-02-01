@@ -6,11 +6,13 @@ import Blog from "../Pages/Blog/Blog";
 import Menus from "../Pages/Menus/Menus";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import CartList from "../Pages/CartList";
+import MyOrder from "../Pages/MyOrder";
 
 const routes = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout></MainLayout>,
+    element: <MainLayout />,
     children: [
       {
         path: "/",
@@ -19,23 +21,27 @@ const routes = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: <Contact />,
       },
       {
         path: "/blog",
-        element: <Blog></Blog>,
+        element: <Blog />,
       },
       {
         path: "/restaurants/:id",
         element: <Menus />,
       },
       {
-        path: "/my-order",
-        element: <Menus></Menus>,
-        loader: () => fetch("/public/data.json"),
+        path: "/cart-list",
+        element: <CartList />,
       },
-      { path: "/login", element: <Login></Login> },
-      { path: "/register", element: <Register></Register> },
+      {
+        path: "/my-order",
+        element: <MyOrder />,
+        loader: () => fetch("http://localhost:4000/api/orders"),
+      },
+      { path: "/login", element: <Login /> },
+      { path: "/register", element: <Register /> },
     ],
   },
 ]);

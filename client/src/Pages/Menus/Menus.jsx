@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import { useOrderContext } from "../../Utility/OrderProvider";
+
 const Menus = () => {
   const { id: restaurantId } = useParams();
   const [restaurant, setRestaurant] = useState(null);
+  const { orders, updateOrders } = useOrderContext();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,6 +22,7 @@ const Menus = () => {
     };
 
     fetchData();
+    // setAddedItems(getStoredItems());
   }, [restaurantId]);
 
   if (!restaurant) {
@@ -56,7 +60,29 @@ const Menus = () => {
                     <p>{description}</p>
                     <p>${price}</p>
                     <div className="card-actions justify-end">
-                      <button className="btn btn-primary">Add To Cart</button>
+                      <button
+                        disabled={
+                          !!orders.find((item) => item.menuId === menu_id)
+                        }
+                        onClick={() => {
+                          const itemToAdd = {
+                            menuId: menu_id,
+                            restaurantId,
+                            name,
+                            img,
+                            price,
+                            quantity: 1,
+                          };
+
+                          // setAddedItems([...addedItems, itemToAdd]);
+                          // saveOrderItem(itemToAdd);
+
+                          updateOrders(itemToAdd);
+                        }}
+                        className="btn btn-primary"
+                      >
+                        Add To Cart
+                      </button>
                     </div>
                   </div>
                 </div>

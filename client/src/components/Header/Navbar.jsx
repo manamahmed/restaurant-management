@@ -3,9 +3,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { useOrderContext } from "../../Utility/OrderProvider";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const { orders } = useOrderContext();
 
   const { user, logOut } = useContext(AuthContext);
   const handleLogout = () => {
@@ -44,6 +46,7 @@ const Navbar = () => {
       </li>
     </>
   );
+
   return (
     <div>
       <div className="navbar bg-gray-300">
@@ -77,6 +80,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
+        <Link to={"/cart-list"}>Cart ({orders.length})</Link>
         <div className="navbar-end">
           {user?.email ? (
             <>

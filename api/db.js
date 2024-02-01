@@ -115,6 +115,36 @@ db.serialize(() => {
       }
     }
   );
+
+  db.get(
+    "SELECT name FROM sqlite_master WHERE type='table' AND name='orders'",
+    (err, table) => {
+      if (!table) {
+        // Create the orders table
+        db.run(
+          `CREATE TABLE orders (
+            id INTEGER PRIMARY KEY,
+            total_price REAL NOT NULL,
+            user_email TEXT NOT NULL,
+            menus TEXT NOT NULL
+          )`,
+          (err) => {
+            if (!err) {
+              // Insert sample data into the orders table
+              const menuStmt = db.prepare(`
+                  INSERT INTO orders (total_price, user_email, menus)
+                  VALUES (?, ?, ?)
+                  `);
+
+              menuStmt.run(20, "foyez@email.com", "book,pen");
+
+              menuStmt.finalize();
+            }
+          }
+        );
+      }
+    }
+  );
 });
 
 module.exports = db;
