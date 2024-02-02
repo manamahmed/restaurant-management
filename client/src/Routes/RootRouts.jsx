@@ -8,6 +8,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import CartList from "../Pages/CartList";
 import MyOrder from "../Pages/MyOrder";
+import { API_BASE_URL } from "../Utility/constants";
 
 const routes = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("http://localhost:4000/api/restaurants"),
+        loader: () => fetch(`${API_BASE_URL}/api/restaurants`),
       },
       {
         path: "/contact",
@@ -38,7 +39,6 @@ const routes = createBrowserRouter([
       {
         path: "/my-order",
         element: <MyOrder />,
-        loader: () => fetch("http://localhost:4000/api/orders"),
       },
       { path: "/login", element: <Login /> },
       { path: "/register", element: <Register /> },

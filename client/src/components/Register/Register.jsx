@@ -10,21 +10,20 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const first_name = form.first_name.value;
-    const last_name = form.last_name.value;
+    const firstName = form.first_name.value;
+    const lastName = form.last_name.value;
+    const address = form.address.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(first_name, last_name, email, password);
 
     createUser(email, password)
       .then((data) => {
-        console.log(data.user);
         Swal.fire({
           title: "Good job!",
           text: "User Created Successfully!",
           icon: "success",
         });
-        navigate("/login");
+        navigate("/");
       })
       .catch((err) => {
         console.error(err);

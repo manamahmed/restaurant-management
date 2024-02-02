@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
+import { getFullUrl } from "../../Utility/utilities";
 
 const RestaurantCard = ({ restaurant }) => {
   const { id, title, img, description, location } = restaurant;
@@ -8,7 +9,7 @@ const RestaurantCard = ({ restaurant }) => {
     <div>
       <div className="card card-compact bg-base-100 shadow-xl">
         <figure>
-          <img src={img} alt="Shoes" />
+          <img src={getFullUrl(img)} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>

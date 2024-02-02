@@ -1,20 +1,51 @@
+import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import { API_BASE_URL } from "../Utility/constants";
 import { useOrderContext } from "../Utility/OrderProvider";
-import { getTotalPrice } from "../Utility/utilities";
+import { getOrderedMenus, getTotalPrice } from "../Utility/utilities";
 
 const CartList = () => {
   const { orders, resetOrders } = useOrderContext();
+  const { user } = useContext(AuthContext);
+
+  const [deliveryAddress, setDeliveryAddress] = useState("");
+  const navigate = useNavigate();
 
   return (
     <form
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
 
-        console.log({ event, orders });
+        const orderedMenus = getOrderedMenus(orders);
+        const orderedData = {
+          email: user.email,
+          total_price: getTotalPrice(orders),
+          menus: orderedMenus.join(","),
+          address: deliveryAddress,
+        };
+
+        try {
+          const response = await fetch(`${API_BASE_URL}/api/orders`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(orderedData),
+          });
+          if (response.ok) {
+            await response.json();
+            resetOrders([]);
+            navigate("/my-order");
+          }
+        } catch (error) {
+          console.error("Error making order:", error);
+        }
       }}
     >
       {orders.map((item) => {
         return (
-          <div key={`${orders.restaurantId}-${orders.menuId}`}>
+          <div key={`${item.restaurantId}-${item.menuId}`}>
             <h3>{item.name}</h3>
             <div>
               Quantity:{" "}
@@ -55,7 +86,18 @@ const CartList = () => {
 
       <div>Total: {getTotalPrice(orders)}</div>
 
-      <button type="submit">Confirm Order</button>
+      <div>
+        Delivery Address:{" "}
+        <input
+          type="text"
+          value={deliveryAddress}
+          onChange={(e) => setDeliveryAddress(e.target.value)}
+        />
+      </div>
+
+      <button type="submit" disabled={deliveryAddress.length === 0}>
+        Confirm Order
+      </button>
     </form>
   );
 };

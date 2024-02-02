@@ -93,6 +93,14 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Menu 3",
+                "img/afif-ramdhasuma-omcpmrw4fKw-unsplash.jpg",
+                "Special main courses",
+                19.99,
+                "Drinks",
+                1
+              );
+              menuStmt.run(
+                "Menu 3",
                 "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
                 "Kids menu",
                 7.99,
@@ -116,6 +124,7 @@ db.serialize(() => {
     }
   );
 
+  // Orders table
   db.get(
     "SELECT name FROM sqlite_master WHERE type='table' AND name='orders'",
     (err, table) => {
@@ -126,19 +135,62 @@ db.serialize(() => {
             id INTEGER PRIMARY KEY,
             total_price REAL NOT NULL,
             user_email TEXT NOT NULL,
-            menus TEXT NOT NULL
+            menus TEXT NOT NULL,
+            address TEXT NOT NULL
           )`,
           (err) => {
             if (!err) {
               // Insert sample data into the orders table
-              const menuStmt = db.prepare(`
-                  INSERT INTO orders (total_price, user_email, menus)
-                  VALUES (?, ?, ?)
+              const orderStmt = db.prepare(`
+                  INSERT INTO orders (total_price, user_email, menus, address)
+                  VALUES (?, ?, ?, ?)
                   `);
 
-              menuStmt.run(20, "foyez@email.com", "book,pen");
+              orderStmt.run(
+                20,
+                "manam@email.com",
+                "book,pen",
+                "teststr. 10, Duisburg"
+              );
 
-              menuStmt.finalize();
+              orderStmt.finalize();
+            }
+          }
+        );
+      }
+    }
+  );
+
+  // users table
+  db.get(
+    "SELECT name FROM sqlite_master WHERE type='table' AND name='users'",
+    (err, table) => {
+      if (!table) {
+        // Create the orders table
+        db.run(
+          `CREATE TABLE orders (
+            id INTEGER PRIMARY KEY,
+            first_name TEXT NOT NULL,
+            last_name TEXT NOT NULL,
+            email TEXT NOT NULL,
+            address TEXT NOT NULL
+          )`,
+          (err) => {
+            if (!err) {
+              // Insert sample data into the orders table
+              const userStmt = db.prepare(`
+                  INSERT INTO orders (first_name, last_name, email, address)
+                  VALUES (?, ?, ?, ?)
+                  `);
+
+              userStmt.run(
+                "Manam",
+                "Ahmed",
+                "manam@email.com",
+                "teststr. 10, Duisburg"
+              );
+
+              userStmt.finalize();
             }
           }
         );

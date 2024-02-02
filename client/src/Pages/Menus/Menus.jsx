@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { API_BASE_URL } from "../../Utility/constants";
 
 import { useOrderContext } from "../../Utility/OrderProvider";
+import { getFullUrl } from "../../Utility/utilities";
 
 const Menus = () => {
   const { id: restaurantId } = useParams();
@@ -12,7 +14,7 @@ const Menus = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:4000/api/restaurants/${restaurantId}`
+          `${API_BASE_URL}/api/restaurants/${restaurantId}`
         );
         const data = await response.json();
         setRestaurant(data);
@@ -44,16 +46,16 @@ const Menus = () => {
       <>
         <div
           className="grid grid-cols-2 gap-12 w-[1200px] mx-auto mb-12 "
-          key={menuName}
+          key={`${restaurantId}-${menuName}`}
         >
           <div className="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
           <br />
           {menuItems.map(({ menu_id, name, img, description, price }) => {
             return (
-              <div key={menu_id}>
+              <div key={`${restaurantId}-${menu_id}`}>
                 <div className="card card-compact  bg-base-100 shadow-xl">
                   <figure>
-                    <img src={img} alt="Shoes" />
+                    <img src={getFullUrl(img)} alt="Shoes" />
                   </figure>
                   <div className="card-body">
                     <h2 className="card-title">{name}</h2>
