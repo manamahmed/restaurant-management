@@ -22,7 +22,7 @@ const MyOrder = () => {
     if (user && orders.length === 0) {
       getOrders();
     }
-  }, [user]);
+  }, [orders.length, user]);
 
   return (
     <div>

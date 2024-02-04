@@ -81,34 +81,36 @@ const Menus = () => {
     return (
       <>
         <div
-          classNameName="max-w-[1440px] mx-auto mb-12 "
+          className="max-w-[1440px] mx-auto mb-12 "
           key={`${restaurantId}-${menuName}`}
         >
-          <div classNameName="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
+          <div className="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
           <br />
 
-          <div classNameName="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 gap-8 max-w-[1240px] mx-auto">
             {menuItems.map(({ menu_id, name, img, description, price }) => {
               return (
                 <div key={`${restaurantId}-${menu_id}`}>
                   <a
                     href="#"
-                    className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl"
+                    className="flex flex-col items-center bg-white  rounded-lg shadow-lg md:flex-row md:max-w-xl"
                   >
                     <div className="">
                       <img
-                        className="object-cover rounded-t-lg h-auto w-96 mx-2"
+                        className="object-cover rounded-lg h-[310px] w-[610px] "
                         src={getFullUrl(img)}
                         alt=""
                       />
                     </div>
                     <div className="flex flex-col justify-between p-4 leading-normal">
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Noteworthy technology acquisitions 2021
+                      <h5 className="mb-6 text-2xl font-bold tracking-tight">
+                        {name}
                       </h5>
-                      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Here are the biggest enterprise technology acquisitions
-                        of 2021 so far, in reverse chronological order.
+                      <p className="mb-8 font-normal text-gray-700 dark:text-gray-400">
+                       {description}
+                      </p>
+                      <p className="mb-4 font-normal text-gray-700 dark:text-gray-400">
+                       ${price}
                       </p>
                       <button
                         disabled={
