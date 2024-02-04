@@ -79,9 +79,12 @@ const Navbar = () => {
         </div>
         <div>
           <Link to={"/cart-list"}>
-            <CiShoppingCart className="text-2xl  font-black">
-              ({orders.length})
-            </CiShoppingCart>
+            <div className="relative">
+              <CiShoppingCart className="text-2xl font-black" />
+              <span className="absolute right-[-10px] top-[-10px] h-[15px] w-[15px] rounded-full bg-white flex justify-center items-center text-xs">
+                {orders.length}
+              </span>
+            </div>
           </Link>
         </div>
         <div className="navbar-end">

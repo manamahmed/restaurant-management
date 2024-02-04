@@ -41,15 +41,15 @@ const Menus = () => {
     }
   }
 
-  // <div classNameName="card card-compact  bg-base-100 shadow-xl">
+  // <div className="card card-compact  bg-base-100 shadow-xl">
   //                 <figure>
   //                   <img src={getFullUrl(img)} alt="Shoes" />
   //                 </figure>
-  //                 <div classNameName="card-body">
-  //                   <h2 classNameName="card-title">{name}</h2>
+  //                 <div className="card-body">
+  //                   <h2 className="card-title">{name}</h2>
   //                   <p>{description}</p>
   //                   <p>${price}</p>
-  //                   <div classNameName="card-actions justify-end">
+  //                   <div className="card-actions justify-end">
   // <button
   //   disabled={
   //     !!orders.find((item) => item.menuId === menu_id)
@@ -69,7 +69,7 @@ const Menus = () => {
 
   //     updateOrders(itemToAdd);
   //   }}
-  //   classNameName="btn btn-primary"
+  //   className="btn btn-primary"
   // >
   //   Add To Cart
   // </button>
@@ -77,40 +77,38 @@ const Menus = () => {
   //                 </div>
   //               </div>
 
-  return Object.entries(menusObj).map(([menuName, menuItems]) => {
+  return Object.entries(menusObj).map(([menuName, menuItems], index) => {
     return (
       <>
         <div
-          classNameName="max-w-[1440px] mx-auto mb-12 "
-          key={`${restaurantId}-${menuName}`}
+          className="max-w-[1440px] mx-auto mb-12 "
+          key={`${restaurantId}-${menuName}-${index}`}
         >
-          <div classNameName="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
+          <div className="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
           <br />
 
-          <div classNameName="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-8">
             {menuItems.map(({ menu_id, name, img, description, price }) => {
               return (
-                <div key={`${restaurantId}-${menu_id}`}>
-                  <a
-                    href="#"
-                    className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl"
-                  >
-                    <div className="">
+                <div key={`${restaurantId}-${menu_id}-${name}`}>
+                  <div className="flex flex-col items-center bg-white border border-gray-200 h-full rounded-lg shadow md:flex-row md:max-w-xl">
+                    <div className="h-full">
                       <img
-                        className="object-cover rounded-t-lg h-auto w-96 mx-2"
+                        className="object-cover w-full rounded-t-lg h-96 md:h-full md:w-[24rem] md:rounded-none md:rounded-s-lg"
                         src={getFullUrl(img)}
-                        alt=""
+                        alt={name}
                       />
                     </div>
-                    <div className="flex flex-col justify-between p-4 leading-normal">
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        Noteworthy technology acquisitions 2021
+                    <div className="flex flex-col justify-between p-4 leading-normal min-w-[60%]">
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight">
+                        {name}
                       </h5>
                       <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Here are the biggest enterprise technology acquisitions
-                        of 2021 so far, in reverse chronological order.
+                        {description}
                       </p>
+                      <p>€{price}</p>
                       <button
+                        type="button"
                         disabled={
                           !!orders.find((item) => item.menuId === menu_id)
                         }
@@ -134,7 +132,7 @@ const Menus = () => {
                         Add To Cart
                       </button>
                     </div>
-                  </a>
+                  </div>
                 </div>
               );
             })}

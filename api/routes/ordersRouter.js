@@ -14,13 +14,13 @@ router.get("/api/orders/:email", (req, res) => {
     [userEmail],
     (err, rows) => {
       if (err) {
-        return res.status(500).json({
-          error: "Error retrieving orders details",
-        });
+        // Error retrieving orders details
+        return res.status(500).json([]);
       }
 
       if (rows.length === 0) {
-        return res.status(404).json({ error: "Orders not found" });
+        // Orders not found
+        return res.status(404).json([]);
       }
 
       res.json(rows);

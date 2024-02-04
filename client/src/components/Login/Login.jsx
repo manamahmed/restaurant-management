@@ -15,11 +15,8 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password);
-
     signIn(email, password)
       .then((data) => {
-        console.log(data.user);
         Swal.fire({
           title: "Good job!",
           text: "Login Successful!",
@@ -36,7 +33,6 @@ const Login = () => {
     //  Create user
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
         Swal.fire({
           title: "Good job!",
           text: "Login Successful!",
@@ -80,11 +76,11 @@ const Login = () => {
                   required
                   name="password"
                 />
-                <label className="label">
+                {/* <label className="label">
                   <a href="#" className="label-text-alt link link-hover">
                     Forgot password?
                   </a>
-                </label>
+                </label> */}
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
