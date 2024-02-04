@@ -17,30 +17,97 @@ db.serialize(() => {
             img TEXT,
             description TEXT,
             location TEXT,
-            opening_hours TEXT
+            opening_hours TEXT,
+            rating REAL NOT NULL
         )`,
           (err) => {
             if (!err) {
               // Insert sample data into the restaurants table
               const restaurantStmt = db.prepare(`
-                INSERT INTO restaurants (title, img, description, location, opening_hours)
-                VALUES (?, ?, ?, ?, ?)
+                INSERT INTO restaurants (title, img, description, location, opening_hours, rating)
+                VALUES (?, ?, ?, ?, ?, ?)
                 `);
 
               restaurantStmt.run(
-                "Restaurant A",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "Fresh Delights",
+                "img/brooke-lark-8beTH4VkhLI-unsplash.jpg",
                 "A cozy place",
-                "123 Main Street, Cityville",
-                "Mon-Sat: 11:00 AM - 10:00 PM, Sun: 12:00 PM - 8:00 PM"
+                "789 Garden Lane, Greensville",
+                "Mon-Fri: 10:00 AM - 8:00 PM, Sat-Sun: 11:00 AM - 7:00 PM",
+                4
               );
 
               restaurantStmt.run(
-                "Restaurant B",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "Tasty Bites",
+                "img/brooke-lark-8beTH4VkhLI-unsplash.jpg",
                 "Family-friendly",
-                "456 Oak St",
-                "Mon-Sun: 12:00 PM - 11:00 PM"
+                "123 Main Street, Cityville",
+                "Mon-Sat: 11:00 AM - 10:00 PM, Sun: 12:00 PM - 8:00 PM",
+                5
+              );
+              restaurantStmt.run(
+                "Fresh Delights",
+                "img/jose-tebar-rlcIcF532ns-unsplash.jpg",
+                "Family-friendly",
+                "789 Garden Lane, Greensville",
+                "Mon-Fri: 10:00 AM - 8:00 PM, Sat-Sun: 11:00 AM - 7:00 PM",
+                3.5
+              );
+              restaurantStmt.run(
+                "Spice Kingdom",
+                "img/brooke-lark-8beTH4VkhLI-unsplash.jpg",
+                "Family-friendly",
+                "222 Spice Boulevard, Flavortown",
+                "Mon-Sat: 11:00 AM - 10:00 PM, Sun: 12:00 PM - 8:00 PM",
+                4.5
+              );
+              restaurantStmt.run(
+                "Ocean Grill",
+                "img/jose-tebar-rlcIcF532ns-unsplash.jpg",
+                "Family-friendly",
+                "555 Seafood Avenue, Marinetown",
+                "Wed-Sat: 5:00 PM - 11:00 PM, Sun: 4:00 PM - 9:00 PM",
+                4
+              );
+              restaurantStmt.run(
+                "Veggie Delight",
+                "img/freshly-italian-pizza-with-mozzarella-cheese-slice-generative-ai.jpg",
+                "Family-friendly",
+                "777 Green Avenue, Vegantown",
+                "Mon-Sat: Tue-Sat: 11:00 AM - 9:00 PM, Sun: 12:00 PM - 7:00 PM",
+                4
+              );
+              restaurantStmt.run(
+                "Mediterranean Flavors",
+                "img/giovanna-gomes-qeMfOXmDWpA-unsplash.jpg",
+                "Family-friendly",
+                "456 Olive Street, Meditown",
+                "Mon-Sat: 12:00 PM - 10:00 PM, Sun: 1:00 PM - 9:00 PM",
+                4.5
+              );
+              restaurantStmt.run(
+                "Sizzling Steaks",
+                "img/ibrahim-boran-Q9KUfbgzGnA-unsplash.jpg",
+                "Family-friendly",
+                "123 Grill Street, Meatropolis",
+                "Tue-Sun: 5:00 PM - 11:00 PM",
+                5
+              );
+              restaurantStmt.run(
+                "Café Aroma",
+                "img/jose-tebar-rlcIcF532ns-unsplash.jpg",
+                "Family-friendly",
+                "789 Espresso Lane, Coffeeville",
+                "Mon-Sat: 7:00 AM - 8:00 PM, Sun: 8:00 AM - 6:00 PM",
+                4
+              );
+              restaurantStmt.run(
+                "Tasty Tacos",
+                "img/karlis-dambrans-oLHk_WLupSc-unsplash.jpg",
+                "Family-friendly",
+                "567 Salsa Street, Tacotown",
+                "Mon-Sat: 11:00 AM - 9:00 PM, Sun: 12:00 PM - 8:00 PM",
+                3.5
               );
 
               restaurantStmt.finalize();

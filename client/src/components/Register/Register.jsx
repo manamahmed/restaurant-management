@@ -85,11 +85,18 @@ const Register = () => {
                   required
                   name="password"
                 />
+              </div>
+              <div className="form-control">
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
+                  <span className="label-text">Address</span>
                 </label>
+                <input
+                  type="text"
+                  placeholder="Type your address"
+                  className="input input-bordered"
+                  required
+                  name="address"
+                />
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Sign Up</button>

@@ -4,6 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import { API_BASE_URL } from "../Utility/constants";
 import { useOrderContext } from "../Utility/OrderProvider";
 import { getOrderedMenus, getTotalPrice } from "../Utility/utilities";
+import Cartdetails from "./Menus/Cartdetails";
 
 const CartList = () => {
   const { orders, resetOrders } = useOrderContext();
@@ -44,6 +45,11 @@ const CartList = () => {
       }}
     >
       {orders.map((item) => {
+        // return (
+        //   <div>
+        //     <Cartdetails item={item} />
+        //   </div>
+        // );
         return (
           <div key={`${item.restaurantId}-${item.menuId}`}>
             <h3>{item.name}</h3>
@@ -74,7 +80,6 @@ const CartList = () => {
                       orderItem.menuId === item.menuId
                     )
                 );
-
                 resetOrders(updatedOrders);
               }}
             >

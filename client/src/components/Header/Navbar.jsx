@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { useOrderContext } from "../../Utility/OrderProvider";
+import { CiShoppingCart } from "react-icons/ci";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -34,12 +35,6 @@ const Navbar = () => {
     <>
       <li>
         <NavLink to={"/"}>Home</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/contact"}>Contact Us</NavLink>
-      </li>
-      <li>
-        <NavLink to={"/blog"}>Blog</NavLink>
       </li>
       <li>
         <NavLink to={"/my-order"}>My Order</NavLink>
@@ -75,22 +70,30 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Liefer Platz</a>
+          <Link to="/">
+            <button className="btn btn-ghost text-xl">Liefer Platz</button>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <Link to={"/cart-list"}>Cart ({orders.length})</Link>
+        <div>
+          <Link to={"/cart-list"}>
+            <CiShoppingCart className="text-2xl  font-black">
+              ({orders.length})
+            </CiShoppingCart>
+          </Link>
+        </div>
         <div className="navbar-end">
           {user?.email ? (
             <>
-              <button onClick={handleLogout} className="btn btn-secondary">
+              <button onClick={handleLogout} className="btn btn-primary">
                 Logout
               </button>
             </>
           ) : (
             <Link to={"/login"}>
-              <button className="btn btn-secondary">Login</button>
+              <button className="btn btn-primary">Login</button>
             </Link>
           )}
         </div>
