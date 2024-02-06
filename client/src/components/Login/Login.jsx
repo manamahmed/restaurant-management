@@ -60,7 +60,7 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
-                  placeholder="email"
+                  placeholder="Email"
                   className="input input-bordered"
                   required
                   name="email"
@@ -72,7 +72,7 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
-                  placeholder="password"
+                  placeholder="Password"
                   className="input input-bordered"
                   required
                   name="password"
