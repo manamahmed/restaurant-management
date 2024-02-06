@@ -16,7 +16,7 @@ router.post("/api/users", (req, res) => {
 
   // Insert a new user into the database
   const stmt = db.prepare(`
-      INSERT INTO orders (first_name, last_name, email, address)
+      INSERT INTO users (first_name, last_name, email, address)
       VALUES (?, ?, ?, ?)
       `);
 
@@ -38,6 +38,31 @@ router.post("/api/users", (req, res) => {
 
     res.status(201).json(row);
   });
+});
+
+// Endpoint to get user info
+router.get("/api/users/:email", (req, res) => {
+  const userEmail = req.params.email;
+
+  db.get(
+    `SELECT *
+    FROM users
+    WHERE users.email = ?`,
+    [userEmail],
+    (err, user) => {
+      if (err) {
+        // Error retrieving users details
+        return res.status(500).json({});
+      }
+
+      if (!user) {
+        // Users not found
+        return res.status(404).json({});
+      }
+
+      res.json(user);
+    }
+  );
 });
 
 module.exports = router;

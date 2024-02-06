@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { API_BASE_URL } from "../Utility/constants";
@@ -16,6 +16,22 @@ const CartList = () => {
 
   const [deliveryAddress, setDeliveryAddress] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/users/${user.email}`);
+        const data = await response.json();
+        setDeliveryAddress(data?.address ?? "");
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    if (user?.email) {
+      getUser();
+    }
+  }, [user]);
 
   if (orders.length === 0) {
     return (

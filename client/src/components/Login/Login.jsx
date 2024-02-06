@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { FaGoogle } from "react-icons/fa";
+// import { FaGoogle } from "react-icons/fa";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { signIn, signInWithGoogle } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -29,21 +29,22 @@ const Login = () => {
       });
   };
 
-  const handleGoogleSignIn = () => {
-    //  Create user
-    signInWithGoogle()
-      .then(() => {
-        Swal.fire({
-          title: "Good job!",
-          text: "Login Successful!",
-          icon: "success",
-        });
-        navigate("/");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
+  // const handleGoogleSignIn = () => {
+  //   //  Create user
+  //   signInWithGoogle()
+  //     .then(() => {
+  //       Swal.fire({
+  //         title: "Good job!",
+  //         text: "Login Successful!",
+  //         icon: "success",
+  //       });
+  //       navigate("/");
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -86,13 +87,13 @@ const Login = () => {
                 <button className="btn btn-primary">Login</button>
               </div>
             </form>
-            <div onClick={handleGoogleSignIn} className="text-center">
+            {/* <div onClick={handleGoogleSignIn} className="text-center">
               or signUp with <br />
               <button className="  btn btn-outline w-[440px] mt-4">
                 <FaGoogle className="text-blue-500 text-xl"></FaGoogle>
                 <span className="text-blue-500 text-l">Login With Google</span>
               </button>
-            </div>
+            </div> */}
             <p className="text-center p-2 mb-2">
               New Here ?
               <Link to={"/register"}>

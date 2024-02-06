@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { API_BASE_URL } from "../../Utility/constants";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -10,21 +11,36 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const firstName = form.first_name.value;
-    // const lastName = form.last_name.value;
-    // const address = form.address.value;
+    const first_name = form.first_name.value;
+    const last_name = form.last_name.value;
+    const address = form.address.value;
     const email = form.email.value;
     const password = form.password.value;
 
     createUser(email, password)
       .then(async () => {
-        await updateUserProfile(firstName);
-        Swal.fire({
-          title: "Good job!",
-          text: "User Created Successfully!",
-          icon: "success",
-        });
-        navigate("/");
+        await updateUserProfile(first_name);
+
+        try {
+          const options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ first_name, last_name, email, address }),
+          };
+          const response = await fetch(`${API_BASE_URL}/api/users`, options);
+          await response.json();
+
+          Swal.fire({
+            title: "Good job!",
+            text: "User Created Successfully!",
+            icon: "success",
+          });
+          navigate("/");
+        } catch (error) {
+          console.error("Error creating users:", error);
+        }
       })
       .catch((err) => {
         console.error(err);
@@ -46,7 +62,7 @@ const Register = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="first Name"
+                  placeholder="First Name"
                   className="input input-bordered"
                   required
                   name="first_name"
@@ -58,7 +74,7 @@ const Register = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="last name"
+                  placeholder="Last name"
                   className="input input-bordered"
                   required
                   name="last_name"
@@ -70,7 +86,7 @@ const Register = () => {
                 </label>
                 <input
                   type="email"
-                  placeholder="email"
+                  placeholder="Email"
                   className="input input-bordered"
                   required
                   name="email"
@@ -81,14 +97,14 @@ const Register = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type="Password"
                   placeholder="password"
                   className="input input-bordered"
                   required
                   name="password"
                 />
               </div>
-              {/* <div className="form-control">
+              <div className="form-control">
                 <label className="label">
                   <span className="label-text">Address</span>
                 </label>
@@ -99,7 +115,7 @@ const Register = () => {
                   required
                   name="address"
                 />
-              </div> */}
+              </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Sign Up</button>
               </div>

@@ -1594,42 +1594,42 @@ db.serialize(() => {
     }
   );
 
-  // // users table
-  // db.get(
-  //   "SELECT name FROM sqlite_master WHERE type='table' AND name='users'",
-  //   (err, table) => {
-  //     if (!table) {
-  //       // Create the orders table
-  //       db.run(
-  //         `CREATE TABLE users (
-  //           id INTEGER PRIMARY KEY,
-  //           first_name TEXT NOT NULL,
-  //           last_name TEXT NOT NULL,
-  //           email TEXT NOT NULL,
-  //           address TEXT NOT NULL
-  //         )`,
-  //         (err) => {
-  //           if (!err) {
-  //             // Insert sample data into the orders table
-  //             const userStmt = db.prepare(`
-  //                 INSERT INTO users (first_name, last_name, email, address)
-  //                 VALUES (?, ?, ?, ?)
-  //                 `);
+  // users table
+  db.get(
+    "SELECT name FROM sqlite_master WHERE type='table' AND name='users'",
+    (err, table) => {
+      if (!table) {
+        // Create the orders table
+        db.run(
+          `CREATE TABLE users (
+            id INTEGER PRIMARY KEY,
+            first_name TEXT NOT NULL,
+            last_name TEXT NOT NULL,
+            email TEXT NOT NULL,
+            address TEXT NOT NULL
+          )`,
+          (err) => {
+            if (!err) {
+              // Insert sample data into the orders table
+              const userStmt = db.prepare(`
+                  INSERT INTO users (first_name, last_name, email, address)
+                  VALUES (?, ?, ?, ?)
+                  `);
 
-  //             userStmt.run(
-  //               "Manam",
-  //               "Ahmed",
-  //               "manamahmed68@gmail.com",
-  //               "teststr. 10, Duisburg"
-  //             );
+              userStmt.run(
+                "Manam",
+                "Ahmed",
+                "manamahmed68@gmail.com",
+                "teststr. 10, Duisburg"
+              );
 
-  //             userStmt.finalize();
-  //           }
-  //         }
-  //       );
-  //     }
-  //   }
-  // );
+              userStmt.finalize();
+            }
+          }
+        );
+      }
+    }
+  );
 });
 
 module.exports = db;
