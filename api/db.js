@@ -5,6 +5,7 @@ const db = new sqlite3.Database(DB_SOURCE);
 
 // Create tables and insert sample data
 db.serialize(() => {
+  // restaurants table
   db.get(
     "SELECT name FROM sqlite_master WHERE type='table' AND name='restaurants'",
     (err, table) => {
@@ -118,6 +119,7 @@ db.serialize(() => {
     }
   );
 
+  // menus table
   db.get(
     "SELECT name FROM sqlite_master WHERE type='table' AND name='menus'",
     (err, table) => {
@@ -834,7 +836,7 @@ db.serialize(() => {
     }
   );
 
-  // Orders table
+  // orders table
   db.get(
     "SELECT name FROM sqlite_master WHERE type='table' AND name='orders'",
     (err, table) => {
@@ -878,7 +880,7 @@ db.serialize(() => {
       if (!table) {
         // Create the orders table
         db.run(
-          `CREATE TABLE orders (
+          `CREATE TABLE users (
             id INTEGER PRIMARY KEY,
             first_name TEXT NOT NULL,
             last_name TEXT NOT NULL,
@@ -889,7 +891,7 @@ db.serialize(() => {
             if (!err) {
               // Insert sample data into the orders table
               const userStmt = db.prepare(`
-                  INSERT INTO orders (first_name, last_name, email, address)
+                  INSERT INTO users (first_name, last_name, email, address)
                   VALUES (?, ?, ?, ?)
                   `);
 

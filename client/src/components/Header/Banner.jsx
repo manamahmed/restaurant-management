@@ -1,11 +1,14 @@
+import { getFullUrl } from "../../Utility/utilities";
+
 const Banner = () => {
   return (
     <div>
       <div
         className="hero h-[500px]"
         style={{
-          backgroundImage:
-            "url(https://i.ibb.co/XC5V0nG/spencer-davis-5-Ue-N8-Vr-Cxvs-unsplash.jpg)",
+          backgroundImage: `url(${getFullUrl(
+            "img/spencer-davis-5-Ue-N8-Vr-Cxvs-unsplash.jpg"
+          )})`,
         }}
       >
         <div className=" bg-opacity-60"></div>

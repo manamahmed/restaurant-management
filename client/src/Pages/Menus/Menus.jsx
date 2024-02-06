@@ -41,15 +41,15 @@ const Menus = () => {
     }
   }
 
-  // <div classNameName="card card-compact  bg-base-100 shadow-xl">
+  // <div className="card card-compact  bg-base-100 shadow-xl">
   //                 <figure>
   //                   <img src={getFullUrl(img)} alt="Shoes" />
   //                 </figure>
-  //                 <div classNameName="card-body">
-  //                   <h2 classNameName="card-title">{name}</h2>
+  //                 <div className="card-body">
+  //                   <h2 className="card-title">{name}</h2>
   //                   <p>{description}</p>
   //                   <p>${price}</p>
-  //                   <div classNameName="card-actions justify-end">
+  //                   <div className="card-actions justify-end">
   // <button
   //   disabled={
   //     !!orders.find((item) => item.menuId === menu_id)
@@ -69,7 +69,7 @@ const Menus = () => {
 
   //     updateOrders(itemToAdd);
   //   }}
-  //   classNameName="btn btn-primary"
+  //   className="btn btn-primary"
   // >
   //   Add To Cart
   // </button>
@@ -77,42 +77,38 @@ const Menus = () => {
   //                 </div>
   //               </div>
 
-  return Object.entries(menusObj).map(([menuName, menuItems]) => {
+  return Object.entries(menusObj).map(([menuName, menuItems], index) => {
     return (
       <>
         <div
           className="max-w-[1440px] mx-auto mb-12 "
-          key={`${restaurantId}-${menuName}`}
+          key={`${restaurantId}-${menuName}-${index}`}
         >
           <div className="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
           <br />
 
-          <div className="grid grid-cols-2 gap-8 max-w-[1240px] mx-auto">
+          <div className="grid grid-cols-3 gap-8">
             {menuItems.map(({ menu_id, name, img, description, price }) => {
               return (
-                <div key={`${restaurantId}-${menu_id}`}>
-                  <a
-                    href="#"
-                    className="flex flex-col items-center bg-white  rounded-lg shadow-lg md:flex-row md:max-w-xl"
-                  >
-                    <div className="">
+                <div key={`${restaurantId}-${menu_id}-${name}`}>
+                  <div className="flex flex-col items-center bg-white border border-gray-200 h-full rounded-lg shadow md:flex-row md:max-w-xl">
+                    <div className="h-full">
                       <img
-                        className="object-cover rounded-lg h-[310px] w-[610px] "
+                        className="object-cover w-full rounded-t-lg h-96 md:h-full md:w-[24rem] md:rounded-none md:rounded-s-lg"
                         src={getFullUrl(img)}
-                        alt=""
+                        alt={name}
                       />
                     </div>
-                    <div className="flex flex-col justify-between p-4 leading-normal">
-                      <h5 className="mb-6 text-2xl font-bold tracking-tight">
+                    <div className="flex flex-col justify-between p-4 leading-normal min-w-[60%]">
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight">
                         {name}
                       </h5>
-                      <p className="mb-8 font-normal text-gray-700 dark:text-gray-400">
-                       {description}
+                      <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                        {description}
                       </p>
-                      <p className="mb-4 font-normal text-gray-700 dark:text-gray-400">
-                       ${price}
-                      </p>
+                      <p>€{price}</p>
                       <button
+                        type="button"
                         disabled={
                           !!orders.find((item) => item.menuId === menu_id)
                         }
@@ -136,7 +132,7 @@ const Menus = () => {
                         Add To Cart
                       </button>
                     </div>
-                  </a>
+                  </div>
                 </div>
               );
             })}

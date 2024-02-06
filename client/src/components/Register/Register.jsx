@@ -92,7 +92,7 @@ const Register = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="Type your address"
+                  placeholder="Enter your address"
                   className="input input-bordered"
                   required
                   name="address"

@@ -13,6 +13,7 @@ const MyOrder = () => {
           `${API_BASE_URL}/api/orders/${user.email}`
         );
         const data = await response.json();
+        console.log({ data });
         setOrders(data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -24,17 +25,40 @@ const MyOrder = () => {
     }
   }, [orders.length, user]);
 
+  if (orders.length === 0) {
+    return (
+      <h3 className="flex justify-center text-xl font-bold mt-[100px]">
+        No orders found.
+      </h3>
+    );
+  }
+
   return (
-    <div>
-      <h2>My Order List</h2>
-      {orders.map((item) => {
-        return (
-          <div key={item.id}>
-            <div>{item.menus}</div>
-            <div>{item.total_price}</div>
-          </div>
-        );
-      })}
+    <div className="max-w-[1200px] mx-auto">
+      <div className="overflow-x-auto">
+        <table className="table table-zebra">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Menu list</th>
+              <th>Address</th>
+              <th>Total price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {orders.map((item, index) => {
+              return (
+                <tr key={item.id}>
+                  <th>{index + 1}</th>
+                  <td>{item.menus.split(",").join(", ")}</td>
+                  <td>{item.address}</td>
+                  <td>€{item.total_price}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
