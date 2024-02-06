@@ -87,12 +87,12 @@ const Menus = () => {
           <div className="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
           <br />
 
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-2 w-[1220px] mx-auto gap-8">
             {menuItems.map(({ menu_id, name, img, description, price }) => {
               return (
                 <div key={`${restaurantId}-${menu_id}-${name}`}>
                   <div className="flex flex-col items-center bg-white border border-gray-200 h-full rounded-lg shadow md:flex-row md:max-w-xl">
-                    <div className="h-full">
+                    <div className="h-[300px]">
                       <img
                         className="object-cover w-full rounded-t-lg h-96 md:h-full md:w-[24rem] md:rounded-none md:rounded-s-lg"
                         src={getFullUrl(img)}

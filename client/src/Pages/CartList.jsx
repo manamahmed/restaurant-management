@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { API_BASE_URL } from "../Utility/constants";
 import { useOrderContext } from "../Utility/OrderProvider";
+import { MdDelete } from "react-icons/md";
 import {
   getFullUrl,
   getOrderedMenus,
@@ -122,49 +123,49 @@ const CartList = () => {
                         resetOrders(updatedOrders);
                       }}
                     >
-                      remove
+                      <MdDelete className="text-2xl "></MdDelete>
                     </button>
                   </th>
                 </tr>
               );
 
-              return (
-                <div key={`${item.restaurantId}-${item.menuId}`}>
-                  <h3>{item.name}</h3>
-                  <div>
-                    Quantity:{" "}
-                    <input
-                      type="text"
-                      value={item.quantity}
-                      onChange={(event) => {
-                        const quantity = Number(event.target.value);
-                        const updatedOrders = orders.map((orderItem) =>
-                          orderItem.restaurantId === item.restaurantId &&
-                          orderItem.menuId === item.menuId
-                            ? { ...orderItem, quantity }
-                            : orderItem
-                        );
-                        resetOrders(updatedOrders);
-                      }}
-                    />
-                  </div>
-                  <div>{item.price}</div>
-                  <button
-                    onClick={() => {
-                      const updatedOrders = orders.filter(
-                        (orderItem) =>
-                          !(
-                            orderItem.restaurantId === item.restaurantId &&
-                            orderItem.menuId === item.menuId
-                          )
-                      );
-                      resetOrders(updatedOrders);
-                    }}
-                  >
-                    remove
-                  </button>
-                </div>
-              );
+              // return (
+              //   <div key={`${item.restaurantId}-${item.menuId}`}>
+              //     <h3>{item.name}</h3>
+              //     <div>
+              //       Quantity:{" "}
+              //       <input
+              //         type="text"
+              //         value={item.quantity}
+              //         onChange={(event) => {
+              //           const quantity = Number(event.target.value);
+              //           const updatedOrders = orders.map((orderItem) =>
+              //             orderItem.restaurantId === item.restaurantId &&
+              //             orderItem.menuId === item.menuId
+              //               ? { ...orderItem, quantity }
+              //               : orderItem
+              //           );
+              //           resetOrders(updatedOrders);
+              //         }}
+              //       />
+              //     </div>
+              //     <div>{item.price}</div>
+              //     <button
+              //       onClick={() => {
+              //         const updatedOrders = orders.filter(
+              //           (orderItem) =>
+              //             !(
+              //               orderItem.restaurantId === item.restaurantId &&
+              //               orderItem.menuId === item.menuId
+              //             )
+              //         );
+              //         resetOrders(updatedOrders);
+              //       }}
+              //     >
+              //       remove
+              //     </button>
+              //   </div>
+              // );
             })}
           </tbody>
           <tfoot>

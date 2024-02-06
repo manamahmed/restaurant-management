@@ -40,7 +40,7 @@ db.serialize(() => {
 
               restaurantStmt.run(
                 "Tasty Bites",
-                "img/brooke-lark-8beTH4VkhLI-unsplash.jpg",
+                "img/miti-YXjr5gdbGnI-unsplash.jpg",
                 "Family-friendly",
                 "123 Main Street, Cityville",
                 "Mon-Sat: 11:00 AM - 10:00 PM, Sun: 12:00 PM - 8:00 PM",
@@ -56,7 +56,7 @@ db.serialize(() => {
               );
               restaurantStmt.run(
                 "Spice Kingdom",
-                "img/brooke-lark-8beTH4VkhLI-unsplash.jpg",
+                "img/marika-sartori-ZD_CEnhS630-unsplash.jpg",
                 "Family-friendly",
                 "222 Spice Boulevard, Flavortown",
                 "Mon-Sat: 11:00 AM - 10:00 PM, Sun: 12:00 PM - 8:00 PM",
@@ -64,7 +64,7 @@ db.serialize(() => {
               );
               restaurantStmt.run(
                 "Ocean Grill",
-                "img/jose-tebar-rlcIcF532ns-unsplash.jpg",
+                "img/nick-karvounis-YmyFBvW7oG8-unsplash.jpg",
                 "Family-friendly",
                 "555 Seafood Avenue, Marinetown",
                 "Wed-Sat: 5:00 PM - 11:00 PM, Sun: 4:00 PM - 9:00 PM",
@@ -96,7 +96,7 @@ db.serialize(() => {
               );
               restaurantStmt.run(
                 "Café Aroma",
-                "img/jose-tebar-rlcIcF532ns-unsplash.jpg",
+                "img/mixed-ingredient-pizza-wooden-board.jpg",
                 "Family-friendly",
                 "789 Espresso Lane, Coffeeville",
                 "Mon-Sat: 7:00 AM - 8:00 PM, Sun: 8:00 AM - 6:00 PM",
@@ -146,7 +146,7 @@ db.serialize(() => {
               // Restaurant 1 main menu
               menuStmt.run(
                 "Menu 1",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_4.jpg",
                 "Delicious starters",
                 10.99,
                 "Main Dish",
@@ -154,7 +154,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "AlfredoChicken",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_1.jpg",
                 "Creamy Alfredo sauce with grilled chicken",
                 14.99,
                 "Main Dish",
@@ -162,7 +162,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Margherita Pizza",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_2.jpg",
                 "Fresh tomatoes, mozzarella, and basil",
                 10.99,
                 "Main Dish",
@@ -170,7 +170,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Grilled Salmon",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_3.jpg",
                 "Grilled salmon fillet with lemon and herbs",
                 16.99,
                 "Main Dish",
@@ -180,7 +180,7 @@ db.serialize(() => {
               // For Restaurants 1 Dessert
               menuStmt.run(
                 "Tiramisu",
-                "desserts/aliona-gumeniuk-GAauSStia3s-unsplash.jpg",
+                "desserts/dessert_1.jpg",
                 "Layered coffee-flavored Italian dessert",
                 7.99,
                 "Dessert",
@@ -188,7 +188,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chocolate Fondue",
-                "desserts/anthony-espinosa-6iqpLKqeaE0-unsplash.jpg",
+                "desserts/dessert_2.jpg",
                 "Assorted fruits with melted chocolate",
                 8.99,
                 "Dessert",
@@ -196,7 +196,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Cheesecake",
-                "desserts/assorment-desserts-with-berries-chocolate.jpg",
+                "desserts/dessert_3.jpg",
                 "Classic New York-style cheesecake",
                 9.99,
                 "Dessert",
@@ -204,7 +204,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Fruit Sorbet",
-                "desserts/assortment-pieces-cake.jpg",
+                "desserts/dessert_4.jpg",
                 "Refreshing mixed fruit sorbet",
                 5.99,
                 "Dessert",
@@ -215,7 +215,7 @@ db.serialize(() => {
 
               menuStmt.run(
                 "Mojito",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_1.jpg",
                 "Refreshing minty lime cocktail",
                 6.99,
                 "Drinks",
@@ -223,7 +223,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Red Wine",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_2.jpg",
                 "Rich and full-bodied red wine",
                 12.99,
                 "Drinks",
@@ -231,7 +231,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Iced Latte",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_3.jpg",
                 "Chilled espresso with milk",
                 4.99,
                 "Drinks",
@@ -239,7 +239,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Soda",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_4.jpg",
                 "Assorted soft drinks",
                 2.99,
                 "Drinks",
@@ -247,10 +247,9 @@ db.serialize(() => {
               );
 
               // Restaurant 1 Snacks
-
               menuStmt.run(
                 "Bruschetta",
-                "img/afif-ramdhasuma-omcpmrw4fKw-unsplash.jpg",
+                "snacks/snacks_1.jpg",
                 "Toasted bread with tomato and basil topping",
                 19.99,
                 "Snacks",
@@ -258,7 +257,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Garlic Bread",
-                "img/afif-ramdhasuma-omcpmrw4fKw-unsplash.jpg",
+                "snacks/snacks_2.jpg",
                 "Warm bread with garlic butter",
                 14.99,
                 "Snacks",
@@ -266,7 +265,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chicken Wings",
-                "img/afif-ramdhasuma-omcpmrw4fKw-unsplash.jpg",
+                "snacks/snacks_3.jpg",
                 "Crispy chicken wings with various sauces",
                 8.99,
                 "Snacks",
@@ -274,7 +273,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Caprese Skewers",
-                "img/afif-ramdhasuma-omcpmrw4fKw-unsplash.jpg",
+                "snacks/snacks_4.jpg",
                 "Mozzarella, tomato, and basil skewers",
                 12.99,
                 "Snacks",
@@ -284,7 +283,7 @@ db.serialize(() => {
               // Restaurant 2 main menu
               menuStmt.run(
                 "Steak with Chimichurri",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_1.jpg",
                 "Grilled steak with tangy chimichurri sauce",
                 18.99,
                 "Main Dish",
@@ -292,7 +291,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "BBQ Ribs",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_2.jpg",
                 "Slow-cooked BBQ ribs with smoky flavor",
                 17.99,
                 "Main Dish",
@@ -300,7 +299,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Shrimp Scampi",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_3.jpg",
                 "Garlic butter shrimp served over pasta",
                 15.99,
                 "Main Dish",
@@ -308,7 +307,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Vegetarian Stir-Fry",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_4.jpg",
                 "Assorted vegetables stir-fried to perfection",
                 10.99,
                 "Main Dish",
@@ -318,7 +317,7 @@ db.serialize(() => {
               // Restaurant 2 Dessert
               menuStmt.run(
                 "Apple Pie",
-                "desserts/brooke-lark-V4MBq8kue3U-unsplash.jpg",
+                "desserts/dessert_5.jpg",
                 "Homemade apple pie with a flaky crust",
                 10.99,
                 "Dessert",
@@ -326,7 +325,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Molten Lava Cake",
-                "desserts/chad-montano-eeqbbemH9-c-unsplash.jpg",
+                "desserts/dessert_6.jpg",
                 "Warm chocolate cake with a gooey center",
                 10.99,
                 "Dessert",
@@ -334,7 +333,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Panna Cotta",
-                "desserts/diana-polekhina-i5BY6W2ttts-unsplash.jpg",
+                "desserts/dessert_7.jpg",
                 "Creamy Italian dessert with berry coulis",
                 13.99,
                 "Dessert",
@@ -342,7 +341,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Frozen Yogurt",
-                "desserts/emile-mbunzama-cLpdEA23Z44-unsplash.jpg",
+                "desserts/dessert_8.jpg",
                 "Refreshing frozen yogurt with assorted toppings",
                 6.99,
                 "Dessert",
@@ -353,7 +352,7 @@ db.serialize(() => {
 
               menuStmt.run(
                 "Sangria",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_5.jpg",
                 "Fruity wine punch with assorted fruits",
                 6.99,
                 "Drinks",
@@ -361,7 +360,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Craft Beer",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_6.jpg",
                 "Locally brewed craft beer with a variety of flavors",
                 7.99,
                 "Drinks",
@@ -369,7 +368,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Margarita",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_7.jpg",
                 "Classic margarita with a salted rim",
                 8.99,
                 "Drinks",
@@ -377,7 +376,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Lemonade",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_8.jpg",
                 "Freshly squeezed lemonade with a hint of mint",
                 4.99,
                 "Drinks",
@@ -387,7 +386,7 @@ db.serialize(() => {
               // Restaurant 2 snacks
               menuStmt.run(
                 "Loaded Nachos",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "snacks/snacks_5.jpg",
                 "Nachos topped with cheese, jalapeños, and salsa",
                 8.99,
                 "Snacks",
@@ -395,7 +394,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mozzarella Sticks",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "snacks/snacks_6.jpg",
                 "Crispy mozzarella sticks with marinara sauce",
                 5.99,
                 "Snacks",
@@ -403,7 +402,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Spinach Artichoke Dip",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "snacks/snacks_7.jpg",
                 "Freshly squeezed lemonade with a hint of mint",
                 9.99,
                 "Snacks",
@@ -411,7 +410,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Garlic Fries",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "snacks/snacks_8.jpg",
                 "Crispy fries tossed with garlic and herbs",
                 7.99,
                 "Snacks",
@@ -419,10 +418,9 @@ db.serialize(() => {
               );
 
               // Restaurant 3 Main Dish
-
               menuStmt.run(
                 "Quinoa Salad",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_9.jpg",
                 "Healthy salad with quinoa, mixed greens, and vinaigrette",
                 9.99,
                 "Main menu",
@@ -430,7 +428,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Caprese Panini",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_10.jpg",
                 "Grilled panini with mozzarella, tomato, and basil",
                 8.99,
                 "Main menu",
@@ -438,7 +436,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Vegetable Curry",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_11.jpg",
                 "Spicy vegetable curry served with rice",
                 12.99,
                 "Main menu",
@@ -446,17 +444,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Stuffed Bell Peppers",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "mainDish/main_dish_12.jpg",
                 "Bell peppers stuffed with quinoa and veggies",
                 17.99,
                 "Main menu",
                 3
               );
-              // Restaurant 3 ar Dessert
 
+              // Restaurant 3 ar Dessert
               menuStmt.run(
                 "Chia Seed Pudding",
-                "desserts/fernando-andrade-89h9zKa0L0g-unsplash.jpg",
+                "desserts/dessert_9.jpg",
                 "Bell peppers stuffed with quinoa and veggies",
                 18.99,
                 "Dessert",
@@ -464,7 +462,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chia Seed Pudding",
-                "desserts/heather-ford-POM4KxWZcG8-unsplash.jpg",
+                "desserts/dessert_10.jpg",
                 "https://example.com/fruit-parfait.jpg",
                 13.99,
                 "Dessert",
@@ -472,7 +470,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Vegan Chocolate Cake",
-                "desserts/humphrey-muleba-jABXuTS1azc-unsplash.jpg",
+                "desserts/dessert_11.jpg",
                 "Moist chocolate cake made without dairy or eggs",
                 10.99,
                 "Dessert",
@@ -480,16 +478,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Coconut Sorbet",
-                "desserts/karly-gomez-lK1Q5RyD6tc-unsplash.jpg",
+                "desserts/dessert_12.jpg",
                 "Bell peppers stuffed with quinoa and veggies",
                 14.99,
                 "Dessert",
                 3
               );
+
               // Restaurant 3 Drinks
               menuStmt.run(
                 "Green Smoothie",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_9.jpg",
                 "Healthy smoothie with spinach, banana, and green fruits",
                 6.99,
                 "Drinks",
@@ -497,7 +496,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Detox Water",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_10.jpg",
                 "Infused water with cucumber, lemon, and mint",
                 11.99,
                 "Drinks",
@@ -505,7 +504,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Herbal Tea",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_11.jpg",
                 "Warm herbal tea with a blend of aromatic herbs",
                 11.99,
                 "Drinks",
@@ -513,17 +512,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Fresh Orange Juice",
-                "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+                "drinks/drinks_12.jpg",
                 "Squeezed orange juice, rich in Vitamin C",
                 14.99,
                 "Drinks",
                 3
               );
-              // Restaurant 3 snacks
 
+              // Restaurant 3 snacks
               menuStmt.run(
                 "Avocado Toast",
-                "https://example.com/avocado-toast.jpg",
+                "snacks/snacks_9.jpg",
                 "Toasted bread with mashed avocado and cherry tomatoes",
                 7.99,
                 "Snacks",
@@ -531,7 +530,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Cucumber Rolls",
-                "https://example.com/cucumber-rolls.jpg",
+                "snacks/snacks_10.jpg",
                 "Fresh cucumber rolls with cream cheese and herbs",
                 6.99,
                 "Snacks",
@@ -539,7 +538,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Kale Chips",
-                "https://example.com/kale-chips.jpg",
+                "snacks/snacks_11.jpg",
                 "Crispy kale chips with sea salt",
                 5.99,
                 "Snacks",
@@ -547,16 +546,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Edamame",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_12.jpg",
                 "Steamed edamame with sea salt",
                 4.99,
                 "Snacks",
                 3
               );
+
               // Restaurant 4 Main dish
               menuStmt.run(
                 "Chicken Curry",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_13.jpg",
                 "Spicy chicken curry with aromatic spices",
                 12.99,
                 "Main menu",
@@ -564,7 +564,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Paneer Tikka Masala",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_14.jpg",
                 "Paneer cubes in a creamy tomato-based sauce",
                 7.99,
                 "Main menu",
@@ -572,7 +572,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Biryani",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_15.jpg",
                 "Fragrant rice dish with meat, vegetables, and spices",
                 14.99,
                 "Main menu",
@@ -580,7 +580,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Tandoori Mixed Grill",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_16.jpg",
                 "Assorted grilled meats with tandoori spices",
                 8.99,
                 "Main menu",
@@ -590,7 +590,7 @@ db.serialize(() => {
               // Restaurant 4 Dessert
               menuStmt.run(
                 "Gulab Jamun",
-                "desserts/kobby-mendez-idTwDKt2j2o-unsplash.jpg",
+                "desserts/dessert_13.jpg",
                 "Deep-fried dumplings in sugar syrup",
                 6.99,
                 "Dessert",
@@ -598,7 +598,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Rasmalai",
-                "desserts/kobby-mendez-q54Oxq44MZs-unsplash.jpg",
+                "desserts/dessert_14.jpg",
                 "Soft cheese dumplings in saffron-flavored milk",
                 3.99,
                 "Dessert",
@@ -606,7 +606,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mango Lassi Popsicle",
-                "desserts/lore-schodts-FIxdY7jOBus-unsplash.jpg",
+                "desserts/dessert_15.jpg",
                 "Refreshing mango lassi in frozen popsicle form",
                 2.99,
                 "Dessert",
@@ -614,7 +614,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Kheer",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "desserts/dessert_16.jpg",
                 "Assorted grilled meats with tandoori spices",
                 5.99,
                 "Dessert",
@@ -624,7 +624,7 @@ db.serialize(() => {
               // Restaurant 4 Drinks
               menuStmt.run(
                 "Masala Chai",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "drinks/drinks_13.jpg",
                 "Assorted grilled meats with tandoori spices",
                 5.99,
                 "Drinks",
@@ -632,7 +632,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mango Lassi",
-                "Drinkss/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "drinks/drinks_14.jpg",
                 "Yogurt-based drink with fresh mango pulp",
                 4.99,
                 "Drinks",
@@ -640,7 +640,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Rose Sharbat",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "drinks/drinks_15.jpg",
                 "Rose-flavored syrup mixed with water",
                 2.99,
                 "Drinks",
@@ -648,17 +648,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Thandai",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "drinks/drinks_16.jpg",
                 "Cooling drink with almonds, fennel, and cardamom",
                 6.99,
                 "Drinks",
                 4
               );
-              // Restaurant 4 Snacks
 
+              // Restaurant 4 Snacks
               menuStmt.run(
                 "Samosa",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_13.jpg",
                 "Crispy pastry filled with spiced potatoes and peas",
                 1.99,
                 "Snacks",
@@ -666,7 +666,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chicken Pakora",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_14.jpg",
                 "Deep-fried chicken fritters with spices",
                 2.99,
                 "Snacks",
@@ -674,7 +674,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Papdi Chaat",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_15.jpg",
                 "Crunchy snack with yogurt, chutney, and spices",
                 3.99,
                 "Snacks",
@@ -682,7 +682,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Aloo Tikki",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_16.jpg",
                 "Fried potato patties with mint chutney",
                 9.99,
                 "Snacks",
@@ -690,10 +690,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 5 main menu
-
               menuStmt.run(
                 "Grilled Lobster Tail",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_17.jpg",
                 "Butter-grilled lobster tail served with garlic butter",
                 16.99,
                 "Main menu",
@@ -701,7 +700,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seafood Paella",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_18.jpg",
                 "Spanish rice dish with a mix of seafood",
                 11.99,
                 "Main menu",
@@ -709,7 +708,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blackened Mahi-Mahi",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_19.jpg",
                 "Fried potato patties with mint chutney",
                 9.99,
                 "Main menu",
@@ -717,7 +716,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Sushi Platter",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_20.jpg",
                 "Assorted sushi rolls with soy sauce and wasabi",
                 13.99,
                 "Main menu",
@@ -725,10 +724,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 5 Desserts
-
               menuStmt.run(
                 "Key Lime Pie",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "desserts/dessert_17.jpg",
                 "Florida-style key lime pie with graham cracker crust",
                 5.99,
                 "Dessert",
@@ -736,7 +734,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Coconut Panna Cotta",
-                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "desserts/dessert_18.jpg",
                 "Coconut-flavored Italian dessert with tropical fruit",
                 9.99,
                 "Dessert",
@@ -744,7 +742,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mango Sorbet",
-                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "desserts/dessert_19.jpg",
                 "Refreshing sorbet made with fresh mangoes",
                 5.99,
                 "Dessert",
@@ -752,7 +750,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chocolate Sea Shells",
-                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "desserts/dessert_1.jpg",
                 "Chocolates shaped like seashells with a smooth filling",
                 6.99,
                 "Dessert",
@@ -762,7 +760,7 @@ db.serialize(() => {
               //  Restaurant 5 Drinks
               menuStmt.run(
                 "Pineapple Coconut Mojito",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_17.jpg",
                 "Tropical twist on the classic mojito",
                 7.99,
                 "Drinks",
@@ -770,7 +768,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blue Lagoon",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_18.jpg",
                 "Blue curaçao cocktail with vodka and lemonade",
                 4.99,
                 "Drinks",
@@ -778,7 +776,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Frozen Margarita",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_19.jpg",
                 "Blended margarita with a salted rim",
                 6.99,
                 "Drinks",
@@ -786,7 +784,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Cucumber Mint Cooler",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_20.jpg",
                 "Cooling drink with cucumber, mint, and lime",
                 12.99,
                 "Drinks",
@@ -794,10 +792,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 5 snacks
-
               menuStmt.run(
                 "Crab Cakes",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_17.jpg",
                 "Golden-brown crab cakes served with aioli",
                 2.99,
                 "Snacks",
@@ -805,7 +802,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Calamari Rings",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_18.jpg",
                 "Crispy calamari rings with marinara sauce",
                 3.99,
                 "Snacks",
@@ -813,7 +810,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Clam Chowder",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_1.jpg",
                 "Creamy New England clam chowder",
                 7.99,
                 "Snacks",
@@ -821,7 +818,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seared Tuna Bites",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_2.jpg",
                 "Sesame-crusted seared tuna bites with wasabi mayo",
                 2.99,
                 "Snacks",
@@ -829,10 +826,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 6 main menu
-
               menuStmt.run(
                 "Grilled Lobster Tail",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_21.jpg",
                 "Butter-grilled lobster tail served with garlic butter",
                 16.99,
                 "Main menu",
@@ -840,7 +836,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seafood Paella",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_22.jpg",
                 "Spanish rice dish with a mix of seafood",
                 11.99,
                 "Main menu",
@@ -848,7 +844,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blackened Mahi-Mahi",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_1.jpg",
                 "Fried potato patties with mint chutney",
                 9.99,
                 "Main menu",
@@ -856,18 +852,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Sushi Platter",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_2.jpg",
                 "Assorted sushi rolls with soy sauce and wasabi",
                 13.99,
                 "Main menu",
                 6
               );
 
-              //  Restaurant 5 Desserts
-
+              //  Restaurant 6 Desserts
               menuStmt.run(
                 "Key Lime Pie",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "desserts/dessert_2.jpg",
                 "Florida-style key lime pie with graham cracker crust",
                 5.99,
                 "Dessert",
@@ -875,7 +870,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Coconut Panna Cotta",
-                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "desserts/dessert_3.jpg",
                 "Coconut-flavored Italian dessert with tropical fruit",
                 9.99,
                 "Dessert",
@@ -883,7 +878,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mango Sorbet",
-                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "desserts/dessert_4.jpg",
                 "Refreshing sorbet made with fresh mangoes",
                 5.99,
                 "Dessert",
@@ -891,17 +886,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chocolate Sea Shells",
-                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "desserts/dessert_5.jpg",
                 "Chocolates shaped like seashells with a smooth filling",
                 6.99,
                 "Dessert",
                 6
               );
 
-              //  Restaurant 5 Drinks
+              //  Restaurant 6 Drinks
               menuStmt.run(
                 "Pineapple Coconut Mojito",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_1.jpg",
                 "Tropical twist on the classic mojito",
                 7.99,
                 "Drinks",
@@ -909,7 +904,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blue Lagoon",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_2.jpg",
                 "Blue curaçao cocktail with vodka and lemonade",
                 4.99,
                 "Drinks",
@@ -917,7 +912,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Frozen Margarita",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_3.jpg",
                 "Blended margarita with a salted rim",
                 6.99,
                 "Drinks",
@@ -925,18 +920,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Cucumber Mint Cooler",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_4.jpg",
                 "Cooling drink with cucumber, mint, and lime",
                 12.99,
                 "Drinks",
                 6
               );
 
-              //  Restaurant 5 snacks
-
+              //  Restaurant 6 snacks
               menuStmt.run(
                 "Crab Cakes",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_3.jpg",
                 "Golden-brown crab cakes served with aioli",
                 2.99,
                 "Snacks",
@@ -944,7 +938,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Calamari Rings",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_4.jpg",
                 "Crispy calamari rings with marinara sauce",
                 3.99,
                 "Snacks",
@@ -952,7 +946,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Clam Chowder",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_5.jpg",
                 "Creamy New England clam chowder",
                 7.99,
                 "Snacks",
@@ -960,7 +954,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seared Tuna Bites",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_6.jpg",
                 "Sesame-crusted seared tuna bites with wasabi mayo",
                 2.99,
                 "Snacks",
@@ -968,10 +962,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 7 main menu
-
               menuStmt.run(
                 "Grilled Lobster Tail",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_3.jpg",
                 "Butter-grilled lobster tail served with garlic butter",
                 16.99,
                 "Main menu",
@@ -979,7 +972,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seafood Paella",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_4.jpg",
                 "Spanish rice dish with a mix of seafood",
                 11.99,
                 "Main menu",
@@ -987,7 +980,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blackened Mahi-Mahi",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_5.jpg",
                 "Fried potato patties with mint chutney",
                 9.99,
                 "Main menu",
@@ -995,18 +988,17 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Sushi Platter",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_6.jpg",
                 "Assorted sushi rolls with soy sauce and wasabi",
                 13.99,
                 "Main menu",
                 7
               );
 
-              //  Restaurant 5 Desserts
-
+              //  Restaurant 7 Desserts
               menuStmt.run(
                 "Key Lime Pie",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "desserts/dessert_4.jpg",
                 "Florida-style key lime pie with graham cracker crust",
                 5.99,
                 "Dessert",
@@ -1014,7 +1006,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Coconut Panna Cotta",
-                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "desserts/dessert_5.jpg",
                 "Coconut-flavored Italian dessert with tropical fruit",
                 9.99,
                 "Dessert",
@@ -1022,7 +1014,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mango Sorbet",
-                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "desserts/dessert_6.jpg",
                 "Refreshing sorbet made with fresh mangoes",
                 5.99,
                 "Dessert",
@@ -1030,7 +1022,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chocolate Sea Shells",
-                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "desserts/dessert_7.jpg",
                 "Chocolates shaped like seashells with a smooth filling",
                 6.99,
                 "Dessert",
@@ -1040,7 +1032,7 @@ db.serialize(() => {
               //  Restaurant 7 Drinks
               menuStmt.run(
                 "Pineapple Coconut Mojito",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_5.jpg",
                 "Tropical twist on the classic mojito",
                 7.99,
                 "Drinks",
@@ -1048,7 +1040,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blue Lagoon",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_6.jpg",
                 "Blue curaçao cocktail with vodka and lemonade",
                 4.99,
                 "Drinks",
@@ -1056,7 +1048,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Frozen Margarita",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_7.jpg",
                 "Blended margarita with a salted rim",
                 6.99,
                 "Drinks",
@@ -1064,7 +1056,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Cucumber Mint Cooler",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_8.jpg",
                 "Cooling drink with cucumber, mint, and lime",
                 12.99,
                 "Drinks",
@@ -1072,10 +1064,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 7 snacks
-
               menuStmt.run(
                 "Crab Cakes",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_7.jpg",
                 "Golden-brown crab cakes served with aioli",
                 2.99,
                 "Snacks",
@@ -1083,7 +1074,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Calamari Rings",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_8.jpg",
                 "Crispy calamari rings with marinara sauce",
                 3.99,
                 "Snacks",
@@ -1091,7 +1082,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Clam Chowder",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_9.jpg",
                 "Creamy New England clam chowder",
                 7.99,
                 "Snacks",
@@ -1099,7 +1090,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seared Tuna Bites",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_10.jpg",
                 "Sesame-crusted seared tuna bites with wasabi mayo",
                 2.99,
                 "Snacks",
@@ -1107,10 +1098,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 8 main menu
-
               menuStmt.run(
                 "Grilled Lobster Tail",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_8.jpg",
                 "Butter-grilled lobster tail served with garlic butter",
                 16.99,
                 "Main menu",
@@ -1118,7 +1108,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seafood Paella",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_9.jpg",
                 "Spanish rice dish with a mix of seafood",
                 11.99,
                 "Main menu",
@@ -1126,7 +1116,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blackened Mahi-Mahi",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_10.jpg",
                 "Fried potato patties with mint chutney",
                 9.99,
                 "Main menu",
@@ -1134,7 +1124,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Sushi Platter",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_11.jpg",
                 "Assorted sushi rolls with soy sauce and wasabi",
                 13.99,
                 "Main menu",
@@ -1142,10 +1132,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 8 Desserts
-
               menuStmt.run(
                 "Key Lime Pie",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "desserts/dessert_8.jpg",
                 "Florida-style key lime pie with graham cracker crust",
                 5.99,
                 "Dessert",
@@ -1153,7 +1142,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Coconut Panna Cotta",
-                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "desserts/dessert_9.jpg",
                 "Coconut-flavored Italian dessert with tropical fruit",
                 9.99,
                 "Dessert",
@@ -1161,7 +1150,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mango Sorbet",
-                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "desserts/dessert_10.jpg",
                 "Refreshing sorbet made with fresh mangoes",
                 5.99,
                 "Dessert",
@@ -1169,7 +1158,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chocolate Sea Shells",
-                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "desserts/dessert_11.jpg",
                 "Chocolates shaped like seashells with a smooth filling",
                 6.99,
                 "Dessert",
@@ -1179,7 +1168,7 @@ db.serialize(() => {
               //  Restaurant 8 Drinks
               menuStmt.run(
                 "Pineapple Coconut Mojito",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_9.jpg",
                 "Tropical twist on the classic mojito",
                 7.99,
                 "Drinks",
@@ -1187,7 +1176,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blue Lagoon",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_10.jpg",
                 "Blue curaçao cocktail with vodka and lemonade",
                 4.99,
                 "Drinks",
@@ -1195,7 +1184,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Frozen Margarita",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_11.jpg",
                 "Blended margarita with a salted rim",
                 6.99,
                 "Drinks",
@@ -1203,7 +1192,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Cucumber Mint Cooler",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_12.jpg",
                 "Cooling drink with cucumber, mint, and lime",
                 12.99,
                 "Drinks",
@@ -1211,10 +1200,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 8 snacks
-
               menuStmt.run(
                 "Crab Cakes",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_9.jpg",
                 "Golden-brown crab cakes served with aioli",
                 2.99,
                 "Snacks",
@@ -1222,7 +1210,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Calamari Rings",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_10.jpg",
                 "Crispy calamari rings with marinara sauce",
                 3.99,
                 "Snacks",
@@ -1230,7 +1218,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Clam Chowder",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_11.jpg",
                 "Creamy New England clam chowder",
                 7.99,
                 "Snacks",
@@ -1238,7 +1226,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seared Tuna Bites",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_12.jpg",
                 "Sesame-crusted seared tuna bites with wasabi mayo",
                 2.99,
                 "Snacks",
@@ -1246,10 +1234,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 9 main menu
-
               menuStmt.run(
                 "Grilled Lobster Tail",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_9.jpg",
                 "Butter-grilled lobster tail served with garlic butter",
                 16.99,
                 "Main menu",
@@ -1257,7 +1244,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seafood Paella",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_10.jpg",
                 "Spanish rice dish with a mix of seafood",
                 11.99,
                 "Main menu",
@@ -1265,7 +1252,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blackened Mahi-Mahi",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_11.jpg",
                 "Fried potato patties with mint chutney",
                 9.99,
                 "Main menu",
@@ -1273,7 +1260,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Sushi Platter",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_12.jpg",
                 "Assorted sushi rolls with soy sauce and wasabi",
                 13.99,
                 "Main menu",
@@ -1281,10 +1268,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 9 Desserts
-
               menuStmt.run(
                 "Key Lime Pie",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "desserts/dessert_9.jpg",
                 "Florida-style key lime pie with graham cracker crust",
                 5.99,
                 "Dessert",
@@ -1292,7 +1278,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Coconut Panna Cotta",
-                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "desserts/dessert_10.jpg",
                 "Coconut-flavored Italian dessert with tropical fruit",
                 9.99,
                 "Dessert",
@@ -1300,7 +1286,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mango Sorbet",
-                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "desserts/dessert_11.jpg",
                 "Refreshing sorbet made with fresh mangoes",
                 5.99,
                 "Dessert",
@@ -1308,7 +1294,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chocolate Sea Shells",
-                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "desserts/dessert_12.jpg",
                 "Chocolates shaped like seashells with a smooth filling",
                 6.99,
                 "Dessert",
@@ -1318,7 +1304,7 @@ db.serialize(() => {
               //  Restaurant 9 Drinks
               menuStmt.run(
                 "Pineapple Coconut Mojito",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_9.jpg",
                 "Tropical twist on the classic mojito",
                 7.99,
                 "Drinks",
@@ -1326,7 +1312,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blue Lagoon",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_10.jpg",
                 "Blue curaçao cocktail with vodka and lemonade",
                 4.99,
                 "Drinks",
@@ -1334,7 +1320,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Frozen Margarita",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_11.jpg",
                 "Blended margarita with a salted rim",
                 6.99,
                 "Drinks",
@@ -1342,7 +1328,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Cucumber Mint Cooler",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_12.jpg",
                 "Cooling drink with cucumber, mint, and lime",
                 12.99,
                 "Drinks",
@@ -1350,10 +1336,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 9 snacks
-
               menuStmt.run(
                 "Crab Cakes",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_13.jpg",
                 "Golden-brown crab cakes served with aioli",
                 2.99,
                 "Snacks",
@@ -1361,7 +1346,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Calamari Rings",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_14.jpg",
                 "Crispy calamari rings with marinara sauce",
                 3.99,
                 "Snacks",
@@ -1369,7 +1354,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Clam Chowder",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_15.jpg",
                 "Creamy New England clam chowder",
                 7.99,
                 "Snacks",
@@ -1377,7 +1362,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seared Tuna Bites",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_16.jpg",
                 "Sesame-crusted seared tuna bites with wasabi mayo",
                 2.99,
                 "Snacks",
@@ -1385,10 +1370,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 10 main menu
-
               menuStmt.run(
                 "Grilled Lobster Tail",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_13.jpg",
                 "Butter-grilled lobster tail served with garlic butter",
                 16.99,
                 "Main menu",
@@ -1396,7 +1380,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seafood Paella",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_14.jpg",
                 "Spanish rice dish with a mix of seafood",
                 11.99,
                 "Main menu",
@@ -1404,7 +1388,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blackened Mahi-Mahi",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_15.jpg",
                 "Fried potato patties with mint chutney",
                 9.99,
                 "Main menu",
@@ -1412,7 +1396,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Sushi Platter",
-                "https://example.com/edamame.jpg",
+                "mainDish/main_dish_16.jpg",
                 "Assorted sushi rolls with soy sauce and wasabi",
                 13.99,
                 "Main menu",
@@ -1420,10 +1404,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 10 Desserts
-
               menuStmt.run(
                 "Key Lime Pie",
-                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "desserts/dessert_13.jpg",
                 "Florida-style key lime pie with graham cracker crust",
                 10.99,
                 "Dessert",
@@ -1431,7 +1414,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Coconut Panna Cotta",
-                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "desserts/dessert_14.jpg",
                 "Coconut-flavored Italian dessert with tropical fruit",
                 9.99,
                 "Dessert",
@@ -1439,7 +1422,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Mango Sorbet",
-                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "desserts/dessert_15.jpg",
                 "Refreshing sorbet made with fresh mangoes",
                 10.99,
                 "Dessert",
@@ -1447,7 +1430,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Chocolate Sea Shells",
-                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "desserts/dessert_16.jpg",
                 "Chocolates shaped like seashells with a smooth filling",
                 6.99,
                 "Dessert",
@@ -1457,7 +1440,7 @@ db.serialize(() => {
               //  Restaurant 10 Drinks
               menuStmt.run(
                 "Pineapple Coconut Mojito",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_13.jpg",
                 "Tropical twist on the classic mojito",
                 7.99,
                 "Drinks",
@@ -1465,7 +1448,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Blue Lagoon",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_14.jpg",
                 "Blue curaçao cocktail with vodka and lemonade",
                 4.99,
                 "Drinks",
@@ -1473,7 +1456,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Frozen Margarita",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_15.jpg",
                 "Blended margarita with a salted rim",
                 6.99,
                 "Drinks",
@@ -1481,7 +1464,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Cucumber Mint Cooler",
-                "https://example.com/edamame.jpg",
+                "drinks/drinks_16.jpg",
                 "Cooling drink with cucumber, mint, and lime",
                 12.99,
                 "Drinks",
@@ -1489,10 +1472,9 @@ db.serialize(() => {
               );
 
               //  Restaurant 10 snacks
-
               menuStmt.run(
                 "Crab Cakes",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_13.jpg",
                 "Golden-brown crab cakes served with aioli",
                 2.99,
                 "Snacks",
@@ -1500,7 +1482,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Calamari Rings",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_14.jpg",
                 "Crispy calamari rings with marinara sauce",
                 3.99,
                 "Snacks",
@@ -1508,7 +1490,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Clam Chowder",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_15.jpg",
                 "Creamy New England clam chowder",
                 7.99,
                 "Snacks",
@@ -1516,7 +1498,7 @@ db.serialize(() => {
               );
               menuStmt.run(
                 "Seared Tuna Bites",
-                "https://example.com/edamame.jpg",
+                "snacks/snacks_16.jpg",
                 "Sesame-crusted seared tuna bites with wasabi mayo",
                 2.99,
                 "Snacks",

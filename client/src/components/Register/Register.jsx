@@ -10,14 +10,14 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const firstName = form.first_name.value;
-    const lastName = form.last_name.value;
-    const address = form.address.value;
+    // const firstName = form.first_name.value;
+    // const lastName = form.last_name.value;
+    // const address = form.address.value;
     const email = form.email.value;
     const password = form.password.value;
 
     createUser(email, password)
-      .then((data) => {
+      .then(() => {
         Swal.fire({
           title: "Good job!",
           text: "User Created Successfully!",
@@ -86,7 +86,7 @@ const Register = () => {
                   name="password"
                 />
               </div>
-              <div className="form-control">
+              {/* <div className="form-control">
                 <label className="label">
                   <span className="label-text">Address</span>
                 </label>
@@ -97,7 +97,7 @@ const Register = () => {
                   required
                   name="address"
                 />
-              </div>
+              </div> */}
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Sign Up</button>
               </div>
