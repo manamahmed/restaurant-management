@@ -15,7 +15,7 @@ const Banner = () => {
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
             <h1 className="mb-5 text-5xl bg-slate-100 p-3 font-bold opacity-70 rounded">
-              <p className="text-black">Are You Hungry?</p>
+              <p className="text-[#2B3440]">Are You Hungry?</p>
             </h1>
           </div>
         </div>
