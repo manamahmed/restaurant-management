@@ -81,7 +81,7 @@ const Menus = () => {
     return (
       <>
         <div
-          className="max-w-[1440px] mx-auto mb-12 "
+          className="max-w-[1240px] mx-auto mb-12 "
           key={`${restaurantId}-${menuName}-${index}`}
         >
           <div className="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
@@ -92,7 +92,7 @@ const Menus = () => {
               return (
                 <div key={`${restaurantId}-${menu_id}-${name}`}>
                   <div className="flex flex-col items-center bg-white border border-gray-200 h-full rounded-lg shadow md:flex-row md:max-w-xl">
-                    <div className="h-[300px]">
+                    <div className="h-[200px]">
                       <img
                         className="object-cover w-full rounded-t-lg h-96 md:h-full md:w-[24rem] md:rounded-none md:rounded-s-lg"
                         src={getFullUrl(img)}
@@ -127,7 +127,7 @@ const Menus = () => {
 
                           updateOrders(itemToAdd);
                         }}
-                        className="btn btn-primary w-[150px] ml-auto"
+                        className="btn btn-primary w-[150px] mt-auto ml-auto"
                       >
                         Add To Cart
                       </button>

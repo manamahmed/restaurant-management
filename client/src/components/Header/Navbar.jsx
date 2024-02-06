@@ -71,7 +71,9 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <button className="btn btn-ghost text-xl uppercase">Lieferspatz</button>
+            <button className="btn btn-ghost text-xl uppercase">
+              Lieferspatz
+            </button>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -90,6 +92,9 @@ const Navbar = () => {
         <div className="navbar-end">
           {user?.email ? (
             <>
+              <div className="mr-[20px]">
+                Welcome, <strong>{user?.displayName}</strong>
+              </div>
               <button onClick={handleLogout} className="btn btn-primary">
                 Logout
               </button>

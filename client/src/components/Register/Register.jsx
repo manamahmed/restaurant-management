@@ -4,20 +4,21 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    // const firstName = form.first_name.value;
+    const firstName = form.first_name.value;
     // const lastName = form.last_name.value;
     // const address = form.address.value;
     const email = form.email.value;
     const password = form.password.value;
 
     createUser(email, password)
-      .then(() => {
+      .then(async () => {
+        await updateUserProfile(firstName);
         Swal.fire({
           title: "Good job!",
           text: "User Created Successfully!",
@@ -29,6 +30,7 @@ const Register = () => {
         console.error(err);
       });
   };
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">

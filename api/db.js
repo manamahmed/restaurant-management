@@ -1536,10 +1536,54 @@ db.serialize(() => {
                   `);
 
               orderStmt.run(
-                20,
-                "manam@email.com",
-                "book,pen",
+                40,
+                "manamahmed68@email.com",
+                "Stuffed Bell Peppers",
                 "teststr. 10, Duisburg"
+              );
+
+              orderStmt.run(
+                13.45,
+                "manamahmed68@email.com",
+                "Cucumber Mint Cooler,Seared Tuna Bites",
+                "Hermanstr. 10, Duisburg"
+              );
+
+              orderStmt.run(
+                13.85,
+                "mdrajibsorkar965@gmail.com",
+                "Frozen Margarita",
+                "Hingbergstr. 146, Mülheim"
+              );
+              orderStmt.run(
+                14.5,
+                "mdrajibsorkar965@gmail.com",
+                "Fresh Orange Juice",
+                "Brükstr. 123, Mülheim"
+              );
+              orderStmt.run(
+                13.5,
+                "md.nasif008@gmail.com",
+                "Vegan Chocolate Cake",
+                "Tülppenstr. 15, Duisburg"
+              );
+              orderStmt.run(
+                13.75,
+                "md.nasif008@gmail.com",
+                "Blackened Mahi-Mahi",
+                "Brükstr. 123, Mülheim"
+              );
+              orderStmt.run(
+                18.25,
+                "kashemali1423@gmail.com",
+                "Calamari Rings",
+                "Bollostr.45, Mülheim"
+              );
+              orderStmt.run(
+                17.5,
+                "kashemali1423@gmail.com",
+                "Pineapple Coconut Mojito",
+                "Lortzingstr. 123, Mülheim"
               );
 
               orderStmt.finalize();
@@ -1550,42 +1594,47 @@ db.serialize(() => {
     }
   );
 
-  // users table
-  db.get(
-    "SELECT name FROM sqlite_master WHERE type='table' AND name='users'",
-    (err, table) => {
-      if (!table) {
-        // Create the orders table
-        db.run(
-          `CREATE TABLE users (
-            id INTEGER PRIMARY KEY,
-            first_name TEXT NOT NULL,
-            last_name TEXT NOT NULL,
-            email TEXT NOT NULL,
-            address TEXT NOT NULL
-          )`,
-          (err) => {
-            if (!err) {
-              // Insert sample data into the orders table
-              const userStmt = db.prepare(`
-                  INSERT INTO users (first_name, last_name, email, address)
-                  VALUES (?, ?, ?, ?)
-                  `);
+  // // users table
+  // db.get(
+  //   "SELECT name FROM sqlite_master WHERE type='table' AND name='users'",
+  //   (err, table) => {
+  //     if (!table) {
+  //       // Create the orders table
+  //       db.run(
+  //         `CREATE TABLE users (
+  //           id INTEGER PRIMARY KEY,
+  //           first_name TEXT NOT NULL,
+  //           last_name TEXT NOT NULL,
+  //           email TEXT NOT NULL,
+  //           address TEXT NOT NULL
+  //         )`,
+  //         (err) => {
+  //           if (!err) {
+  //             // Insert sample data into the orders table
+  //             const userStmt = db.prepare(`
+  //                 INSERT INTO users (first_name, last_name, email, address)
+  //                 VALUES (?, ?, ?, ?)
+  //                 `);
 
-              userStmt.run(
-                "Manam",
-                "Ahmed",
-                "manam@email.com",
-                "teststr. 10, Duisburg"
-              );
+  //             userStmt.run(
+  //               "Manam",
+  //               "Ahmed",
+  //               "manamahmed68@gmail.com",
+  //               "teststr. 10, Duisburg"
+  //             );
 
-              userStmt.finalize();
-            }
-          }
-        );
-      }
-    }
-  );
+  //             userStmt.finalize();
+  //           }
+  //         }
+  //       );
+  //     }
+  //   }
+  // );
 });
 
 module.exports = db;
+
+// mdrajibsorkar965@gmail.com
+// md.nasif008@gmail.com
+// manamahmed68@gmail.com
+// kashemali1423@gmail.com

@@ -66,6 +66,7 @@ const CartList = () => {
           <thead>
             <tr>
               <th>Name</th>
+              <th></th>
               <th>Quantity</th>
               <th>Price</th>
               <th></th>
@@ -75,12 +76,15 @@ const CartList = () => {
             {orders.map((item) => {
               return (
                 <tr key={`${item.restaurantId}-${item.menuId}`}>
-                  <td>
+                  <td className="w-[200px]">
                     <div className="flex items-center gap-3">
                       <div>
                         <div className="font-bold">{item.name}</div>
                       </div>
-
+                    </div>
+                  </td>
+                  <td>
+                    <div className="flex items-center gap-3">
                       <div className="avatar">
                         <div className="mask mask-squircle w-12 h-12">
                           <img
@@ -108,7 +112,7 @@ const CartList = () => {
                       }}
                     />
                   </td>
-                  <td>{item.price} €</td>
+                  <td>€{item.price}</td>
                   <th>
                     <button
                       className="btn btn-ghost btn-xs"
@@ -123,54 +127,17 @@ const CartList = () => {
                         resetOrders(updatedOrders);
                       }}
                     >
-                      <MdDelete className="text-2xl "></MdDelete>
+                      <MdDelete className="text-2xl text-red-700"></MdDelete>
                     </button>
                   </th>
                 </tr>
               );
-
-              // return (
-              //   <div key={`${item.restaurantId}-${item.menuId}`}>
-              //     <h3>{item.name}</h3>
-              //     <div>
-              //       Quantity:{" "}
-              //       <input
-              //         type="text"
-              //         value={item.quantity}
-              //         onChange={(event) => {
-              //           const quantity = Number(event.target.value);
-              //           const updatedOrders = orders.map((orderItem) =>
-              //             orderItem.restaurantId === item.restaurantId &&
-              //             orderItem.menuId === item.menuId
-              //               ? { ...orderItem, quantity }
-              //               : orderItem
-              //           );
-              //           resetOrders(updatedOrders);
-              //         }}
-              //       />
-              //     </div>
-              //     <div>{item.price}</div>
-              //     <button
-              //       onClick={() => {
-              //         const updatedOrders = orders.filter(
-              //           (orderItem) =>
-              //             !(
-              //               orderItem.restaurantId === item.restaurantId &&
-              //               orderItem.menuId === item.menuId
-              //             )
-              //         );
-              //         resetOrders(updatedOrders);
-              //       }}
-              //     >
-              //       remove
-              //     </button>
-              //   </div>
-              // );
             })}
           </tbody>
           <tfoot>
             <tr>
               <th>Name</th>
+              <th></th>
               <th>Quantity</th>
               <th>Price</th>
               <th></th>
