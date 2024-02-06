@@ -656,177 +656,872 @@ db.serialize(() => {
               );
               // Restaurant 4 Snacks
 
-               menuStmt.run(
-                 "Samosa",
-                 "https://example.com/edamame.jpg",
-                 "Crispy pastry filled with spiced potatoes and peas",
-                 1.99,
-                 "Snacks",
-                 4
-               );
-               menuStmt.run(
-                 "Chicken Pakora",
-                 "https://example.com/edamame.jpg",
-                 "Deep-fried chicken fritters with spices",
-                 2.99,
-                 "Snacks",
-                 4
-               );
-               menuStmt.run(
-                 "Papdi Chaat",
-                 "https://example.com/edamame.jpg",
-                 "Crunchy snack with yogurt, chutney, and spices",
-                 3.99,
-                 "Snacks",
-                 4
-               );
-               menuStmt.run(
-                 "Aloo Tikki",
-                 "https://example.com/edamame.jpg",
-                 "Fried potato patties with mint chutney",
-                 9.99,
-                 "Snacks",
-                 4
-               );
+              menuStmt.run(
+                "Samosa",
+                "https://example.com/edamame.jpg",
+                "Crispy pastry filled with spiced potatoes and peas",
+                1.99,
+                "Snacks",
+                4
+              );
+              menuStmt.run(
+                "Chicken Pakora",
+                "https://example.com/edamame.jpg",
+                "Deep-fried chicken fritters with spices",
+                2.99,
+                "Snacks",
+                4
+              );
+              menuStmt.run(
+                "Papdi Chaat",
+                "https://example.com/edamame.jpg",
+                "Crunchy snack with yogurt, chutney, and spices",
+                3.99,
+                "Snacks",
+                4
+              );
+              menuStmt.run(
+                "Aloo Tikki",
+                "https://example.com/edamame.jpg",
+                "Fried potato patties with mint chutney",
+                9.99,
+                "Snacks",
+                4
+              );
 
-              //  Restaurant 5 main menus
+              //  Restaurant 5 main menu
 
-               menuStmt.run(
-                 "Grilled Lobster Tail",
-                 "https://example.com/edamame.jpg",
-                 "Butter-grilled lobster tail served with garlic butter",
-                 16.99,
-                 "Main menu",
-                 5
-               );
-               menuStmt.run(
-                 "Seafood Paella",
-                 "https://example.com/edamame.jpg",
-                 "Spanish rice dish with a mix of seafood",
-                 11.99,
-                 "Main menu",
-                 5
-               );
-               menuStmt.run(
-                 "Blackened Mahi-Mahi",
-                 "https://example.com/edamame.jpg",
-                 "Fried potato patties with mint chutney",
-                 9.99,
-                 "Main menu",
-                 5
-               );
-               menuStmt.run(
-                 "Sushi Platter",
-                 "https://example.com/edamame.jpg",
-                 "Assorted sushi rolls with soy sauce and wasabi",
-                 13.99,
-                 "Main menu",
-                 5
-               );
+              menuStmt.run(
+                "Grilled Lobster Tail",
+                "https://example.com/edamame.jpg",
+                "Butter-grilled lobster tail served with garlic butter",
+                16.99,
+                "Main menu",
+                5
+              );
+              menuStmt.run(
+                "Seafood Paella",
+                "https://example.com/edamame.jpg",
+                "Spanish rice dish with a mix of seafood",
+                11.99,
+                "Main menu",
+                5
+              );
+              menuStmt.run(
+                "Blackened Mahi-Mahi",
+                "https://example.com/edamame.jpg",
+                "Fried potato patties with mint chutney",
+                9.99,
+                "Main menu",
+                5
+              );
+              menuStmt.run(
+                "Sushi Platter",
+                "https://example.com/edamame.jpg",
+                "Assorted sushi rolls with soy sauce and wasabi",
+                13.99,
+                "Main menu",
+                5
+              );
 
               //  Restaurant 5 Desserts
 
-               menuStmt.run(
-                 "Key Lime Pie",
-                 "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
-                 "Florida-style key lime pie with graham cracker crust",
-                 5.99,
-                 "Dessert",
-                 5
-               );
-               menuStmt.run(
-                 "Coconut Panna Cotta",
-                 "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
-                 "Coconut-flavored Italian dessert with tropical fruit",
-                 9.99,
-                 "Dessert",
-                 5
-               );
-               menuStmt.run(
-                 "Mango Sorbet",
-                 "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
-                 "Refreshing sorbet made with fresh mangoes",
-                 5.99,
-                 "Dessert",
-                 5
-               );
-               menuStmt.run(
-                 "Chocolate Sea Shells",
-                 "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
-                 "Chocolates shaped like seashells with a smooth filling",
-                 6.99,
-                 "Dessert",
-                 5
-               );
+              menuStmt.run(
+                "Key Lime Pie",
+                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "Florida-style key lime pie with graham cracker crust",
+                5.99,
+                "Dessert",
+                5
+              );
+              menuStmt.run(
+                "Coconut Panna Cotta",
+                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "Coconut-flavored Italian dessert with tropical fruit",
+                9.99,
+                "Dessert",
+                5
+              );
+              menuStmt.run(
+                "Mango Sorbet",
+                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "Refreshing sorbet made with fresh mangoes",
+                5.99,
+                "Dessert",
+                5
+              );
+              menuStmt.run(
+                "Chocolate Sea Shells",
+                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "Chocolates shaped like seashells with a smooth filling",
+                6.99,
+                "Dessert",
+                5
+              );
 
               //  Restaurant 5 Drinks
-               menuStmt.run(
-                 "Pineapple Coconut Mojito",
-                 "https://example.com/edamame.jpg",
-                 "Tropical twist on the classic mojito",
-                 7.99,
-                 "Drinks",
-                 5
-               );
-               menuStmt.run(
-                 "Blue Lagoon",
-                 "https://example.com/edamame.jpg",
-                 "Blue curaçao cocktail with vodka and lemonade",
-                 4.99,
-                 "Drinks",
-                 5
-               );
-               menuStmt.run(
-                 "Frozen Margarita",
-                 "https://example.com/edamame.jpg",
-                 "Blended margarita with a salted rim",
-                 6.99,
-                 "Drinks",
-                 5
-               );
-               menuStmt.run(
-                 "Cucumber Mint Cooler",
-                 "https://example.com/edamame.jpg",
-                 "Cooling drink with cucumber, mint, and lime",
-                 12.99,
-                 "Drinks",
-                 5
-               );
+              menuStmt.run(
+                "Pineapple Coconut Mojito",
+                "https://example.com/edamame.jpg",
+                "Tropical twist on the classic mojito",
+                7.99,
+                "Drinks",
+                5
+              );
+              menuStmt.run(
+                "Blue Lagoon",
+                "https://example.com/edamame.jpg",
+                "Blue curaçao cocktail with vodka and lemonade",
+                4.99,
+                "Drinks",
+                5
+              );
+              menuStmt.run(
+                "Frozen Margarita",
+                "https://example.com/edamame.jpg",
+                "Blended margarita with a salted rim",
+                6.99,
+                "Drinks",
+                5
+              );
+              menuStmt.run(
+                "Cucumber Mint Cooler",
+                "https://example.com/edamame.jpg",
+                "Cooling drink with cucumber, mint, and lime",
+                12.99,
+                "Drinks",
+                5
+              );
 
               //  Restaurant 5 snacks
 
-               menuStmt.run(
-                 "Crab Cakes",
-                 "https://example.com/edamame.jpg",
-                 "Golden-brown crab cakes served with aioli",
-                 2.99,
-                 "Snacks",
-                 5
-               );
-               menuStmt.run(
-                 "Calamari Rings",
-                 "https://example.com/edamame.jpg",
-                 "Crispy calamari rings with marinara sauce",
-                 3.99,
-                 "Snacks",
-                 5
-               );
-               menuStmt.run(
-                 "Clam Chowder",
-                 "https://example.com/edamame.jpg",
-                 "Creamy New England clam chowder",
-                 7.99,
-                 "Snacks",
-                 5
-               );
-               menuStmt.run(
-                 "Seared Tuna Bites",
-                 "https://example.com/edamame.jpg",
-                 "Sesame-crusted seared tuna bites with wasabi mayo",
-                 2.99,
-                 "Snacks",
-                 5
-               );
+              menuStmt.run(
+                "Crab Cakes",
+                "https://example.com/edamame.jpg",
+                "Golden-brown crab cakes served with aioli",
+                2.99,
+                "Snacks",
+                5
+              );
+              menuStmt.run(
+                "Calamari Rings",
+                "https://example.com/edamame.jpg",
+                "Crispy calamari rings with marinara sauce",
+                3.99,
+                "Snacks",
+                5
+              );
+              menuStmt.run(
+                "Clam Chowder",
+                "https://example.com/edamame.jpg",
+                "Creamy New England clam chowder",
+                7.99,
+                "Snacks",
+                5
+              );
+              menuStmt.run(
+                "Seared Tuna Bites",
+                "https://example.com/edamame.jpg",
+                "Sesame-crusted seared tuna bites with wasabi mayo",
+                2.99,
+                "Snacks",
+                5
+              );
+
+              //  Restaurant 6 main menu
+
+              menuStmt.run(
+                "Grilled Lobster Tail",
+                "https://example.com/edamame.jpg",
+                "Butter-grilled lobster tail served with garlic butter",
+                16.99,
+                "Main menu",
+                6
+              );
+              menuStmt.run(
+                "Seafood Paella",
+                "https://example.com/edamame.jpg",
+                "Spanish rice dish with a mix of seafood",
+                11.99,
+                "Main menu",
+                6
+              );
+              menuStmt.run(
+                "Blackened Mahi-Mahi",
+                "https://example.com/edamame.jpg",
+                "Fried potato patties with mint chutney",
+                9.99,
+                "Main menu",
+                6
+              );
+              menuStmt.run(
+                "Sushi Platter",
+                "https://example.com/edamame.jpg",
+                "Assorted sushi rolls with soy sauce and wasabi",
+                13.99,
+                "Main menu",
+                6
+              );
+
+              //  Restaurant 5 Desserts
+
+              menuStmt.run(
+                "Key Lime Pie",
+                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "Florida-style key lime pie with graham cracker crust",
+                5.99,
+                "Dessert",
+                6
+              );
+              menuStmt.run(
+                "Coconut Panna Cotta",
+                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "Coconut-flavored Italian dessert with tropical fruit",
+                9.99,
+                "Dessert",
+                6
+              );
+              menuStmt.run(
+                "Mango Sorbet",
+                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "Refreshing sorbet made with fresh mangoes",
+                5.99,
+                "Dessert",
+                6
+              );
+              menuStmt.run(
+                "Chocolate Sea Shells",
+                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "Chocolates shaped like seashells with a smooth filling",
+                6.99,
+                "Dessert",
+                6
+              );
+
+              //  Restaurant 5 Drinks
+              menuStmt.run(
+                "Pineapple Coconut Mojito",
+                "https://example.com/edamame.jpg",
+                "Tropical twist on the classic mojito",
+                7.99,
+                "Drinks",
+                6
+              );
+              menuStmt.run(
+                "Blue Lagoon",
+                "https://example.com/edamame.jpg",
+                "Blue curaçao cocktail with vodka and lemonade",
+                4.99,
+                "Drinks",
+                6
+              );
+              menuStmt.run(
+                "Frozen Margarita",
+                "https://example.com/edamame.jpg",
+                "Blended margarita with a salted rim",
+                6.99,
+                "Drinks",
+                6
+              );
+              menuStmt.run(
+                "Cucumber Mint Cooler",
+                "https://example.com/edamame.jpg",
+                "Cooling drink with cucumber, mint, and lime",
+                12.99,
+                "Drinks",
+                6
+              );
+
+              //  Restaurant 5 snacks
+
+              menuStmt.run(
+                "Crab Cakes",
+                "https://example.com/edamame.jpg",
+                "Golden-brown crab cakes served with aioli",
+                2.99,
+                "Snacks",
+                6
+              );
+              menuStmt.run(
+                "Calamari Rings",
+                "https://example.com/edamame.jpg",
+                "Crispy calamari rings with marinara sauce",
+                3.99,
+                "Snacks",
+                6
+              );
+              menuStmt.run(
+                "Clam Chowder",
+                "https://example.com/edamame.jpg",
+                "Creamy New England clam chowder",
+                7.99,
+                "Snacks",
+                6
+              );
+              menuStmt.run(
+                "Seared Tuna Bites",
+                "https://example.com/edamame.jpg",
+                "Sesame-crusted seared tuna bites with wasabi mayo",
+                2.99,
+                "Snacks",
+                6
+              );
+
+              //  Restaurant 7 main menu
+
+              menuStmt.run(
+                "Grilled Lobster Tail",
+                "https://example.com/edamame.jpg",
+                "Butter-grilled lobster tail served with garlic butter",
+                16.99,
+                "Main menu",
+                7
+              );
+              menuStmt.run(
+                "Seafood Paella",
+                "https://example.com/edamame.jpg",
+                "Spanish rice dish with a mix of seafood",
+                11.99,
+                "Main menu",
+                7
+              );
+              menuStmt.run(
+                "Blackened Mahi-Mahi",
+                "https://example.com/edamame.jpg",
+                "Fried potato patties with mint chutney",
+                9.99,
+                "Main menu",
+                7
+              );
+              menuStmt.run(
+                "Sushi Platter",
+                "https://example.com/edamame.jpg",
+                "Assorted sushi rolls with soy sauce and wasabi",
+                13.99,
+                "Main menu",
+                7
+              );
+
+              //  Restaurant 5 Desserts
+
+              menuStmt.run(
+                "Key Lime Pie",
+                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "Florida-style key lime pie with graham cracker crust",
+                5.99,
+                "Dessert",
+                7
+              );
+              menuStmt.run(
+                "Coconut Panna Cotta",
+                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "Coconut-flavored Italian dessert with tropical fruit",
+                9.99,
+                "Dessert",
+                7
+              );
+              menuStmt.run(
+                "Mango Sorbet",
+                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "Refreshing sorbet made with fresh mangoes",
+                5.99,
+                "Dessert",
+                7
+              );
+              menuStmt.run(
+                "Chocolate Sea Shells",
+                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "Chocolates shaped like seashells with a smooth filling",
+                6.99,
+                "Dessert",
+                7
+              );
+
+              //  Restaurant 7 Drinks
+              menuStmt.run(
+                "Pineapple Coconut Mojito",
+                "https://example.com/edamame.jpg",
+                "Tropical twist on the classic mojito",
+                7.99,
+                "Drinks",
+                7
+              );
+              menuStmt.run(
+                "Blue Lagoon",
+                "https://example.com/edamame.jpg",
+                "Blue curaçao cocktail with vodka and lemonade",
+                4.99,
+                "Drinks",
+                7
+              );
+              menuStmt.run(
+                "Frozen Margarita",
+                "https://example.com/edamame.jpg",
+                "Blended margarita with a salted rim",
+                6.99,
+                "Drinks",
+                7
+              );
+              menuStmt.run(
+                "Cucumber Mint Cooler",
+                "https://example.com/edamame.jpg",
+                "Cooling drink with cucumber, mint, and lime",
+                12.99,
+                "Drinks",
+                7
+              );
+
+              //  Restaurant 7 snacks
+
+              menuStmt.run(
+                "Crab Cakes",
+                "https://example.com/edamame.jpg",
+                "Golden-brown crab cakes served with aioli",
+                2.99,
+                "Snacks",
+                7
+              );
+              menuStmt.run(
+                "Calamari Rings",
+                "https://example.com/edamame.jpg",
+                "Crispy calamari rings with marinara sauce",
+                3.99,
+                "Snacks",
+                7
+              );
+              menuStmt.run(
+                "Clam Chowder",
+                "https://example.com/edamame.jpg",
+                "Creamy New England clam chowder",
+                7.99,
+                "Snacks",
+                7
+              );
+              menuStmt.run(
+                "Seared Tuna Bites",
+                "https://example.com/edamame.jpg",
+                "Sesame-crusted seared tuna bites with wasabi mayo",
+                2.99,
+                "Snacks",
+                7
+              );
+
+              //  Restaurant 8 main menu
+
+              menuStmt.run(
+                "Grilled Lobster Tail",
+                "https://example.com/edamame.jpg",
+                "Butter-grilled lobster tail served with garlic butter",
+                16.99,
+                "Main menu",
+                8
+              );
+              menuStmt.run(
+                "Seafood Paella",
+                "https://example.com/edamame.jpg",
+                "Spanish rice dish with a mix of seafood",
+                11.99,
+                "Main menu",
+                8
+              );
+              menuStmt.run(
+                "Blackened Mahi-Mahi",
+                "https://example.com/edamame.jpg",
+                "Fried potato patties with mint chutney",
+                9.99,
+                "Main menu",
+                8
+              );
+              menuStmt.run(
+                "Sushi Platter",
+                "https://example.com/edamame.jpg",
+                "Assorted sushi rolls with soy sauce and wasabi",
+                13.99,
+                "Main menu",
+                8
+              );
+
+              //  Restaurant 8 Desserts
+
+              menuStmt.run(
+                "Key Lime Pie",
+                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "Florida-style key lime pie with graham cracker crust",
+                5.99,
+                "Dessert",
+                8
+              );
+              menuStmt.run(
+                "Coconut Panna Cotta",
+                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "Coconut-flavored Italian dessert with tropical fruit",
+                9.99,
+                "Dessert",
+                8
+              );
+              menuStmt.run(
+                "Mango Sorbet",
+                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "Refreshing sorbet made with fresh mangoes",
+                5.99,
+                "Dessert",
+                8
+              );
+              menuStmt.run(
+                "Chocolate Sea Shells",
+                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "Chocolates shaped like seashells with a smooth filling",
+                6.99,
+                "Dessert",
+                8
+              );
+
+              //  Restaurant 8 Drinks
+              menuStmt.run(
+                "Pineapple Coconut Mojito",
+                "https://example.com/edamame.jpg",
+                "Tropical twist on the classic mojito",
+                7.99,
+                "Drinks",
+                8
+              );
+              menuStmt.run(
+                "Blue Lagoon",
+                "https://example.com/edamame.jpg",
+                "Blue curaçao cocktail with vodka and lemonade",
+                4.99,
+                "Drinks",
+                8
+              );
+              menuStmt.run(
+                "Frozen Margarita",
+                "https://example.com/edamame.jpg",
+                "Blended margarita with a salted rim",
+                6.99,
+                "Drinks",
+                8
+              );
+              menuStmt.run(
+                "Cucumber Mint Cooler",
+                "https://example.com/edamame.jpg",
+                "Cooling drink with cucumber, mint, and lime",
+                12.99,
+                "Drinks",
+                8
+              );
+
+              //  Restaurant 8 snacks
+
+              menuStmt.run(
+                "Crab Cakes",
+                "https://example.com/edamame.jpg",
+                "Golden-brown crab cakes served with aioli",
+                2.99,
+                "Snacks",
+                8
+              );
+              menuStmt.run(
+                "Calamari Rings",
+                "https://example.com/edamame.jpg",
+                "Crispy calamari rings with marinara sauce",
+                3.99,
+                "Snacks",
+                8
+              );
+              menuStmt.run(
+                "Clam Chowder",
+                "https://example.com/edamame.jpg",
+                "Creamy New England clam chowder",
+                7.99,
+                "Snacks",
+                8
+              );
+              menuStmt.run(
+                "Seared Tuna Bites",
+                "https://example.com/edamame.jpg",
+                "Sesame-crusted seared tuna bites with wasabi mayo",
+                2.99,
+                "Snacks",
+                8
+              );
+
+              //  Restaurant 9 main menu
+
+              menuStmt.run(
+                "Grilled Lobster Tail",
+                "https://example.com/edamame.jpg",
+                "Butter-grilled lobster tail served with garlic butter",
+                16.99,
+                "Main menu",
+                9
+              );
+              menuStmt.run(
+                "Seafood Paella",
+                "https://example.com/edamame.jpg",
+                "Spanish rice dish with a mix of seafood",
+                11.99,
+                "Main menu",
+                9
+              );
+              menuStmt.run(
+                "Blackened Mahi-Mahi",
+                "https://example.com/edamame.jpg",
+                "Fried potato patties with mint chutney",
+                9.99,
+                "Main menu",
+                9
+              );
+              menuStmt.run(
+                "Sushi Platter",
+                "https://example.com/edamame.jpg",
+                "Assorted sushi rolls with soy sauce and wasabi",
+                13.99,
+                "Main menu",
+                9
+              );
+
+              //  Restaurant 9 Desserts
+
+              menuStmt.run(
+                "Key Lime Pie",
+                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "Florida-style key lime pie with graham cracker crust",
+                5.99,
+                "Dessert",
+                9
+              );
+              menuStmt.run(
+                "Coconut Panna Cotta",
+                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "Coconut-flavored Italian dessert with tropical fruit",
+                9.99,
+                "Dessert",
+                9
+              );
+              menuStmt.run(
+                "Mango Sorbet",
+                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "Refreshing sorbet made with fresh mangoes",
+                5.99,
+                "Dessert",
+                9
+              );
+              menuStmt.run(
+                "Chocolate Sea Shells",
+                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "Chocolates shaped like seashells with a smooth filling",
+                6.99,
+                "Dessert",
+                9
+              );
+
+              //  Restaurant 9 Drinks
+              menuStmt.run(
+                "Pineapple Coconut Mojito",
+                "https://example.com/edamame.jpg",
+                "Tropical twist on the classic mojito",
+                7.99,
+                "Drinks",
+                9
+              );
+              menuStmt.run(
+                "Blue Lagoon",
+                "https://example.com/edamame.jpg",
+                "Blue curaçao cocktail with vodka and lemonade",
+                4.99,
+                "Drinks",
+                9
+              );
+              menuStmt.run(
+                "Frozen Margarita",
+                "https://example.com/edamame.jpg",
+                "Blended margarita with a salted rim",
+                6.99,
+                "Drinks",
+                9
+              );
+              menuStmt.run(
+                "Cucumber Mint Cooler",
+                "https://example.com/edamame.jpg",
+                "Cooling drink with cucumber, mint, and lime",
+                12.99,
+                "Drinks",
+                9
+              );
+
+              //  Restaurant 9 snacks
+
+              menuStmt.run(
+                "Crab Cakes",
+                "https://example.com/edamame.jpg",
+                "Golden-brown crab cakes served with aioli",
+                2.99,
+                "Snacks",
+                9
+              );
+              menuStmt.run(
+                "Calamari Rings",
+                "https://example.com/edamame.jpg",
+                "Crispy calamari rings with marinara sauce",
+                3.99,
+                "Snacks",
+                9
+              );
+              menuStmt.run(
+                "Clam Chowder",
+                "https://example.com/edamame.jpg",
+                "Creamy New England clam chowder",
+                7.99,
+                "Snacks",
+                9
+              );
+              menuStmt.run(
+                "Seared Tuna Bites",
+                "https://example.com/edamame.jpg",
+                "Sesame-crusted seared tuna bites with wasabi mayo",
+                2.99,
+                "Snacks",
+                9
+              );
+
+              //  Restaurant 10 main menu
+
+              menuStmt.run(
+                "Grilled Lobster Tail",
+                "https://example.com/edamame.jpg",
+                "Butter-grilled lobster tail served with garlic butter",
+                16.99,
+                "Main menu",
+                10
+              );
+              menuStmt.run(
+                "Seafood Paella",
+                "https://example.com/edamame.jpg",
+                "Spanish rice dish with a mix of seafood",
+                11.99,
+                "Main menu",
+                10
+              );
+              menuStmt.run(
+                "Blackened Mahi-Mahi",
+                "https://example.com/edamame.jpg",
+                "Fried potato patties with mint chutney",
+                9.99,
+                "Main menu",
+                10
+              );
+              menuStmt.run(
+                "Sushi Platter",
+                "https://example.com/edamame.jpg",
+                "Assorted sushi rolls with soy sauce and wasabi",
+                13.99,
+                "Main menu",
+                10
+              );
+
+              //  Restaurant 10 Desserts
+
+              menuStmt.run(
+                "Key Lime Pie",
+                "desserts/luisana-zerpa-MJPr6nOdppw-unsplash.jpg",
+                "Florida-style key lime pie with graham cracker crust",
+                10.99,
+                "Dessert",
+                10
+              );
+              menuStmt.run(
+                "Coconut Panna Cotta",
+                "desserts/pushpak-dsilva-2UeBOL7UD34-unsplash.jpg",
+                "Coconut-flavored Italian dessert with tropical fruit",
+                9.99,
+                "Dessert",
+                10
+              );
+              menuStmt.run(
+                "Mango Sorbet",
+                "desserts/yulia-khlebnikova-FDYbS43jUrU-unsplash.jpg",
+                "Refreshing sorbet made with fresh mangoes",
+                10.99,
+                "Dessert",
+                10
+              );
+              menuStmt.run(
+                "Chocolate Sea Shells",
+                "desserts/zoom-view-little-round-cake-decorated-with-strawberries-white-plate.jpg",
+                "Chocolates shaped like seashells with a smooth filling",
+                6.99,
+                "Dessert",
+                10
+              );
+
+              //  Restaurant 10 Drinks
+              menuStmt.run(
+                "Pineapple Coconut Mojito",
+                "https://example.com/edamame.jpg",
+                "Tropical twist on the classic mojito",
+                7.99,
+                "Drinks",
+                10
+              );
+              menuStmt.run(
+                "Blue Lagoon",
+                "https://example.com/edamame.jpg",
+                "Blue curaçao cocktail with vodka and lemonade",
+                4.99,
+                "Drinks",
+                10
+              );
+              menuStmt.run(
+                "Frozen Margarita",
+                "https://example.com/edamame.jpg",
+                "Blended margarita with a salted rim",
+                6.99,
+                "Drinks",
+                10
+              );
+              menuStmt.run(
+                "Cucumber Mint Cooler",
+                "https://example.com/edamame.jpg",
+                "Cooling drink with cucumber, mint, and lime",
+                12.99,
+                "Drinks",
+                10
+              );
+
+              //  Restaurant 10 snacks
+
+              menuStmt.run(
+                "Crab Cakes",
+                "https://example.com/edamame.jpg",
+                "Golden-brown crab cakes served with aioli",
+                2.99,
+                "Snacks",
+                10
+              );
+              menuStmt.run(
+                "Calamari Rings",
+                "https://example.com/edamame.jpg",
+                "Crispy calamari rings with marinara sauce",
+                3.99,
+                "Snacks",
+                10
+              );
+              menuStmt.run(
+                "Clam Chowder",
+                "https://example.com/edamame.jpg",
+                "Creamy New England clam chowder",
+                7.99,
+                "Snacks",
+                10
+              );
+              menuStmt.run(
+                "Seared Tuna Bites",
+                "https://example.com/edamame.jpg",
+                "Sesame-crusted seared tuna bites with wasabi mayo",
+                2.99,
+                "Snacks",
+                10
+              );
 
               menuStmt.finalize();
             }

@@ -87,7 +87,7 @@ const Menus = () => {
           <div className="text-2xl  font-bold ml-4 mt-8 ">{menuName}</div>
           <br />
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 gap-8">
             {menuItems.map(({ menu_id, name, img, description, price }) => {
               return (
                 <div key={`${restaurantId}-${menu_id}-${name}`}>
