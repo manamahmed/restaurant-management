@@ -1586,6 +1586,19 @@ db.serialize(() => {
                 "Lortzingstr. 123, Mülheim"
               );
 
+              orderStmt.run(
+                18.25,
+                "foyez@gmail.com",
+                "Calamari Rings",
+                "Bollostr.45, Mülheim"
+              );
+              orderStmt.run(
+                17.5,
+                "foyez@gmail.com",
+                "Pineapple Coconut Mojito",
+                "Lortzingstr. 123, Mülheim"
+              );
+
               orderStmt.finalize();
             }
           }
@@ -1607,25 +1620,25 @@ db.serialize(() => {
             last_name TEXT NOT NULL,
             email TEXT NOT NULL,
             address TEXT NOT NULL
-          )`,
-          (err) => {
-            if (!err) {
-              // Insert sample data into the orders table
-              const userStmt = db.prepare(`
-                  INSERT INTO users (first_name, last_name, email, address)
-                  VALUES (?, ?, ?, ?)
-                  `);
+          )`
+          // (err) => {
+          //   if (!err) {
+          //     // Insert sample data into the orders table
+          //     const userStmt = db.prepare(`
+          //         INSERT INTO users (first_name, last_name, email, address)
+          //         VALUES (?, ?, ?, ?)
+          //         `);
 
-              userStmt.run(
-                "Manam",
-                "Ahmed",
-                "manamahmed68@gmail.com",
-                "teststr. 10, Duisburg"
-              );
+          //     userStmt.run(
+          //       "Manam",
+          //       "Ahmed",
+          //       "manamahmed68@gmail.com",
+          //       "teststr. 10, Duisburg"
+          //     );
 
-              userStmt.finalize();
-            }
-          }
+          //     userStmt.finalize();
+          //   }
+          // }
         );
       }
     }
