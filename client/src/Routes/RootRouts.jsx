@@ -5,10 +5,12 @@ import Contact from "../Pages/Contact/Contact";
 import Blog from "../Pages/Blog/Blog";
 import Menus from "../Pages/Menus/Menus";
 import Login from "../components/Login/Login";
-import Register from "../components/Register/Register";
 import CartList from "../Pages/CartList";
 import MyOrder from "../Pages/MyOrder";
 import { API_BASE_URL } from "../Utility/constants";
+import RestaurantRegister from "../components/Register/RestaurantRegister";
+import CustomerRegister from "../components/Register/CustomerRegister";
+import RestaurantOrder from "../Pages/RestaurantOrder";
 
 const routes = createBrowserRouter([
   {
@@ -18,15 +20,6 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch(`${API_BASE_URL}/api/restaurants`),
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
-        path: "/blog",
-        element: <Blog />,
       },
       {
         path: "/restaurants/:id",
@@ -40,8 +33,13 @@ const routes = createBrowserRouter([
         path: "/my-order",
         element: <MyOrder />,
       },
+      {
+        path: "/restaurant-order",
+        element: <RestaurantOrder />,
+      },
       { path: "/login", element: <Login /> },
-      { path: "/register", element: <Register /> },
+      { path: "/customer-register", element: <CustomerRegister /> },
+      { path: "/restaurant-register", element: <RestaurantRegister /> },
     ],
   },
 ]);

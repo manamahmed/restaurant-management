@@ -3,7 +3,7 @@ const cors = require("cors");
 
 const restaurantsRouter = require("./routes/restaurantsRouter.js");
 const ordersRouter = require("./routes/ordersRouter.js");
-const usersRouter = require("./routes/usersRouter.js");
+const customersRouter = require("./routes/customersRouter.js");
 
 const app = express();
 
@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 app.use(restaurantsRouter);
 app.use(ordersRouter);
-app.use(usersRouter);
+app.use(customersRouter);
 
 // Handle unknown routes with a 404 response
 app.all("*", (req, res) => {

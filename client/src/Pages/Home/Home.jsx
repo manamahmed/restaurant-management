@@ -1,24 +1,14 @@
-import { useLoaderData } from "react-router-dom";
-import RestaurantCard from "../../components/Restaurant/RestaurantCard";
-import Banner from "../../components/Header/Banner";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+import CustomerHome from "../../components/Home/CustomerHome";
+import RestaurantHome from "../../components/Home/RestaurantHome";
+import { getUserData } from "../../Utility/utilities";
 
 const Home = () => {
-  const restaurants = useLoaderData();
-  const restaurantsArr = Array.isArray(restaurants) ? restaurants : [];
+  const { user } = useContext(AuthContext);
+  const { userType } = getUserData(user);
 
-  return (
-    <div>
-      <Banner />
-      <h2 className="text-4xl font-bold text-red-800 text-center mt-8">
-        Our Restaurants
-      </h2>
-      <div className="grid grid-cols-2 w-[1400px] mx-auto md:grid-cols-3 p-6 gap-8">
-        {restaurantsArr.map((restaurant) => (
-          <RestaurantCard key={restaurant.id} restaurant={restaurant} />
-        ))}
-      </div>
-    </div>
-  );
+  return userType === "restaurant" ? <RestaurantHome /> : <CustomerHome />;
 };
 
 export default Home;

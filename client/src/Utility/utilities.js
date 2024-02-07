@@ -18,3 +18,11 @@ export const getFullUrl = (url) => {
   const isFullUrl = url.startsWith("http://") || url.startsWith("https://");
   return isFullUrl ? url : `${API_BASE_URL}/${url}`;
 };
+
+export const getUserData = (user) => {
+  const userData = user?.photoURL?.split(",") ?? [];
+  const userType = userData?.[0] ?? "";
+  const zipCode = userData?.[1] ?? "";
+
+  return { userType, zipCode };
+};

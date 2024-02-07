@@ -6,8 +6,17 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 
 const RestaurantCard = ({ restaurant }) => {
-  const { id, title, img, description, location, opening_hours, rating } =
-    restaurant;
+  const {
+    id,
+    name,
+    img,
+    description,
+    street,
+    zip,
+    opening_time,
+    closing_time,
+    rating,
+  } = restaurant;
 
   return (
     <div>
@@ -16,7 +25,7 @@ const RestaurantCard = ({ restaurant }) => {
           <img className="min-h-[286px]" src={getFullUrl(img)} alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{title}</h2>
+          <h2 className="card-title">{name}</h2>
           <p>{description}</p>
           <div className="flex gap-2 items-center">
             <div>
@@ -26,11 +35,15 @@ const RestaurantCard = ({ restaurant }) => {
             </div>
 
             <div>
-              <p>{location}</p>
+              <p>
+                {street}, {zip}
+              </p>
             </div>
           </div>
           <div>
-            <p>Opening Hours: {opening_hours}</p>
+            <p>
+              Time: {opening_time} - {closing_time}
+            </p>
           </div>
           <div>
             <Rating style={{ maxWidth: 180 }} value={rating} readOnly />

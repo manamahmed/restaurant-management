@@ -1,35 +1,43 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { API_BASE_URL } from "../../Utility/constants";
 
-const Register = () => {
+const CustomerRegister = () => {
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
     const first_name = form.first_name.value;
     const last_name = form.last_name.value;
-    const address = form.address.value;
+    const street = form.street.value;
+    const zip = form.zip.value;
     const email = form.email.value;
     const password = form.password.value;
 
     createUser(email, password)
       .then(async () => {
-        await updateUserProfile({ name: first_name });
+        await updateUserProfile({
+          name: first_name,
+          photoURL: `customer,${zip}`,
+        });
 
         try {
+          const data = { first_name, last_name, email, street, zip };
           const options = {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ first_name, last_name, email, address }),
+            body: JSON.stringify(data),
           };
-          const response = await fetch(`${API_BASE_URL}/api/users`, options);
+          const response = await fetch(
+            `${API_BASE_URL}/api/customers`,
+            options
+          );
           await response.json();
 
           Swal.fire({
@@ -39,11 +47,19 @@ const Register = () => {
           });
           navigate("/");
         } catch (error) {
-          console.error("Error creating users:", error);
+          console.error("Error creating customers:", error);
         }
       })
       .catch((err) => {
-        console.error(err);
+        console.log(err.message);
+
+        if (err.message.includes("auth/email-already-in-use")) {
+          Swal.fire({
+            title: "Error!",
+            text: "Email already in use!",
+            icon: "error",
+          });
+        }
       });
   };
 
@@ -106,14 +122,26 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Address</span>
+                  <span className="label-text">Street</span>
                 </label>
                 <input
                   type="text"
-                  placeholder="Enter your address"
+                  placeholder="Enter your street"
                   className="input input-bordered"
                   required
-                  name="address"
+                  name="street"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Zip code</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter your zip code"
+                  className="input input-bordered"
+                  required
+                  name="zip"
                 />
               </div>
               <div className="form-control mt-6">
@@ -133,4 +161,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default CustomerRegister;

@@ -1,29 +1,29 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import RestaurantOrderStatus from "../components/RestaurantOrderStatus";
 import { API_BASE_URL } from "../Utility/constants";
 
-const MyOrder = () => {
+const RestaurantOrder = () => {
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    const getOrders = async () => {
+    const getRestaurantWithMenus = async () => {
       try {
         const response = await fetch(
-          `${API_BASE_URL}/api/orders/${user.email}`
+          `${API_BASE_URL}/api/ordersByRestaurantEmail/${user.email}`
         );
-        const data = await response.json();
-        console.log({ data });
-        setOrders(data);
+        const ordersData = await response.json();
+        setOrders(ordersData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
-    if (user && orders.length === 0) {
-      getOrders();
+    if (user?.email) {
+      getRestaurantWithMenus();
     }
-  }, [orders.length, user]);
+  }, [user]);
 
   if (orders.length === 0) {
     return (
@@ -54,7 +54,12 @@ const MyOrder = () => {
                   <td>{item.menus.split(",").join(", ")}</td>
                   <td>{item.address}</td>
                   <td>€{item.total_price}</td>
-                  <td>{item.status}</td>
+                  <td>
+                    <RestaurantOrderStatus
+                      status={item.status}
+                      orderId={item.id}
+                    />
+                  </td>
                 </tr>
               );
             })}
@@ -65,4 +70,4 @@ const MyOrder = () => {
   );
 };
 
-export default MyOrder;
+export default RestaurantOrder;

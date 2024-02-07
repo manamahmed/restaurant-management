@@ -5,12 +5,17 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { useOrderContext } from "../../Utility/OrderProvider";
 import { CiShoppingCart } from "react-icons/ci";
+import { getUserData } from "../../Utility/utilities";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { orders } = useOrderContext();
-
   const { user, logOut } = useContext(AuthContext);
+
+  const { userType } = getUserData(user);
+  const isCustomer = userType === "customer";
+  const isRestaurant = userType === "restaurant";
+
   const handleLogout = () => {
     logOut()
       .then(() => {
@@ -36,9 +41,14 @@ const Navbar = () => {
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      {user?.email && (
+      {user?.email && isCustomer && (
         <li>
           <NavLink to={"/my-order"}>My Order</NavLink>
+        </li>
+      )}
+      {user?.email && isRestaurant && (
+        <li>
+          <NavLink to={"/restaurant-order"}>Restaurant Order</NavLink>
         </li>
       )}
     </>
@@ -81,16 +91,20 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div>
-          <Link to={"/cart-list"}>
-            <div className="relative">
-              <CiShoppingCart className="text-2xl font-black" />
-              <span className="absolute right-[-10px] top-[-10px] h-[15px] w-[15px] rounded-full bg-white flex justify-center items-center text-xs">
-                {orders.length}
-              </span>
-            </div>
-          </Link>
-        </div>
+
+        {!isRestaurant && (
+          <div>
+            <Link to={"/cart-list"}>
+              <div className="relative">
+                <CiShoppingCart className="text-2xl font-black" />
+                <span className="absolute right-[-10px] top-[-10px] h-[15px] w-[15px] rounded-full bg-white flex justify-center items-center text-xs">
+                  {orders.length}
+                </span>
+              </div>
+            </Link>
+          </div>
+        )}
+
         <div className="navbar-end">
           {user?.email ? (
             <>

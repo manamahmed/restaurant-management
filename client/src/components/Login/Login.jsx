@@ -96,11 +96,19 @@ const Login = () => {
             </div> */}
             <p className="text-center p-2 mb-2">
               New Here ?
-              <Link to={"/register"}>
-                <button className="btn btn-active btn-link">
-                  Registration Now
-                </button>
-              </Link>
+              <>
+                <Link to={"/customer-register"}>
+                  <button className="btn btn-active btn-link">
+                    Registration as customer
+                  </button>
+                </Link>
+                OR
+                <Link to={"/restaurant-register"}>
+                  <button className="btn btn-active btn-link">
+                    Registration as restaurant
+                  </button>
+                </Link>
+              </>
             </p>
           </div>
         </div>

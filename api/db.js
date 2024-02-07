@@ -14,15 +14,19 @@ db.serialize(() => {
         db.run(
           `CREATE TABLE restaurants (
             id INTEGER PRIMARY KEY,
-            title TEXT NOT NULL,
-            img TEXT,
-            description TEXT,
-            location TEXT,
-            opening_hours TEXT,
-            rating REAL NOT NULL
+            name TEXT NOT NULL,
+            email TEXT NOT NULL,
+            description TEXT NOT NULL,
+            street TEXT,
+            zip TEXT NOT NULL,
+            opening_time TIME NOT NULL,
+            closing_time TIME NOT NULL,
+            delivery_radius TEXT NOT NULL,
+            img TEXT
         )`,
           (err) => {
             if (!err) {
+              return;
               // Insert sample data into the restaurants table
               const restaurantStmt = db.prepare(`
                 INSERT INTO restaurants (title, img, description, location, opening_hours, rating)
@@ -1525,10 +1529,15 @@ db.serialize(() => {
             total_price REAL NOT NULL,
             user_email TEXT NOT NULL,
             menus TEXT NOT NULL,
-            address TEXT NOT NULL
+            address TEXT NOT NULL,
+            restaurant_id INTEGER,
+            status TEXT NOT NULL,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (restaurant_id) REFERENCES restaurants(id)
           )`,
           (err) => {
             if (!err) {
+              return;
               // Insert sample data into the orders table
               const orderStmt = db.prepare(`
                   INSERT INTO orders (total_price, user_email, menus, address)
@@ -1607,19 +1616,20 @@ db.serialize(() => {
     }
   );
 
-  // users table
+  // customers table
   db.get(
-    "SELECT name FROM sqlite_master WHERE type='table' AND name='users'",
+    "SELECT name FROM sqlite_master WHERE type='table' AND name='customers'",
     (err, table) => {
       if (!table) {
         // Create the orders table
         db.run(
-          `CREATE TABLE users (
+          `CREATE TABLE customers (
             id INTEGER PRIMARY KEY,
             first_name TEXT NOT NULL,
             last_name TEXT NOT NULL,
             email TEXT NOT NULL,
-            address TEXT NOT NULL
+            street TEXT NOT NULL,
+            zip TEXT NOT NULL
           )`
           // (err) => {
           //   if (!err) {
@@ -1646,8 +1656,3 @@ db.serialize(() => {
 });
 
 module.exports = db;
-
-// mdrajibsorkar965@gmail.com
-// md.nasif008@gmail.com
-// manamahmed68@gmail.com
-// kashemali1423@gmail.com

@@ -4,7 +4,7 @@ const db = require("../db.js");
 const router = express.Router();
 
 // Endpoint to add a new user
-router.post("/api/users", (req, res) => {
+router.post("/api/customers", (req, res) => {
   const newUser = req.body;
 
   // Validate required fields
@@ -16,37 +16,41 @@ router.post("/api/users", (req, res) => {
 
   // Insert a new user into the database
   const stmt = db.prepare(`
-      INSERT INTO users (first_name, last_name, email, address)
-      VALUES (?, ?, ?, ?)
+      INSERT INTO customers (first_name, last_name, email, street, zip)
+      VALUES (?, ?, ?, ?, ?)
       `);
 
   stmt.run(
     newUser.first_name,
     newUser.last_name,
     newUser.email,
-    newUser.address ?? ""
+    newUser.street,
+    newUser.zip
   );
 
   stmt.finalize();
 
-  db.get("SELECT * FROM users WHERE id = last_insert_rowid()", (err, row) => {
-    if (err) {
-      return res
-        .status(500)
-        .json({ error: "Error retrieving the newly added user" });
-    }
+  db.get(
+    "SELECT * FROM customers WHERE id = last_insert_rowid()",
+    (err, row) => {
+      if (err) {
+        return res
+          .status(500)
+          .json({ error: "Error retrieving the newly added user" });
+      }
 
-    res.status(201).json(row);
-  });
+      res.status(201).json(row);
+    }
+  );
 });
 
 // Endpoint to get user info
-router.get("/api/users/:email", (req, res) => {
+router.get("/api/customers/:email", (req, res) => {
   const userEmail = req.params.email;
 
   db.get(
     `SELECT *
-    FROM users
+    FROM customers
     WHERE users.email = ?`,
     [userEmail],
     (err, user) => {

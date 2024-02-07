@@ -57,6 +57,9 @@ const CartList = () => {
           total_price: getTotalPrice(orders),
           menus: orderedMenus.join(","),
           address: deliveryAddress,
+          restaurant_id: orders[0]?.restaurantId
+            ? Number(orders[0].restaurantId)
+            : null,
         };
 
         try {

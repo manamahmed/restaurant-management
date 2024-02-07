@@ -41,42 +41,6 @@ const Menus = () => {
     }
   }
 
-  // <div className="card card-compact  bg-base-100 shadow-xl">
-  //                 <figure>
-  //                   <img src={getFullUrl(img)} alt="Shoes" />
-  //                 </figure>
-  //                 <div className="card-body">
-  //                   <h2 className="card-title">{name}</h2>
-  //                   <p>{description}</p>
-  //                   <p>${price}</p>
-  //                   <div className="card-actions justify-end">
-  // <button
-  //   disabled={
-  //     !!orders.find((item) => item.menuId === menu_id)
-  //   }
-  //   onClick={() => {
-  //     const itemToAdd = {
-  //       menuId: menu_id,
-  //       restaurantId,
-  //       name,
-  //       img,
-  //       price,
-  //       quantity: 1,
-  //     };
-
-  //     // setAddedItems([...addedItems, itemToAdd]);
-  //     // saveOrderItem(itemToAdd);
-
-  //     updateOrders(itemToAdd);
-  //   }}
-  //   className="btn btn-primary"
-  // >
-  //   Add To Cart
-  // </button>
-  //                   </div>
-  //                 </div>
-  //               </div>
-
   return Object.entries(menusObj).map(([menuName, menuItems], index) => {
     return (
       <>
