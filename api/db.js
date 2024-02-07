@@ -149,7 +149,7 @@ db.serialize(() => {
                   `);
               // Restaurant 1 main menu
               menuStmt.run(
-                "Menu 1",
+                "Chicken Nugget",
                 "mainDish/main_dish_4.jpg",
                 "Delicious starters",
                 10.99,

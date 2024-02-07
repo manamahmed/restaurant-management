@@ -27,7 +27,7 @@ const CustomerHome = () => {
     };
 
     getRestaurants();
-  }, []);
+  }, [zipCode]);
 
   return (
     <div>

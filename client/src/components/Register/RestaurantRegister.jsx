@@ -27,6 +27,10 @@ const RestaurantRegister = () => {
         await updateUserProfile({ name, photoURL: `restaurant,${zip}` });
 
         try {
+          const trimmedDeliveryRadius = delivery_radius
+            .split(",")
+            .map((item) => item.trim())
+            .join(",");
           const options = {
             method: "POST",
             headers: {
@@ -42,7 +46,7 @@ const RestaurantRegister = () => {
               closing_time,
               description,
               image: imgUrl,
-              delivery_radius,
+              delivery_radius: trimmedDeliveryRadius,
             }),
           };
           const response = await fetch(
