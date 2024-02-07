@@ -216,4 +216,25 @@ router.post("/api/restaurants/:restaurantId/menus", (req, res) => {
   );
 });
 
+// Endpoint to delete a menu item
+router.delete("/api/restaurants/:restaurantId/menus/:menuId", (req, res) => {
+  const restaurantId = req.params.restaurantId;
+  const menuId = req.params.menuId;
+
+  // Execute the DELETE query
+  db.run(
+    "DELETE FROM menus WHERE id = ? AND restaurant_id = ?",
+    [menuId, restaurantId],
+    (err) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+
+      res.json({
+        message: "Menu item deleted successfully",
+      });
+    }
+  );
+});
+
 module.exports = router;

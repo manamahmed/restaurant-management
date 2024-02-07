@@ -1,9 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { API_BASE_URL } from "../../Utility/constants";
 import { getFullUrl } from "../../Utility/utilities";
+import Swal from "sweetalert2";
 
 const RestaurantHome = () => {
+  const formRef = useRef(null);
   const { user } = useContext(AuthContext);
   const [restaurant, setRestaurant] = useState(null);
 
@@ -14,7 +16,6 @@ const RestaurantHome = () => {
           `${API_BASE_URL}/api/restaurants/${user.email}`
         );
         const data = await response.json();
-        console.log({ data });
         setRestaurant(data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -64,14 +65,46 @@ const RestaurantHome = () => {
                           alt={name}
                         />
                       </div>
-                      <div className="flex flex-col justify-between p-4 leading-normal min-w-[60%]">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight">
-                          {name}
-                        </h5>
-                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                          {description}
-                        </p>
-                        <p>€{price}</p>
+                      <div className="min-w-[60%]">
+                        <div className="flex flex-col justify-between p-4 leading-normal">
+                          <h5 className="mb-2 text-2xl font-bold tracking-tight">
+                            {name}
+                          </h5>
+                          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                            {description}
+                          </p>
+                          <p>€{price}</p>
+                        </div>
+
+                        <button
+                          className="btn btn-outline btn-error flex mt-2 mr-2 mb-2 ml-auto"
+                          onClick={async () => {
+                            try {
+                              const options = {
+                                method: "DELETE",
+                                headers: {
+                                  "Content-Type": "application/json",
+                                },
+                              };
+                              const response = await fetch(
+                                `${API_BASE_URL}/api/restaurants/${restaurant.id}/menus/${menu_id}`,
+                                options
+                              );
+                              await response.json();
+
+                              setRestaurant({
+                                ...restaurant,
+                                menus: restaurant.menus.filter((menu) => {
+                                  return !(menu.menu_id === menu_id);
+                                }),
+                              });
+                            } catch (error) {
+                              console.error("Error deleting menu item:", error);
+                            }
+                          }}
+                        >
+                          Delete
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -90,6 +123,7 @@ const RestaurantHome = () => {
         <div className="hero-content flex-col">
           <div className="card shrink-0 w-[1200px]  shadow-2xl bg-base-100">
             <form
+              ref={formRef}
               onSubmit={async (event) => {
                 event.preventDefault();
 
@@ -124,6 +158,7 @@ const RestaurantHome = () => {
                     text: "Menu item added Successfully!",
                     icon: "success",
                   });
+                  formRef.current?.reset();
                 } catch (error) {
                   console.error("Error creating customers:", error);
                 }

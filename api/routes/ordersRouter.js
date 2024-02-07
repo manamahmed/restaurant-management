@@ -3,69 +3,68 @@ const db = require("../db.js");
 
 const router = express.Router();
 
-// // Endpoint to get restaurants based on status and order by created_at
-// app.get("/restaurants", (req, res) => {
-//   // Fetch restaurants with status "pending" or "preparing"
-//   db.all(
-//     `
-//     SELECT * FROM restaurants
-//     WHERE status IN ('pending', 'preparing')
-//     ORDER BY created_at ASC
-//   `,
-//     (err, pendingRestaurants) => {
-//       if (err) {
-//         return res
-//           .status(500)
-//           .json({ error: "Error retrieving pending or preparing restaurants" });
-//       }
-
-//       // Fetch restaurants with status "rejected" or "completed"
-//       db.all(
-//         `
-//       SELECT * FROM restaurants
-//       WHERE status IN ('rejected', 'completed')
-//       ORDER BY created_at ASC
-//     `,
-//         (err, otherRestaurants) => {
-//           if (err) {
-//             return res.status(500).json({
-//               error: "Error retrieving rejected or completed restaurants",
-//             });
-//           }
-
-//           // Combine the two sets of restaurants
-//           const allRestaurants = pendingRestaurants.concat(otherRestaurants);
-
-//           res.json(allRestaurants);
-//         }
-//       );
-//     }
-//   );
-// });
-
 // Endpoint to get orders
 router.get("/api/orders/:email", (req, res) => {
   const userEmail = req.params.email;
 
+  // Fetch restaurants with status "pending" or "preparing"
   db.all(
-    `SELECT *
-    FROM orders
-    WHERE orders.user_email = ?`,
+    `
+    SELECT * FROM orders
+    WHERE status IN ('pending', 'preparing') AND user_email = ?
+    ORDER BY created_at DESC
+    `,
     [userEmail],
-    (err, rows) => {
+    (err, pendingOrders) => {
       if (err) {
-        // Error retrieving orders details
-        return res.status(500).json([]);
+        return res.status(500).json({
+          error: "Error retrieving pending or preparing restaurants",
+        });
       }
 
-      if (rows.length === 0) {
-        // Orders not found
-        return res.status(404).json([]);
-      }
+      // Fetch orders with status "rejected" or "completed"
+      db.all(
+        `
+        SELECT * FROM orders
+        WHERE status IN ('rejected', 'completed') AND user_email = ?
+        ORDER BY created_at DESC
+      `,
+        [userEmail],
+        (err, otherOrders) => {
+          if (err) {
+            return res.status(500).json({
+              error: "Error retrieving rejected or completed restaurants",
+            });
+          }
 
-      res.json(rows);
+          // Combine the two sets of restaurants
+          const allOrders = pendingOrders.concat(otherOrders);
+
+          res.json(allOrders);
+        }
+      );
     }
   );
+
+  // db.all(
+  //   `SELECT *
+  //   FROM orders
+  //   WHERE orders.user_email = ?`,
+  //   [userEmail],
+  //   (err, rows) => {
+  //     if (err) {
+  //       // Error retrieving orders details
+  //       return res.status(500).json([]);
+  //     }
+
+  //     if (rows.length === 0) {
+  //       // Orders not found
+  //       return res.status(404).json([]);
+  //     }
+
+  //     res.json(rows);
+  //   }
+  // );
 });
 
 // Endpoint to get orders with restaurant email
@@ -76,7 +75,6 @@ router.get("/api/ordersByRestaurantEmail/:restaurantEmail", (req, res) => {
     "SELECT * FROM restaurants WHERE email = ?",
     [restaurantEmail],
     (err, restaurant) => {
-      console.log({ restaurant });
       if (err) {
         return res.status(500).json([]);
       }
@@ -84,32 +82,12 @@ router.get("/api/ordersByRestaurantEmail/:restaurantEmail", (req, res) => {
         return res.json([]);
       }
 
-      // db.all(
-      //   `SELECT *
-      //   FROM orders
-      //   WHERE orders.restaurant_id = ?`,
-      //   [restaurant.id],
-      //   (err, rows) => {
-      //     if (err) {
-      //       // Error retrieving orders details
-      //       return res.status(500).json([]);
-      //     }
-
-      //     if (rows.length === 0) {
-      //       // Orders not found
-      //       return res.status(404).json([]);
-      //     }
-
-      //     res.json(rows);
-      //   }
-      // );
-
       // Fetch restaurants with status "pending" or "preparing"
       db.all(
         `
         SELECT * FROM orders
         WHERE status IN ('pending', 'preparing') AND restaurant_id = ?
-        ORDER BY created_at ASC
+        ORDER BY created_at DESC
       `,
         [restaurant.id],
         (err, pendingOrders) => {
@@ -124,7 +102,7 @@ router.get("/api/ordersByRestaurantEmail/:restaurantEmail", (req, res) => {
             `
             SELECT * FROM orders
             WHERE status IN ('rejected', 'completed') AND restaurant_id = ?
-            ORDER BY created_at ASC
+            ORDER BY created_at DESC
           `,
             [restaurant.id],
             (err, otherOrders) => {

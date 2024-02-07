@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { getFullUrl } from "../../Utility/utilities";

@@ -82,100 +82,105 @@ const RestaurantRegister = () => {
 
   return (
     <div>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col">
-          <div className="text-center lg:text-left">
+      <div className="min-h-screen bg-base-200">
+        <div className="  flex-col">
+          <div className="text-center">
             <h1 className="text-5xl font-bold mb-6">Register Now!</h1>
           </div>
-          <div className="card shrink-0 w-[500px] max-w-xl shadow-2xl bg-base-100">
+          <div className=" w-[800px] mx-auto card shrink-0  shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit} className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="input input-bordered"
-                  required
-                  name="name"
-                />
+              <div className="flex gap-4 justify-center">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="input w-[300px] input-bordered"
+                    required
+                    name="name"
+                  />
+                </div>
+
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Email</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="input  w-[300px]  input-bordered"
+                    required
+                    name="email"
+                  />
+                </div>
+              </div>
+
+              <div className="flex gap-4 justify-center">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Password</span>
+                  </label>
+                  <input
+                    type="Password"
+                    placeholder="password"
+                    className="input  w-[300px]  input-bordered"
+                    required
+                    name="password"
+                  />
+                </div>
+
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Description</span>
+                  </label>
+                  <textarea
+                    type="text"
+                    placeholder="Enter restaurant description"
+                    className="input  w-[300px]  input-bordered"
+                    required
+                    name="description"
+                    rows={10}
+                  />
+                </div>
+              </div>
+              <div className="flex gap-4 justify-center">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Street</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter restaurant street"
+                    className="input w-[300px]  input-bordered"
+                    required
+                    name="street"
+                  />
+                </div>
+
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Zip code</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter restaurant zip code"
+                    className="input  w-[300px]  input-bordered"
+                    required
+                    name="zip"
+                  />
+                </div>
               </div>
 
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="input input-bordered"
-                  required
-                  name="email"
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="Password"
-                  placeholder="password"
-                  className="input input-bordered"
-                  required
-                  name="password"
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Description</span>
-                </label>
-                <textarea
-                  type="text"
-                  placeholder="Enter restaurant description"
-                  className="input input-bordered"
-                  required
-                  name="description"
-                  rows={10}
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Street</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter restaurant street"
-                  className="input input-bordered"
-                  required
-                  name="street"
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Zip code</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter restaurant zip code"
-                  className="input input-bordered"
-                  required
-                  name="zip"
-                />
-              </div>
-
-              <div className="form-control">
-                <label className="label">
+                <label className="label ml-16">
                   <span className="label-text">Image url</span>
                 </label>
                 <input
                   type="text"
                   placeholder="Enter restaurant image url"
-                  className="input input-bordered"
+                  className="input  w-[620px] mx-auto  input-bordered"
                   required
                   name="imgUrl"
                 />
@@ -183,12 +188,14 @@ const RestaurantRegister = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Delivery radius (in zip)</span>
+                  <span className="label-text ml-16">
+                    Delivery radius (in zip)
+                  </span>
                 </label>
                 <input
                   type="text"
                   placeholder="47051,47052,47053"
-                  className="input input-bordered"
+                  className="input w-[620px] mx-auto  input-bordered"
                   required
                   name="delivery_radius"
                 />
@@ -196,25 +203,27 @@ const RestaurantRegister = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Opening time</span>
+                  <span className="label-text ml-16">Opening time</span>
                 </label>
-                <input
-                  type="text"
-                  placeholder="From"
-                  className="input input-bordered"
-                  required
-                  name="from"
-                />
-                <input
-                  type="text"
-                  placeholder="To"
-                  className="input input-bordered"
-                  required
-                  name="to"
-                />
+                <div className="flex gap-4 justify-center">
+                  <input
+                    type="text"
+                    placeholder="From"
+                    className="input  w-[300px]   input-bordered"
+                    required
+                    name="from"
+                  />
+                  <input
+                    type="text"
+                    placeholder="To"
+                    className="input  w-[300px]  input-bordered"
+                    required
+                    name="to"
+                  />
+                </div>
               </div>
 
-              <div className="form-control mt-6">
+              <div className="form-control w-[620px] mx-auto mt-6">
                 <button className="btn btn-primary">Sign Up</button>
               </div>
             </form>

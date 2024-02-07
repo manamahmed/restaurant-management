@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
@@ -51,8 +51,6 @@ const CustomerRegister = () => {
         }
       })
       .catch((err) => {
-        console.log(err.message);
-
         if (err.message.includes("auth/email-already-in-use")) {
           Swal.fire({
             title: "Error!",
@@ -72,53 +70,59 @@ const CustomerRegister = () => {
           </div>
           <div className="card shrink-0 w-[500px] max-w-xl shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit} className="card-body">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">First Name</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="First Name"
-                  className="input input-bordered"
-                  required
-                  name="first_name"
-                />
+              <div className="flex gap-4">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">First Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="input input-bordered"
+                    required
+                    name="first_name"
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Last Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Last name"
+                    className="input input-bordered"
+                    required
+                    name="last_name"
+                  />
+                </div>
               </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Last Name</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Last name"
-                  className="input input-bordered"
-                  required
-                  name="last_name"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="input input-bordered"
-                  required
-                  name="email"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="Password"
-                  placeholder="password"
-                  className="input input-bordered"
-                  required
-                  name="password"
-                />
+              <div className="flex gap-4">
+                <div className="flex gap-4">
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Email</span>
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      className="input input-bordered"
+                      required
+                      name="email"
+                    />
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Password</span>
+                    </label>
+                    <input
+                      type="Password"
+                      placeholder="password"
+                      className="input input-bordered"
+                      required
+                      name="password"
+                    />
+                  </div>
+                </div>
               </div>
               <div className="form-control">
                 <label className="label">

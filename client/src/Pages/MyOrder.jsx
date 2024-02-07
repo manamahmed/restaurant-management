@@ -13,7 +13,6 @@ const MyOrder = () => {
           `${API_BASE_URL}/api/orders/${user.email}`
         );
         const data = await response.json();
-        console.log({ data });
         setOrders(data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -32,6 +31,19 @@ const MyOrder = () => {
       </h3>
     );
   }
+
+  const renderStatus = (status) => {
+    let classes = "";
+
+    if (status === "rejected") {
+      classes += "text-red-800";
+    }
+    if (status === "completed") {
+      classes += "text-green-800";
+    }
+
+    return <td className={classes}>{status}</td>;
+  };
 
   return (
     <div className="max-w-[1200px] mx-auto">
@@ -54,7 +66,7 @@ const MyOrder = () => {
                   <td>{item.menus.split(",").join(", ")}</td>
                   <td>{item.address}</td>
                   <td>€{item.total_price}</td>
-                  <td>{item.status}</td>
+                  {renderStatus(item.status)}
                 </tr>
               );
             })}

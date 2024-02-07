@@ -153,8 +153,8 @@ const CartList = () => {
         Total: €{getTotalPrice(orders)}
       </div>
 
-      <div className="text-right">
-        Useful Info:{" "}
+      <div className="text-right flex items-center justify-end gap-4">
+        Add Note:{" "}
         <textarea
           className="border p-2 my-4 w-1/4 focus:border-blue-500 hover:border-blue-300"
           type="text"

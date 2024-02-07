@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { API_BASE_URL } from "../Utility/constants";
 
@@ -6,11 +7,11 @@ const RestaurantOrderStatus = ({ status, orderId }) => {
   const [selectedOption, setSelectedOption] = useState("");
 
   if (orderStatus === "rejected") {
-    return <div>Rejected</div>;
+    return <div className="text-red-800">Rejected</div>;
   }
 
   if (orderStatus === "completed") {
-    return <div>Completed</div>;
+    return <div className="text-green-800">Completed</div>;
   }
 
   if (orderStatus === "preparing") {
@@ -31,8 +32,7 @@ const RestaurantOrderStatus = ({ status, orderId }) => {
               `${API_BASE_URL}/api/orders/${orderId}`,
               options
             );
-            const updatedOrder = await response.json();
-            console.log({ updatedOrder });
+            await response.json();
           } catch (error) {
             console.error("Error updating order:", error);
           }
@@ -43,7 +43,7 @@ const RestaurantOrderStatus = ({ status, orderId }) => {
         defaultValue=""
         value={selectedOption}
       >
-        <option value="" disabled>
+        <option className="text-yellow-400" value="" disabled>
           Preparing
         </option>
         <option value="completed">Complete</option>
@@ -68,8 +68,7 @@ const RestaurantOrderStatus = ({ status, orderId }) => {
             `${API_BASE_URL}/api/orders/${orderId}`,
             options
           );
-          const updatedOrder = await response.json();
-          console.log({ updatedOrder });
+          await response.json();
         } catch (error) {
           console.error("Error updating order:", error);
         }
@@ -84,7 +83,7 @@ const RestaurantOrderStatus = ({ status, orderId }) => {
         Pending
       </option>
       <option value="preparing">Confirm</option>
-      <option value="rejected">Cancel</option>
+      <option value="rejected ">Cancel</option>
     </select>
   );
 };
