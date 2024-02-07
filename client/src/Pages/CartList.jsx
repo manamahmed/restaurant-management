@@ -14,24 +14,8 @@ const CartList = () => {
   const { orders, resetOrders } = useOrderContext();
   const { user } = useContext(AuthContext);
 
-  const [deliveryAddress, setDeliveryAddress] = useState("");
+  const [info, setInfo] = useState("");
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const getUser = async () => {
-      try {
-        const response = await fetch(`${API_BASE_URL}/api/users/${user.email}`);
-        const data = await response.json();
-        setDeliveryAddress(data?.address ?? "");
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    if (user?.email) {
-      getUser();
-    }
-  }, [user]);
 
   if (orders.length === 0) {
     return (
@@ -56,7 +40,7 @@ const CartList = () => {
           email: user.email,
           total_price: getTotalPrice(orders),
           menus: orderedMenus.join(","),
-          address: deliveryAddress,
+          info,
           restaurant_id: orders[0]?.restaurantId
             ? Number(orders[0].restaurantId)
             : null,
@@ -170,20 +154,17 @@ const CartList = () => {
       </div>
 
       <div className="text-right">
-        Delivery Address:{" "}
-        <input
+        Useful Info:{" "}
+        <textarea
           className="border p-2 my-4 w-1/4 focus:border-blue-500 hover:border-blue-300"
           type="text"
-          value={deliveryAddress}
-          onChange={(e) => setDeliveryAddress(e.target.value)}
+          value={info}
+          placeholder="e.g. Cheese without onion"
+          onChange={(e) => setInfo(e.target.value)}
         />
       </div>
 
-      <button
-        className="btn btn-primary flex ml-auto mt-4"
-        type="submit"
-        disabled={deliveryAddress.length === 0}
-      >
+      <button className="btn btn-primary flex ml-auto mt-4" type="submit">
         Confirm Order
       </button>
     </form>

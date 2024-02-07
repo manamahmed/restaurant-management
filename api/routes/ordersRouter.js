@@ -151,43 +151,52 @@ router.post("/api/orders", (req, res) => {
   const newOrder = req.body;
 
   // Validate required fields
-  if (
-    !newOrder.email ||
-    !newOrder.menus ||
-    !newOrder.total_price ||
-    !newOrder.address
-  ) {
+  if (!newOrder.email || !newOrder.menus || !newOrder.total_price) {
     return res.status(400).json({
-      error: "email, menus, total_price and address fields are required.",
+      error: "email, menus and total_price fields are required.",
     });
   }
 
-  // Insert new restaurant into the database
-  const stmt = db.prepare(`
-    INSERT INTO orders (total_price, user_email, menus, address, restaurant_id, status)
-    VALUES (?, ?, ?, ?, ?, ?)
-    `);
+  db.get(
+    "SELECT * FROM customers WHERE email = ?",
+    [newOrder.email],
+    (err, user) => {
+      if (!err) {
+        const { street, zip } = user;
 
-  stmt.run(
-    newOrder.total_price,
-    newOrder.email,
-    newOrder.menus,
-    newOrder.address,
-    newOrder.restaurant_id,
-    "pending"
-  );
+        // Insert new restaurant into the database
+        const stmt = db.prepare(`
+        INSERT INTO orders (total_price, user_email, menus, address, restaurant_id, status, info)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        `);
 
-  stmt.finalize();
+        stmt.run(
+          newOrder.total_price,
+          newOrder.email,
+          newOrder.menus,
+          `${street}, ${zip}`,
+          newOrder.restaurant_id,
+          "pending",
+          newOrder.info
+        );
 
-  db.get("SELECT * FROM orders WHERE id = last_insert_rowid()", (err, row) => {
-    if (err) {
-      return res
-        .status(500)
-        .json({ error: "Error retrieving the newly added order" });
+        stmt.finalize();
+
+        db.get(
+          "SELECT * FROM orders WHERE id = last_insert_rowid()",
+          (err, row) => {
+            if (err) {
+              return res
+                .status(500)
+                .json({ error: "Error retrieving the newly added order" });
+            }
+
+            res.status(201).json(row);
+          }
+        );
+      }
     }
-
-    res.status(201).json(row);
-  });
+  );
 });
 
 // Endpoint to update the "status" field

@@ -1532,6 +1532,7 @@ db.serialize(() => {
             address TEXT NOT NULL,
             restaurant_id INTEGER,
             status TEXT NOT NULL,
+            info TEXT,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY (restaurant_id) REFERENCES restaurants(id)
           )`,
