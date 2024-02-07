@@ -8,7 +8,7 @@ router.get("/api/restaurants", (req, res) => {
   const zipCode = req.query.zip;
 
   // Get the current time in HH:mm:ss format
-  const currentTime = new Date().toLocaleTimeString("en-US", { hour12: false });
+  const currentTime = new Date().toLocaleTimeString("de-DE", { hour12: false });
 
   if (zipCode) {
     // Fetch restaurants with delivery radius including the provided zip code

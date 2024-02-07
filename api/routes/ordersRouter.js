@@ -45,26 +45,6 @@ router.get("/api/orders/:email", (req, res) => {
       );
     }
   );
-
-  // db.all(
-  //   `SELECT *
-  //   FROM orders
-  //   WHERE orders.user_email = ?`,
-  //   [userEmail],
-  //   (err, rows) => {
-  //     if (err) {
-  //       // Error retrieving orders details
-  //       return res.status(500).json([]);
-  //     }
-
-  //     if (rows.length === 0) {
-  //       // Orders not found
-  //       return res.status(404).json([]);
-  //     }
-
-  //     res.json(rows);
-  //   }
-  // );
 });
 
 // Endpoint to get orders with restaurant email
